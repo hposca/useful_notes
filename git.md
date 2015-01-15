@@ -108,6 +108,8 @@ $ git checkout existingbranch
 
 ~~~ Bash
 $ git log --oneline --decorate --color --graph --all --simplify-by-decoration
+# ou
+$ git log --graph --simplify-by-decoration --pretty=format:'%d' --all
 ~~~
 
 ## Adicionando branches remotas
