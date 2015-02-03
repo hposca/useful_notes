@@ -20,3 +20,12 @@ fulload() { dd if=/dev/zero of=/dev/null | dd if=/dev/zero of=/dev/null | dd if=
 
 Repeat the command in the curly brackets as many times as the number of threads you want to produce (here 4 threads). Simple enter hit will stop it (just make sure no other dd is running on this user or you kill it too).
 
+# Rsync
+
+Dicas [aqui](http://www.electrictoolbox.com/rsync-ignore-existing-update-newer/)
+
+## Apenas arquivos novos
+
+~~~ Bash
+rsync --update -raz --progress <origem> <destino>
+~~~
