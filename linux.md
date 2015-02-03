@@ -29,3 +29,21 @@ Dicas [aqui](http://www.electrictoolbox.com/rsync-ignore-existing-update-newer/)
 ~~~ Bash
 rsync --update -raz --progress <origem> <destino>
 ~~~
+
+# Encontrando arquivos com setuid ativado
+
+Com ajuda, conseguimos encontrar todos os arquivos que estão com setuid ativado. Isso foi útil para resolver um problema que estava dando no SAS devido ao fato dos bin não estarem setados com ele:
+
+~~~ Bash
+find . -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
+~~~
+
+Para se setar o setuid basta se adicionar qual bit será será setado como steuid (u,g,o):
+
+~~~ Bash
+chmod 4444 arquivo
+# ou
+chmod 2444 arquivo
+# ou
+chmod 1444 arquivo
+~~~
