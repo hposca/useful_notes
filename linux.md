@@ -32,7 +32,7 @@ rsync --update -raz --progress <origem> <destino>
 
 # Encontrando arquivos com setuid ativado
 
-Com ajuda, conseguimos encontrar todos os arquivos que estão com setuid ativado. Isso foi útil para resolver um problema que estava dando no SAS devido ao fato dos bin não estarem setados com ele:
+Com [ajuda](http://www.cyberciti.biz/faq/unix-bsd-linux-setuid-file/), conseguimos encontrar todos os arquivos que estão com setuid ativado. Isso foi útil para resolver um problema que estava dando no SAS devido ao fato dos bin não estarem setados com ele:
 
 ~~~ Bash
 find . -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
