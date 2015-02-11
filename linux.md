@@ -22,9 +22,15 @@ Repeat the command in the curly brackets as many times as the number of threads 
 
 # Rsync
 
-Dicas [aqui](http://www.electrictoolbox.com/rsync-ignore-existing-update-newer/)
+## Pegando e enviando arquivos para a Amazon
+
+~~~ Bash
+rsync -avz --progress -e "ssh -i chave.pem" ubuntu@ip:arquivo .
+~~~
 
 ## Apenas arquivos novos
+
+Dicas [aqui](http://www.electrictoolbox.com/rsync-ignore-existing-update-newer/)
 
 ~~~ Bash
 rsync --update -raz --progress <origem> <destino>
