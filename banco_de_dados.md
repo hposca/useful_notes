@@ -23,3 +23,11 @@ $ export PGPASSWORD="senha do banco"
 ~~~ Bash
 $ pg_dump -Fc -h host_para_o_banco -U usuario nome_do_banco | gzip -9 > dump.sql.gz
 ~~~
+
+## Restaurando o banco
+
+Ao final do processo acima temos um arquivo comprimido. Para restaurar o banco a partir deste arquivo podemos fazer algo como o seguinte:
+
+~~~ Bash
+$ gunzip -c dump.sql.gz | pg_restore -U usuario -d nome_da_base
+~~~
