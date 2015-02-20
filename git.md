@@ -31,6 +31,12 @@ $ git reset --hard HEAD~5 #will get you back 5 commits.
 $ git reset --merge ORIG_HEAD
 ~~~
 
+## [Showing which files have changed between git branches](http://stackoverflow.com/questions/822811/showing-which-files-have-changed-between-git-branches)
+
+~~~ Bash
+$ git diff --name-status master..branchName
+~~~
+
 ## [Git log all branches](http://www.lornajane.net/posts/2014/git-log-all-branches)
 
 ~~~ Bash
