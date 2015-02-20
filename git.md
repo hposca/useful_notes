@@ -37,6 +37,14 @@ $ git reset --merge ORIG_HEAD
 $ git diff --name-status master..branchName
 ~~~
 
+## [Git rename local git branch](http://stackoverflow.com/questions/6591213/rename-local-git-branch)
+
+~~~ Bash
+$ git branch -m <oldname> <newname>
+# or, if you want to rename the current branch:
+$ git branch -m <newname>
+~~~
+
 ## [Git log all branches](http://www.lornajane.net/posts/2014/git-log-all-branches)
 
 ~~~ Bash
