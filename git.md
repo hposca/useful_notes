@@ -3,7 +3,7 @@
 ## [How can I determine the url that a local git repo was originally cloned from?](http://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from)
 
 ~~~ Bash
-# If referential integrity has been broken:
+ # If referential integrity has been broken:
 $ git config --get remote.origin.url
 # If referential integrity is intact:
 $git remote show origin
@@ -97,6 +97,29 @@ $ git config --bool core.bare true
 ~~~
 
 Then delete all the files except .git in that folder. And then you will be able to perform git push to the remote repository without any errors.
+
+# Gerando Patches
+
+Dica do [How to create and apply a patch with Git](https://ariejan.net/2009/10/26/how-to-create-and-apply-a-patch-with-git/):
+
+## Para se gerar o patch:
+
+~~~ Bash
+$ git format-patch against_branch_name --stdout > name_of.patch
+~~~
+
+Outra forma de se gerar o patch é com `git diff`:
+
+~~~ Bash
+$ git diff sha1..sha2 > name_of.patch
+~~~
+
+## Para se aplicar o patch:
+
+~~~ Bash
+$ git apply --stat name_of.patch
+~~~
+Assim, ele só irá mostrar como será a aplicação do patch, não aplicará de verdade.
 
 # Trabalhando com Branches
 
