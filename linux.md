@@ -53,3 +53,12 @@ chmod 2444 arquivo
 # ou
 chmod 1444 arquivo
 ~~~
+
+# Mouse
+
+Quando o touchpad parar de funcionar basta executar estes dois comandos:
+
+~~~ Bash
+# modprobe -r psmouse
+# modprobe psmouse
+~~~
