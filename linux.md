@@ -62,3 +62,26 @@ Quando o touchpad parar de funcionar basta executar estes dois comandos:
 # modprobe -r psmouse
 # modprobe psmouse
 ~~~
+
+# Sort
+
+## Sort com delimitador diferente de espaços
+
+`-t`:
+~~~ Bash
+sort -t: myFile
+~~~
+
+## Sort n-ésima coluna
+
+`-k`:
+~~~ Bash
+sort -k3,3 myFile
+~~~
+
+## Sort com ordenação numérica de verdade ( 9 < 100 )
+
+`-n`:
+~~~ Bash
+sort -n myFile
+~~~
