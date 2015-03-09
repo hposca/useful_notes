@@ -217,3 +217,11 @@ $ git remote rm branchA
 
 Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório que estava no "repositório A", e com o histórico preservado!
 E isto tudo só foi possível devido às dicas [deste site](http://www.google.com/url?q=http%3A%2F%2Fgbayer.com%2Fdevelopment%2Fmoving-files-from-one-git-repository-to-another-preserving-history%2F&sa=D&sntz=1&usg=AFrqEzd245648I-fl6TPK2YXtsyvjdMGLw)!
+
+# Submodules
+
+Atualizando todos os submodules:
+
+~~~ Bash
+git submodule update --init --recursive
+~~~
