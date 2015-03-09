@@ -36,3 +36,17 @@ Depois de editar o hexadecimal, para converter o arquivo devolta ao formato bin√
 ~~~ Bash
 :%!xxd -r
 ~~~
+
+# Repetindo macros
+
+Execute the macro stored in register a on lines 5 through 10.
+
+~~~ Bash
+:5,10norm! @a
+~~~
+
+Execute the macro stored in register a on all lines.
+
+~~~ Bash
+:%norm! @a
+~~~
