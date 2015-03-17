@@ -51,6 +51,13 @@ $ git branch -m <newname>
 $ git log --oneline --graph --decorate --all
 ~~~
 
+## [Git remove remote branches](http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely)
+
+~~~ Bash
+$ git push origin --delete <branchName> # or
+$ git push origin :<branchName>
+~~~
+
 ## [Move commits from one branch to another](http://effectif.com/git/move-commit-from-one-branch-to-another)
 
 ~~~ Bash
