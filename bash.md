@@ -12,7 +12,7 @@ Para se pegar a extensão de um arquivo:
     ${name##*.}
 ~~~
 
-Assim podemos, por exemplo, renomear vários arquivos deixando-os com 4 digitos:
+Assim podemos, por exemplo, renomear vários arquivos deixando-os com 3 digitos:
 
 ~~~ Bash
     for name in *.jpg; do
