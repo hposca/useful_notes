@@ -80,6 +80,7 @@ $ git am -3 --ignore-whitespace *.patch
 ~~~
 
 Caso algum dos patches falhe na sua aplicação basta editar o arquivo, adicioná-lo com `git add` e dar um `git am --continue`
+
 ## [Move the most recent commit(s) to a new branch with Git](http://stackoverflow.com/questions/1628563/move-the-most-recent-commits-to-a-new-branch-with-git)
 
 ~~~ Bash
