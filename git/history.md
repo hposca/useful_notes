@@ -17,3 +17,18 @@ O conteúdo do que foi mudado:
     # ou
     git diff HEAD~10..HEAD~5
     ~~~
+
+# Revert a commit alredy pushed to a remote repository
+
+From [this blog entry](http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html) there are two good ways:
+
+    ~~~ Bash
+    git push origin +commit_sha^:master
+    ~~~
+
+or (The one I used):
+
+    ~~~ Bash
+    git reset HEAD^ --hard
+    git push origin -f
+    ~~~
