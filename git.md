@@ -132,3 +132,7 @@ Atualizando todos os submodules:
 ~~~ Bash
 git submodule update --init --recursive
 ~~~
+
+# How to grep (search) committed code in the git history?
+
+    git grep <regexp> $(git rev-list --all)
