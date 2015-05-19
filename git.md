@@ -92,6 +92,12 @@ $ git apply --stat name_of.patch
 ~~~
 Assim, ele só irá mostrar como será a aplicação do patch, não aplicará de verdade.
 
+Para realmente se aplicar o patch devemos chamar
+
+~~~ Bash
+$ git am name_of.patch
+~~~
+
 # Trabalhando com Branches
 
 
