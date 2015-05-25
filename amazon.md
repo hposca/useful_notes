@@ -14,3 +14,9 @@ aws elasticbeanstalk describe-configuration-settings --application-name $applica
 instances="i-12345678 i-09876543"
 aws ec2 describe-instances --instance-ids $instances --query "Reservations[].Instances[].Tags[?Key=='Name'].Value" --output=text
 ~~~
+
+- Pega informações de qual AMI foi utilizada para se gerar as instâncias:
+
+~~~ Bash
+aws ec2 describe-instances --query "Reservations[].Instances[*].[ImageId,Tags[?Key=='Name']]"
+~~~
