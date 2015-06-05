@@ -36,6 +36,14 @@ Dicas [aqui](http://www.electrictoolbox.com/rsync-ignore-existing-update-newer/)
 rsync --update -raz --progress <origem> <destino>
 ~~~
 
+## How to gzip a directory, transfer via scp, and decompress in one command?
+
+~~~ Bash
+    rsync -az --progress source_dir/* remote_host:/destination_dir # Show progress bar
+    #or:
+    tar -zc path/to/source | ssh user@remote tar -zxC path/to/destination # Doesn't show progress bar
+~~~
+
 # Encontrando arquivos com setuid ativado
 
 Com [ajuda](http://www.cyberciti.biz/faq/unix-bsd-linux-setuid-file/), conseguimos encontrar todos os arquivos que estão com setuid ativado. Isso foi útil para resolver um problema que estava dando no SAS devido ao fato dos bin não estarem setados com ele:
