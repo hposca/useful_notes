@@ -1,12 +1,18 @@
-﻿# Dicas Linux
+﻿
+# Dicas Linux
 
-[How do I list all cron jobs for all users?](http://stackoverflow.com/questions/134906/how-do-i-list-all-cron-jobs-for-all-users)
+## How do I list all cron jobs for all users?
+
+From [How do I list all cron jobs for all users?](http://stackoverflow.com/questions/134906/how-do-i-list-all-cron-jobs-for-all-users) :
 
 ~~~ Bash
-# for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
+# As root:
+for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
 ~~~
 
-[How to create a CPU spike with a bash command](http://stackoverflow.com/questions/2925606/how-to-create-a-cpu-spike-with-a-bash-command)
+## How to create a CPU spike with a bash command
+
+From [How to create a CPU spike with a bash command](http://stackoverflow.com/questions/2925606/how-to-create-a-cpu-spike-with-a-bash-command) :
 
 ~~~ Bash
 dd if=/dev/zero of=/dev/null
@@ -39,9 +45,9 @@ rsync --update -raz --progress <origem> <destino>
 ## How to gzip a directory, transfer via scp, and decompress in one command?
 
 ~~~ Bash
-    rsync -az --progress source_dir/* remote_host:/destination_dir # Show progress bar
-    #or:
-    tar -zc path/to/source | ssh user@remote tar -zxC path/to/destination # Doesn't show progress bar
+rsync -az --progress source_dir/* remote_host:/destination_dir # Show progress bar
+#or:
+tar -zc path/to/source | ssh user@remote tar -zxC path/to/destination # Doesn't show progress bar
 ~~~
 
 # Encontrando arquivos com setuid ativado
@@ -67,29 +73,27 @@ chmod 1444 arquivo
 Quando o touchpad parar de funcionar basta executar estes dois comandos:
 
 ~~~ Bash
-# modprobe -r psmouse
-# modprobe psmouse
+# Como root:
+modprobe -r psmouse
+modprobe psmouse
 ~~~
 
 # Sort
 
-## Sort com delimitador diferente de espaços
+### Sort com delimitador diferente de espaços
 
-`-t`:
 ~~~ Bash
 sort -t: myFile
 ~~~
 
-## Sort n-ésima coluna
+### Sort n-ésima coluna
 
-`-k`:
 ~~~ Bash
 sort -k3,3 myFile
 ~~~
 
-## Sort com ordenação numérica de verdade ( 9 < 100 )
+### Sort com ordenação numérica de verdade ( 9 < 100 )
 
-`-n`:
 ~~~ Bash
 sort -n myFile
 ~~~
