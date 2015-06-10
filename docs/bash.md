@@ -3,19 +3,21 @@
 Para se pegar o nome de um arquivo:
 
 ~~~ Bash
-    ${name%.*}
+${name%.*}
 ~~~
 
 Para se pegar a extensão de um arquivo:
 
 ~~~ Bash
-    ${name##*.}
+${name##*.}
 ~~~
 
-Assim podemos, por exemplo, renomear vários arquivos deixando-os com 3 digitos:
+Exemplo:
+
+- Renomear vários arquivos deixando-os com 3 digitos:
 
 ~~~ Bash
-    for name in *.jpg; do
-        echo mv $name $(printf %03d.%s ${name%.*} ${name##*.})
-    done
+for name in *.jpg; do
+  echo mv $name $(printf %03d.%s ${name%.*} ${name##*.})
+done
 ~~~
