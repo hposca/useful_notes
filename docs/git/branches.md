@@ -100,3 +100,37 @@ git branch newbranch
 git reset --hard HEAD~3 # Go back 3 commits. You *will* lose uncommitted work.
 git checkout newbranch
 ~~~
+
+## Movendo um diretório de um repositório para outro, preservando o histórico!
+
+Quem nunca começou a mexer em um diretório e depois percebeu que ele precisava ficar em outro repositório, ou até ser um repositório separado (uma biblioteca, por exemplo)? Seus problemas se acabaram-se!! `git filter-branch` ao resgate!
+
+Para esta receita de bolo queremos:
+
+- Mover um diretório de um repositório A para um repositório B
+
+E temos as seguintes condições:
+
+- O repositório A contém outras coisas além do diretório que queremos mover
+- Queremos preservar todo o histórico de commits que envolvam o diretório em questão
+
+(depois de fazer um backup do seu repositório, utilizando sua forma favorita)
+
+Na raiz do "repositório A":
+
+~~~ Bash
+git filter-branch --subdirectory-filter [oDitoCujoDoDiretorioQueQueremosSeparar] -- --all
+~~~
+
+Este lindo comando fará, segundo a documentação, como se o repositório fosse a raíz do repositório e todo o resto, desconhecido.
+
+Já no seu "repositório B":
+
+~~~ Bash
+git remote add branchA [caminhoParaORepositorioA]
+git pull branchA master # Ao invés de master você pode colocar a branch que estava sendo utilizada no repositório A
+git remote rm branchA
+~~~
+
+Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório que estava no "repositório A", e com o histórico preservado!
+E isto tudo só foi possível devido às dicas [deste site](http://www.google.com/url?q=http%3A%2F%2Fgbayer.com%2Fdevelopment%2Fmoving-files-from-one-git-repository-to-another-preserving-history%2F&sa=D&sntz=1&usg=AFrqEzd245648I-fl6TPK2YXtsyvjdMGLw)!
