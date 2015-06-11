@@ -12,5 +12,6 @@ pages:
 - Latex: 'latex.md'
 - Linux: 'linux.md'
 - Perl: 'perl.md'
+- Ruby: 'ruby.md'
 - Vim: 'vim.md'
 theme: readthedocs
