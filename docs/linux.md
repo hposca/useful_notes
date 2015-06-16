@@ -97,3 +97,19 @@ sort -k3,3 myFile
 ~~~ Bash
 sort -n myFile
 ~~~
+
+## Ativando swap
+
+Ativando swap, seguindo o [tutorial da DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04):
+
+~~~
+#!/usr/bin/env bash
+if [ $(id -u) -ne 0 ]; then echo "Run as root"; exit 1; fi
+free -m
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+free -m
+~~~
