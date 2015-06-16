@@ -3,6 +3,7 @@ pages:
 - 'index.md'
 - Amazon: 'amazon.md'
 - Banco de dados: 'banco_de_dados.md'
+- Benchmarks: 'benchmarks.md'
 - Bash: 'bash.md'
 - Docker: 'docker.md'
 - Git:
