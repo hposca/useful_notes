@@ -23,6 +23,13 @@
     dp		Same as ":diffput" without argument or range.
             Note: this doesn't work in Visual mode.
 
+## Scroll simultâneo
+
+~~~ Bash
+set scrollbind   # Para ativar
+set noscrollbind # Para desativar
+~~~
+
 # Abrindo um arquivo em hexadecimal
 
 Depois de abrir o arquivo, para se ver o hex dump dele:
@@ -49,4 +56,20 @@ Execute the macro stored in register a on all lines.
 
 ~~~ Bash
 :%norm! @a
+~~~
+
+# Correção ortográfica
+
+~~~ Bash
+set spell spelllang=en_ca      # Ativando globalmente
+setlocal spell spelllang=en_ca # Ativando localmente
+set nospell                    # Desativando
+
+]s                             # move the cursor to the next misspelled word
+[s                             # move the cursor back to previous misspelled words.
+
+z=                             # Vim will suggest a list of alternatives that it thinks may be correct
+
+zg                             # Vim will add the word to its dictionary
+zw                             # Mark word as incorrect
 ~~~
