@@ -10,6 +10,7 @@ pages:
   - Geral: 'git/git.md'
   - Branches: 'git/branches.md'
   - History: 'git/history.md'
+  - Undoing Mistakes: 'git/undoing.md'
 - Latex: 'latex.md'
 - Linux: 'linux.md'
 - Perl: 'perl.md'
