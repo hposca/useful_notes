@@ -22,6 +22,8 @@ Or in one command, if `$file` is the file in question.
 git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"
 ~~~
 
+__HINT:__ Use `git log --diff-filter=D --summary` to get all the commits which have deleted files and the files deleted;
+
 # Undoing a git rebase
 
 Sometimes we want to undo a bad `git rebase`, hints from [StackOverflow](http://stackoverflow.com/questions/134882/undoing-a-git-rebase) :
