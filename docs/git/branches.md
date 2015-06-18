@@ -134,3 +134,26 @@ git remote rm branchA
 
 Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório que estava no "repositório A", e com o histórico preservado!
 E isto tudo só foi possível devido às dicas [deste site](http://www.google.com/url?q=http%3A%2F%2Fgbayer.com%2Fdevelopment%2Fmoving-files-from-one-git-repository-to-another-preserving-history%2F&sa=D&sntz=1&usg=AFrqEzd245648I-fl6TPK2YXtsyvjdMGLw)!
+
+# How do you squash commits into one patch with git format-patch?
+
+With the help of [StackOverflow](http://stackoverflow.com/questions/616556/how-do-you-squash-commits-into-one-patch-with-git-format-patch).
+
+~~~ Bash
+[(master)]$ git checkout -b tmpsquash
+Switched to a new branch "tmpsquash"
+
+[(tmpsquash)]$ git merge --squash newlines
+Updating 4d2de39..b6768b2
+Fast forward
+Squash commit -- not updating HEAD
+ test.txt |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+[(tmpsquash)]$ git commit -a -m "My squashed commits"
+[tmpsquash]: created 75b0a89: "My squashed commits"
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+[(tmpsquash)]$ git format-patch master
+0001-My-squashed-commits.patch
+~~~
