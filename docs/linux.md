@@ -113,3 +113,17 @@ swapon /swapfile
 swapon -s
 free -m
 ~~~
+
+# Loop com arquivos que têm espaços no nome
+
+Dicas extraídas [daqui](http://askubuntu.com/questions/343727/filenames-with-spaces-breaking-for-loop-find-command) e [daqui](http://www.cyberciti.biz/tips/handling-filenames-with-spaces-in-bash.html).
+
+~~~ Bash
+find . -print0 | while read -d $'\0' file; do cp -v "$file" /tmp; done
+~~~
+
+~~~ Bash
+find . -type f -name '*.*' -printf '%p\0' | tar --null -uf archive.tar -T -
+~~~
+
+
