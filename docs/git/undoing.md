@@ -24,6 +24,21 @@ git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"
 
 __HINT:__ Use `git log --diff-filter=D --summary` to get all the commits which have deleted files and the files deleted;
 
+__HINT 2:__ [from here](http://blog.kablamo.org/2013/12/08/git-restore/) How to search the contents of deleted files
+
+Lets say I don’t remember the filename of that file I deleted in a fit of cleanup passion. I do remember the name of one of the functions in it though. Here is how to deal with that. Search the contents of all files that have ever existed in git for a string:
+
+~~~ Bash
+git log --summary -S<string> [<path/to/file>] [--since=2009.1.1] [--until=2010.1.1]
+~~~
+
+Another way to do this:
+
+~~~ Bash
+git rev-list --all | xargs git grep 'string'
+~~~
+
+
 # Undoing a git rebase
 
 Sometimes we want to undo a bad `git rebase`, hints from [StackOverflow](http://stackoverflow.com/questions/134882/undoing-a-git-rebase) :
