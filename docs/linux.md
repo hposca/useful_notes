@@ -126,4 +126,10 @@ find . -print0 | while read -d $'\0' file; do cp -v "$file" /tmp; done
 find . -type f -name '*.*' -printf '%p\0' | tar --null -uf archive.tar -T -
 ~~~
 
+# Descobrindo a placa de vídeo
 
+Para se decobrir qual placa de vídeo estamos usando podemos utilizar o `lspci` como descrito [aqui](http://www.binarytides.com/linux-get-gpu-information/) e [aqui](http://www.cyberciti.biz/faq/linux-tell-which-graphics-vga-card-installed/):
+
+~~~ Bash
+lspci -v
+~~~
