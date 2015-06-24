@@ -45,3 +45,24 @@ git rm --cached <file>
 
 The removal of the file from the head revision will happen on the next commit.
 
+# Edit an incorrect commit message in Git
+
+With hints from [StackOverflow](http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git):
+
+1. If the commit you want to fix isn’t the most recent one:
+
+    If you want to fix several flawed commits, pass the parent of the oldest one of them.
+    `git rebase --interactive $parent_of_flawed_commit`
+
+1. An editor will come up, with a list of all commits since the one you gave.
+
+    1. Change `pick` to `reword` (or on old versions of Git, to _edit_) in front of any commits you want to fix.
+    1. Once you save, Git will replay the listed commits.
+
+1. For each commit you want to `reword`, Git will drop you back into your editor. For each commit you want to edit, Git drops you into the shell. If you’re in the shell:
+
+    1. Change the commit in any way you like.
+    1. `git commit --amend`
+    1. `git rebase --continue`
+
+Most of this sequence will be explained to you by the output of the various commands as you go. It’s very easy, you don’t need to memorise it – just remember that `git rebase --interactive` lets you correct commits no matter how long ago they were.
