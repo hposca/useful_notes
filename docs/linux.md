@@ -139,3 +139,21 @@ lspci -v
 ## Avoid copy if files exist in destination
 
     cp -R -u -p /source /destination
+
+Due to these options:
+
+    -p                           same as --preserve=mode,ownership,timestamps
+        --preserve[=ATTR_LIST]   preserve the specified attributes (default:
+                                mode,ownership,timestamps), if possible
+                                additional attributes: context, links, xattr,
+                                all
+    -R, -r, --recursive          copy directories recursively
+        --reflink[=WHEN]         control clone/CoW copies. See below
+        --remove-destination     remove each existing destination file before
+                                attempting to open it (contrast with --force)
+        --sparse=WHEN            control creation of sparse files. See below
+        --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                argument
+    -u, --update                 copy only when the SOURCE file is newer
+                                than the destination file or when the
+                                destination file is missing
