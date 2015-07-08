@@ -133,3 +133,9 @@ Para se decobrir qual placa de vídeo estamos usando podemos utilizar o `lspci` 
 ~~~ Bash
 lspci -v
 ~~~
+
+# Copying
+
+## Avoid copy if files exist in destination
+
+    cp -R -u -p /source /destination
