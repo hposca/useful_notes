@@ -161,3 +161,7 @@ Due to these options:
 # Displaying Today’s Files Only
 
     find -maxdepth 1 -type f -mtime -1
+
+# How to zip files that are listed in a text file
+
+    cat input.txt | zip filename.zip -@
