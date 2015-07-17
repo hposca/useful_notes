@@ -157,3 +157,7 @@ Due to these options:
     -u, --update                 copy only when the SOURCE file is newer
                                 than the destination file or when the
                                 destination file is missing
+
+# Displaying Today’s Files Only
+
+    find -maxdepth 1 -type f -mtime -1
