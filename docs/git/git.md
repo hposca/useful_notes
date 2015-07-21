@@ -115,3 +115,9 @@ git submodule update --init --recursive
 ~~~ Bash
 git grep [regexp] $(git rev-list --all)
 ~~~
+
+# Add only non-whitespace changes
+
+Suponha que o seu editor tenha feito mudanças nos whitespaces/tabs, para apenas adicionar ao staging as mudanças de verdade:
+
+    git diff -w --no-color <arquivo> | git apply --cached --ignore-whitespace
