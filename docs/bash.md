@@ -28,6 +28,10 @@ Misturando algumas [respostas do StackOverflow](http://stackoverflow.com/questio
 
     find . -type f -not -iwholename '*.git*' -exec bash -c 'expand -t 2 "$0" > /tmp/e && mv /tmp/e "$0"' {} \;
 
+Ignorando um diretório:
+
+    find . -type f -iname "*.rb" -not -path "*/vendor/*" -exec bash -c 'expand -t 2 "$0" > /tmp/e && mv /tmp/e "$0"' {} \;
+
 Se estivermos em um repositório git podemos garantir que não alteramos nada de
 verdade executando um:
 
