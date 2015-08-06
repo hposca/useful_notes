@@ -58,6 +58,27 @@ Execute the macro stored in register a on all lines.
 :%norm! @a
 ~~~
 
+# Editando macros
+
+Dicas [desse site](https://robots.thoughtbot.com/how-to-edit-an-existing-vim-macro)
+
+Yanking into a register
+
+    "qp paste the contents of the register to the current cursor position
+    I enter insert mode at the begging of the pasted line
+    ^ add the missing motion to return to the front of the line
+    <Escape> return to visual mode
+    "qyy yank this new modified macro back into the q register
+    dd delete the pasted register from the file your editing
+
+Editing the register visually
+
+    :let @q=' open the q register
+    <Cntl-r><Cntl-r>q paste the contents of the q register into the buffer
+    ^ add the missing motion to return to the front of the line
+    ' add a closing quote
+    <Enter> finish editing the macro
+
 # Correção ortográfica
 
 ~~~ Bash
