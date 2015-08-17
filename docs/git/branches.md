@@ -127,9 +127,13 @@ Este lindo comando fará, segundo a documentação, como se o repositório fosse
 Já no seu "repositório B":
 
 ~~~ Bash
+git checkout -b new_branch
 git remote add branchA [caminhoParaORepositorioA]
 git pull branchA master # Ao invés de master você pode colocar a branch que estava sendo utilizada no repositório A
 git remote rm branchA
+git checkout master
+git merge --no-ff new_branch
+git branch -d new_branch
 ~~~
 
 Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório que estava no "repositório A", e com o histórico preservado!
