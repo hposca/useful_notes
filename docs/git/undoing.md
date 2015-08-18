@@ -63,3 +63,27 @@ git reset --hard HEAD@{5}
 ~~~
 
 __HINT:__ Just in case, make a backup first: `git tag BACKUP`. You can return to it if something goes wrong: `git reset --hard BACKUP`
+
+## Desfazendo o último commit
+
+~~~ Bash
+git reset --soft HEAD~1
+~~~
+
+# Desfazendo o primeiro commit de um repositório
+
+~~~ Bash
+git update-ref -d HEAD
+~~~
+
+# Undo a git merge
+
+From [Undo a git merge](http://stackoverflow.com/questions/2389361/undo-a-git-merge) :
+
+~~~ Bash
+git reset --hard commit_sha
+# ou
+git reset --hard HEAD~5 #will get you back 5 commits.
+# ou
+git reset --merge ORIG_HEAD
+~~~

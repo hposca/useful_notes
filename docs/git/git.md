@@ -11,30 +11,6 @@ git config --get remote.origin.url
 git remote show origin
 ~~~
 
-## Desfazendo o último commit
-
-~~~ Bash
-git reset --soft HEAD~1
-~~~
-
-## Desfazendo o primeiro commit de um repositório
-
-~~~ Bash
-git update-ref -d HEAD
-~~~
-
-## Undo a git merge
-
-From [Undo a git merge](http://stackoverflow.com/questions/2389361/undo-a-git-merge) :
-
-~~~ Bash
-git reset --hard commit_sha
-# ou
-git reset --hard HEAD~5 #will get you back 5 commits.
-# ou
-git reset --merge ORIG_HEAD
-~~~
-
 ## Problema ao se fazer push para um repositório "non-bare"
 
 ~~~ Bash
