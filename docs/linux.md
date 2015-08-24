@@ -165,3 +165,9 @@ Due to these options:
 # How to zip files that are listed in a text file
 
     cat input.txt | zip filename.zip -@
+
+# Desabilitando um usuário, mas sem apagá-lo
+
+    usermod --expiredate 1 [LOGIN]
+
+    passwd -l [LOGIN]
