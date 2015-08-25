@@ -171,3 +171,28 @@ Due to these options:
     usermod --expiredate 1 [LOGIN]
 
     passwd -l [LOGIN]
+
+# IPTables (Firewall)
+
+Algumas dicas interessantes:
+
+- [Apagando uma regra do firewall por linha](http://stackoverflow.com/questions/10197405/iptables-remove-specific-rules)
+- [Um bom tutorial explicando como funciona](http://www.thegeekstuff.com/2011/02/iptables-add-rule/)
+- [Um tutorial simples](https://wiki.centos.org/HowTos/Network/IPTables)
+
+Listando as regras, com portas e número das linhas:
+
+    iptables -L -n --line-numbers
+
+Apagando uma linha específica:
+
+    iptables -D INPUT [num]
+
+Adicionando regra para novas conexões:
+
+    iptables -A INPUT -m state --state NEW -p tcp --dport [porta] -j ACCEPT
+
+Regra para se rejeitar demais conexões:
+
+    iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
+    iptables -A INPUT -j DROP
