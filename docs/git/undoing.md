@@ -87,3 +87,11 @@ git reset --hard HEAD~5 #will get you back 5 commits.
 # ou
 git reset --merge ORIG_HEAD
 ~~~
+
+## How to revert a merge that is already pushed to remote?
+
+From this [StackOverflow hint](http://stackoverflow.com/questions/7099833/how-to-revert-a-merge-commit-thats-already-pushed-to-remote-branch):
+
+    git revert merge_sha -m [1,2]
+
+To discover if you have to use 1 or 2 do a `git log` on the merge_sha, then 1 will represent the left SHA and 2 the right SHA that appear in the 'Merge' line.
