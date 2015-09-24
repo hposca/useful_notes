@@ -196,3 +196,23 @@ Regra para se rejeitar demais conexões:
 
     iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
     iptables -A INPUT -j DROP
+
+# How to run multiple simultaneous X Window sessions
+
+From [Linux Commando](http://linuxcommando.blogspot.com.br/2015/02/how-to-run-multiple-simultaneous-x.html)
+
+- Switch to a virtual terminal
+    - By default, six virtual text terminals are available to you (Ctrl+Alt+F1 to F6)
+    - Press Control+Alt+F1 to go to virtual terminal 1
+- Login as her
+- Execute the following command
+    `startx -- :1`
+- This starts another X session using the first free graphical console.
+    - By default, 6 X consoles are available (Ctrl+Alt+F7 to F12)
+    - Your own existing X session is Ctrl+Alt+F7
+    - The next free X console is therefore Ctrl+Alt+F8
+- To switch from her X session to yours, and vice versa, press Ctrl+Alt+F7 and Ctrl+Alt+F8 respectively.
+
+You may use the above procedure to create up to 5 additional X sessions (Ctrl+Alt+F8 to Ctrl+Alt+F12).
+For each additional X session, increment the console number in both step 1 and 3.
+For instance, switch to virtual terminal 2 (Control+Alt+F2) to execute the command `startx -- :2`.
