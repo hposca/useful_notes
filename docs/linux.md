@@ -216,3 +216,24 @@ From [Linux Commando](http://linuxcommando.blogspot.com.br/2015/02/how-to-run-mu
 You may use the above procedure to create up to 5 additional X sessions (Ctrl+Alt+F8 to Ctrl+Alt+F12).
 For each additional X session, increment the console number in both step 1 and 3.
 For instance, switch to virtual terminal 2 (Control+Alt+F2) to execute the command `startx -- :2`.
+
+# No wired connection after suspend
+
+**(Not tested yet)**
+
+From [this Ubuntu Forum thread](http://ubuntuforums.org/showthread.php?t=2179603):
+
+- Get the Kernel module with `lspci -k | grep -iA3 NETWORK` or `lspci -k | grep -iA3 ethernet`
+- Edit `/etc/pm/config.d/modules`
+    - Add `SUSPEND_MODULES="<the_kernel_module_for_your_network_card>"`
+
+Another attempt, knowing that your Kernel module is 8139too:
+
+1. Unload 8139too:
+    sudo modprobe -r 8139too
+2. Suspend:
+    sudo pm-suspend
+3. Resume the computer from suspend
+4. Reload the module:
+    sudo modprobe 8139too
+5. Test the network connection.
