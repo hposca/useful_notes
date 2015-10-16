@@ -226,3 +226,24 @@ Sometimes you need to debug your SSH connection, for those times you can open an
 And when (from other machine) need to connect to it:
 
     ssh -p 2222 user@machine
+
+# No wired connection after suspend
+
+**(Not tested yet)**
+
+From [this Ubuntu Forum thread](http://ubuntuforums.org/showthread.php?t=2179603):
+
+- Get the Kernel module with `lspci -k | grep -iA3 NETWORK` or `lspci -k | grep -iA3 ethernet`
+- Edit `/etc/pm/config.d/modules`
+    - Add `SUSPEND_MODULES="<the_kernel_module_for_your_network_card>"`
+
+Another attempt, knowing that your Kernel module is 8139too:
+
+1. Unload 8139too:
+    sudo modprobe -r 8139too
+2. Suspend:
+    sudo pm-suspend
+3. Resume the computer from suspend
+4. Reload the module:
+    sudo modprobe 8139too
+5. Test the network connection.
