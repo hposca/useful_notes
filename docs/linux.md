@@ -216,3 +216,13 @@ From [Linux Commando](http://linuxcommando.blogspot.com.br/2015/02/how-to-run-mu
 You may use the above procedure to create up to 5 additional X sessions (Ctrl+Alt+F8 to Ctrl+Alt+F12).
 For each additional X session, increment the console number in both step 1 and 3.
 For instance, switch to virtual terminal 2 (Control+Alt+F2) to execute the command `startx -- :2`.
+
+# Create another SSH server
+
+Sometimes you need to debug your SSH connection, for those times you can open another SSH server and watch what is happening inside it.
+
+    /usr/sbin/sshd -d -p 2222
+
+And when (from other machine) need to connect to it:
+
+    ssh -p 2222 user@machine
