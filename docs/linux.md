@@ -247,3 +247,9 @@ Another attempt, knowing that your Kernel module is 8139too:
 4. Reload the module:
     sudo modprobe 8139too
 5. Test the network connection.
+
+# Validating RSA public keys
+
+    ssh-keygen -l -f key.pub
+
+More info on [How do I validate a RSA ssh public key file (id_rsa.pub)? - Server Fault](http://serverfault.com/questions/453296/how-do-i-validate-a-rsa-ssh-public-key-file-id-rsa-pub)
