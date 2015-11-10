@@ -253,3 +253,18 @@ Another attempt, knowing that your Kernel module is 8139too:
     ssh-keygen -l -f key.pub
 
 More info on [How do I validate a RSA ssh public key file (id_rsa.pub)? - Server Fault](http://serverfault.com/questions/453296/how-do-i-validate-a-rsa-ssh-public-key-file-id-rsa-pub)
+
+# Getting you own key from the command line
+
+To get your fingerprint
+
+    ssh-add -l
+
+To get your public key
+
+    ssh-add -L
+
+This is useful when you are inside a Docker container that has your keys forwarded to it using:
+
+    -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK)
+    -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK
