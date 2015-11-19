@@ -268,3 +268,7 @@ This is useful when you are inside a Docker container that has your keys forward
 
     -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK)
     -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK
+
+# Getting home directory by username
+
+    eval echo ~$USER
