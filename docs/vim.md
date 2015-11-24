@@ -94,3 +94,9 @@ z=                             # Vim will suggest a list of alternatives that it
 zg                             # Vim will add the word to its dictionary
 zw                             # Mark word as incorrect
 ~~~
+
+# Substituindo ^M por quebras de linha
+
+With help from [here](http://stackoverflow.com/questions/811193/how-to-convert-the-m-linebreak-to-normal-linebreak-in-a-file-opened-in-vim):
+
+    :%s/<Ctrl-V><Ctrl-M>/\r/g
