@@ -272,3 +272,10 @@ This is useful when you are inside a Docker container that has your keys forward
 # Getting home directory by username
 
     eval echo ~$USER
+
+# Reduce size of PDF files
+
+- [compression - How can I reduce the file size of a scanned PDF file? - Ask Ubuntu](http://askubuntu.com/questions/113544/how-can-i-reduce-the-file-size-of-a-scanned-pdf-file)
+- [compression - How to reduce the size of a pdf file? - Ask Ubuntu](http://askubuntu.com/questions/207447/how-to-reduce-the-size-of-a-pdf-file)
+- [Reducing PDF file-size in Linux | The Road to Elysium](http://jorge.fbarr.net/2012/11/29/reducing-pdf-file-size-in-linux/)
+- [Bash Shell: Ignore Aliases and Functions When Running A Command](http://www.cyberciti.biz/faq/ignore-shell-aliases-functions-when-running-command/)
