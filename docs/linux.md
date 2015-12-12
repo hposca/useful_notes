@@ -279,3 +279,16 @@ This is useful when you are inside a Docker container that has your keys forward
 - [compression - How to reduce the size of a pdf file? - Ask Ubuntu](http://askubuntu.com/questions/207447/how-to-reduce-the-size-of-a-pdf-file)
 - [Reducing PDF file-size in Linux | The Road to Elysium](http://jorge.fbarr.net/2012/11/29/reducing-pdf-file-size-in-linux/)
 - [Bash Shell: Ignore Aliases and Functions When Running A Command](http://www.cyberciti.biz/faq/ignore-shell-aliases-functions-when-running-command/)
+
+# How do I find out which process is eating up my bandwidth
+
+From [networking - How do I find out which process is eating up my bandwidth? - Ask Ubuntu](http://askubuntu.com/questions/2411/how-do-i-find-out-which-process-is-eating-up-my-bandwidth):
+
+    sudo apt-get install -y nethogs
+    sudo nethogs eth0
+
+Another way:
+
+- Run `sudo iftop`
+- Push `S` or `D` to display Source and Destination ports
+- Then use `netstat -tup` to discover the process
