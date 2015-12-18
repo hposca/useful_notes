@@ -280,6 +280,19 @@ This is useful when you are inside a Docker container that has your keys forward
 - [Reducing PDF file-size in Linux | The Road to Elysium](http://jorge.fbarr.net/2012/11/29/reducing-pdf-file-size-in-linux/)
 - [Bash Shell: Ignore Aliases and Functions When Running A Command](http://www.cyberciti.biz/faq/ignore-shell-aliases-functions-when-running-command/)
 
+Low quality options:
+
+    gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -sOutputFile=new_file.pdf original_file.pdf
+    gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -sOutputFile=new_file.pdf original_file.pdf
+
+The best balance was found in:
+
+    gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -sOutputFile=new_file.pdf original_file.pdf
+
+**Note:** You may need to issue the command with a backslash in front of it if you use 'gs' as an alias:
+
+    \gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -sOutputFile=new_file.pdf original_file.pdf
+
 # How do I find out which process is eating up my bandwidth
 
 From [networking - How do I find out which process is eating up my bandwidth? - Ask Ubuntu](http://askubuntu.com/questions/2411/how-do-i-find-out-which-process-is-eating-up-my-bandwidth):
