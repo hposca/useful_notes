@@ -292,3 +292,33 @@ Another way:
 - Run `sudo iftop`
 - Push `S` or `D` to display Source and Destination ports
 - Then use `netstat -tup` to discover the process
+
+# Splitting and merging PDF files
+
+With hints from:
+
+- [Linux Commando: Splitting up is easy for a PDF file](http://linuxcommando.blogspot.com.br/2013/02/splitting-up-is-easy-for-pdf-file.html)
+- [Linux Commando: How to split up PDF files - part 2](http://linuxcommando.blogspot.com.br/2014/01/how-to-split-up-pdf-files-part-2.html)
+- [Linux Commando: How to merge or split pdf files using convert](http://linuxcommando.blogspot.com.br/2015/03/how-to-merge-or-split-pdf-files-using.html)
+
+    sudo apt-get update && sudo apt-get install -y pdftk
+
+## Splitting
+
+You can specify page ranges like this:
+
+    pdftk myoldfile.pdf cat 1-2 4-5 output mynewfile.pdf
+
+pdftk has a few more tricks in its back pocket. For example, you can specify a burst operation to split each page in the input file into a separate output file.
+
+    pdftk myoldfile.pdf burst
+
+By default, the output files are named pg_0001.pdf, pg_0002.pdf, etc.
+
+## Merging
+
+pdftk is also capable of merging multiple pdf files into one pdf.
+
+    pdftk pg_0001.pdf pg_0002.pdf pg_0004.pdf pg_0005.pdf output mynewfile.pdf
+
+That would merge the files corresponding to the first, second, fourth and fifth pages into a single output pdf.
