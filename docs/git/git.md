@@ -97,3 +97,19 @@ git grep [regexp] $(git rev-list --all)
 Suponha que o seu editor tenha feito mudanças nos whitespaces/tabs, para apenas adicionar ao staging as mudanças de verdade:
 
     git diff -w --no-color <arquivo> | git apply --cached --ignore-whitespace
+
+# Temporarily stop watching a file
+
+    git update-index --assume-unchanged <file>
+
+Now the file, even if modified, will not appear in a git status.
+
+To undo it:
+
+    git update-index --no-assume-unchanged <file>
+
+To list all the files that are "hidden" in this way:
+
+    git ls-files -v | grep '^h'
+
+With the help of [StackOverflow](http://stackoverflow.com/questions/17195861/undo-git-update-index-assume-unchanged-file)
