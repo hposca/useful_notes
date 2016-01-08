@@ -237,15 +237,25 @@ From [this Ubuntu Forum thread](http://ubuntuforums.org/showthread.php?t=2179603
 - Edit `/etc/pm/config.d/modules`
     - Add `SUSPEND_MODULES="<the_kernel_module_for_your_network_card>"`
 
-Another attempt, knowing that your Kernel module is 8139too:
+Or in one shot:
 
-1. Unload 8139too:
-    sudo modprobe -r 8139too
+    lspci -k | grep -iA3 ethernet | grep -i "Kernel driver" | awk '{print $NF}'
+
+Knowing that your Kernel module is 8139:
+
+1. Unload 8139:
+
+    sudo modprobe -r 8139
+
 2. Suspend:
+
     sudo pm-suspend
+
 3. Resume the computer from suspend
 4. Reload the module:
-    sudo modprobe 8139too
+
+    sudo modprobe 8139
+
 5. Test the network connection.
 
 # Validating RSA public keys
