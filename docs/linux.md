@@ -345,3 +345,15 @@ pdftk is also capable of merging multiple pdf files into one pdf.
     pdftk pg_0001.pdf pg_0002.pdf pg_0004.pdf pg_0005.pdf output mynewfile.pdf
 
 That would merge the files corresponding to the first, second, fourth and fifth pages into a single output pdf.
+
+# Discovering available versions of a package to install
+
+Discover which versions are available using one of the following commands:
+
+    apt-cache policy <package-name>
+    apt-cache madison <package-name>
+
+Then, to install the chosen version:
+
+    sudo apt-get install package=version
+
