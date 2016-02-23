@@ -113,3 +113,9 @@ To list all the files that are "hidden" in this way:
     git ls-files -v | grep '^h'
 
 With the help of [StackOverflow](http://stackoverflow.com/questions/17195861/undo-git-update-index-assume-unchanged-file)
+
+# Discovering when text was modified in a file
+
+With the help of [StackOverflow](http://stackoverflow.com/questions/12591247/find-when-line-was-deleted):
+
+    git log -c -S'missingtext' /path/to/file
