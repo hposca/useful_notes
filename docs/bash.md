@@ -36,3 +36,7 @@ Se estivermos em um repositório git podemos garantir que não alteramos nada de
 verdade executando um:
 
     git diff --ignore-all-space
+
+# Converting spaces in filenames to underlines
+
+    for file in *pdf; do mv $file $(echo $file | tr -s ' ' '_'); done
