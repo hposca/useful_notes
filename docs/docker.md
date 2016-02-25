@@ -35,3 +35,14 @@ Still not enough space? What is this ‘vfs’ directory?
 ~~~
 docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes
 ~~~
+
+# Acessing the container to use debugging tools
+
+In rails development sometimes we have to use [pry](https://github.com/pry/pry) via `binding.pry` to debug our code.
+
+As we need to be on the same terminal that is running the process we need to start our server manually:
+
+    docker-compose run --service-ports <container-name-defined-in-the-docker-compose-file> /bin/bash
+    rails s
+
+And then, when we hit the breakpoint (`binding.pry`) we can [use pry](https://github.com/pry/pry/wiki) normally.
