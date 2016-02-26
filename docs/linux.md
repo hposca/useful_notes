@@ -357,3 +357,6 @@ Then, to install the chosen version:
 
     sudo apt-get install package=version
 
+# Copying text from the command line
+
+    xclip -sel clip < ~/.ssh/id_rsa.pub
