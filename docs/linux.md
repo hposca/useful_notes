@@ -197,6 +197,18 @@ Regra para se rejeitar demais conexões:
     iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
     iptables -A INPUT -j DROP
 
+Bloqueando acesso de saída (upload) de um IP:
+
+    iptables -A OUTPUT -d [ip-address] -j DROP
+
+Bloqueando saída por porta:
+
+    iptables -A OUTPUT -p tcp --dport [port] -j DROP
+
+To block tcp port for an IP address:
+
+    iptables -A OUTPUT -p tcp -d [ip address] --dport [port] -j DROP
+
 # How to run multiple simultaneous X Window sessions
 
 From [Linux Commando](http://linuxcommando.blogspot.com.br/2015/02/how-to-run-multiple-simultaneous-x.html)
