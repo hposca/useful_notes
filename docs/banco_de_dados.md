@@ -1,5 +1,17 @@
 #  Anotações referentes a Bancos de Dados
 
+# MySQL
+
+Primeiramente temos que ter o pacote `mysql-client` instalado.
+
+## Tirando o dump
+
+    mysqldump -u root --host=<HOST DO BANCO> --user='<username>' --password='<senha do banco>' database_name > /tmp/dump.sql
+
+## Restaurando para uma base de dados rails
+
+    rails db < dump.sql
+
 # PostgreSQL + Amazon RDS
 
 ## Tirando um dump de um banco que está na Amazon RDS
