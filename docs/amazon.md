@@ -22,3 +22,11 @@ aws ec2 describe-instances --instance-ids $instances --query "Reservations[].Ins
 ~~~ Bash
 aws ec2 describe-instances --query "Reservations[].Instances[*].[ImageId,Tags[?Key=='Name']]"
 ~~~
+
+# S3
+
+## Discovering how much disk space a bucket is using
+
+From [this answer in StackOverflow](http://stackoverflow.com/questions/8975959/aws-s3-how-do-i-see-how-much-disk-space-is-using):
+
+    aws s3 ls s3://<bucketname> --recursive  | grep -v -E "(Bucket: |Prefix: |LastWriteTime|^$|--)" | awk 'BEGIN {total=0}{total+=$3}END{print total/1024/1024" MB"}'
