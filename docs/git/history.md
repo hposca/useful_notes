@@ -18,6 +18,16 @@ git diff sha1..sha2
 git diff HEAD~10..HEAD~5
 ~~~
 
+## Branches and commits between two commits
+
+- All commits between two commits (only the direct path)
+
+    git log --ancestry-path <root>..<descendant>
+
+- Current branches that are children of another
+
+    git branch --contains <root branch>
+
 # Revert a commit alredy pushed to a remote repository
 
 From [this blog entry](http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html) there are two good ways:
