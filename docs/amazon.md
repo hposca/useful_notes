@@ -30,3 +30,13 @@ aws ec2 describe-instances --query "Reservations[].Instances[*].[ImageId,Tags[?K
 From [this answer in StackOverflow](http://stackoverflow.com/questions/8975959/aws-s3-how-do-i-see-how-much-disk-space-is-using):
 
     aws s3 ls s3://<bucketname> --recursive  | grep -v -E "(Bucket: |Prefix: |LastWriteTime|^$|--)" | awk 'BEGIN {total=0}{total+=$3}END{print total/1024/1024" MB"}'
+
+## Copying the content between buckets
+
+First step, see what it will do:
+
+    aws s3 sync s3://source-bucket s3://destination-bucket --dryrun
+
+If everything looks fine, execute it:
+
+    aws s3 sync s3://source-bucket s3://destination-bucket
