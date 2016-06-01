@@ -10,7 +10,7 @@ Primeiramente temos que ter o pacote `mysql-client` instalado.
 
 ## Restaurando para uma base de dados rails
 
-    rails db < dump.sql
+    rails db -p < dump.sql
 
 # PostgreSQL + Amazon RDS
 
