@@ -40,3 +40,7 @@ verdade executando um:
 # Converting spaces in filenames to underlines
 
     for file in *pdf; do mv $file $(echo $file | tr -s ' ' '_'); done
+
+    or
+
+    for file in *pdf; do rename 's/ /_/g' $file; done
