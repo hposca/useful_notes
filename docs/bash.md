@@ -44,3 +44,12 @@ verdade executando um:
     or
 
     for file in *pdf; do rename 's/ /_/g' $file; done
+
+# Getting the exit status of a command even when using tee
+
+Even when using `tee` you can use the `${PIPESTATUS}` variable to see what was
+the exit code of the executed command.
+It can be used to check if the status was `0` so you can continue your command
+chain:
+
+    ./my_command.sh | tee -a /tmp/output.log ; test ${PIPESTATUS[0]} -eq 0 && ...
