@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Banco de dados - Anotações</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Banco de dados";
+    var mkdocs_page_input_path = "banco_de_dados.md";
+    var mkdocs_page_url = "/banco_de_dados/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Anotações</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../amazon/">Amazon</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Banco de dados</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#anotacoes-referentes-a-bancos-de-dados">Anotações referentes a Bancos de Dados</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#mysql">MySQL</a></li>
+                
+                    <li><a class="toctree-l4" href="#tirando-o-dump">Tirando o dump</a></li>
+                
+                    <li><a class="toctree-l4" href="#restaurando-para-uma-base-de-dados-rails">Restaurando para uma base de dados rails</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#postgresql-amazon-rds">PostgreSQL + Amazon RDS</a></li>
+                
+                    <li><a class="toctree-l4" href="#tirando-um-dump-de-um-banco-que-esta-na-amazon-rds">Tirando um dump de um banco que está na Amazon RDS</a></li>
+                
+                    <li><a class="toctree-l4" href="#restaurando-o-banco">Restaurando o banco</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../benchmarks/">Benchmarks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bash/">Bash</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../docker/">Docker</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Git</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/git/">Geral</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/branches/">Branches</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/history/">History</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/undoing/">Undoing Mistakes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../latex/">Latex</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Linux</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../linux/">General</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../linux/dropbox/">Dropxbox</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../linux/file_handling/">File Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../linux/format_conversions/">Format Conversion</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../linux/logs/">Logs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../linux/tmux/">Tmux</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../linux/youtube/">Youtube</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../perl/">Perl</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ruby/">Ruby</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vim/">Vim</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Anotações</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Banco de dados</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="anotacoes-referentes-a-bancos-de-dados">Anotações referentes a Bancos de Dados</h1>
+<h1 id="mysql">MySQL</h1>
+<p>Primeiramente temos que ter o pacote <code>mysql-client</code> instalado.</p>
+<h2 id="tirando-o-dump">Tirando o dump</h2>
+<pre><code>mysqldump -u root --host=&lt;HOST DO BANCO&gt; --user='&lt;username&gt;' --password='&lt;senha do banco&gt;' database_name &gt; /tmp/dump.sql
+</code></pre>
+<h2 id="restaurando-para-uma-base-de-dados-rails">Restaurando para uma base de dados rails</h2>
+<pre><code>rails db -p &lt; dump.sql
+</code></pre>
+<h1 id="postgresql-amazon-rds">PostgreSQL + Amazon RDS</h1>
+<h2 id="tirando-um-dump-de-um-banco-que-esta-na-amazon-rds">Tirando um dump de um banco que está na Amazon RDS</h2>
+<p>Para se facilitar o processo de se tirar o dump precisamos ter uma instância EC2 em pé, que servirá apenas para se tirar o dump.</p>
+<ul>
+<li>Precisamos instalar os pacotes que contêm o <code>pg_dump</code>:</li>
+</ul>
+<pre><code class="Bash">sudo apt-get install -y postgresql-client-9.3 postgresql-client-common
+</code></pre>
+
+<ul>
+<li>Depois, temos que configurar a variável de ambiente que tem a senha do banco de dados:</li>
+</ul>
+<pre><code class="Bash">export PGPASSWORD=&quot;senha do banco&quot;
+</code></pre>
+
+<ul>
+<li>Finalmente, começamos a tirar o dump:</li>
+</ul>
+<pre><code class="Bash">pg_dump -Fc -h host_para_o_banco -U usuario nome_do_banco | gzip -9 &gt; dump.sql.gz
+</code></pre>
+
+<h2 id="restaurando-o-banco">Restaurando o banco</h2>
+<p>Ao final do processo acima temos um arquivo comprimido. Para restaurar o banco a partir deste arquivo podemos fazer algo como o seguinte:</p>
+<pre><code class="Bash">gunzip -c dump.sql.gz | pg_restore -U usuario -d nome_da_base
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../benchmarks/" class="btn btn-neutral float-right" title="Benchmarks">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../amazon/" class="btn btn-neutral" title="Amazon"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../amazon/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../benchmarks/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

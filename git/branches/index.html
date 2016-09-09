@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Branches - Anotações</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Branches";
+    var mkdocs_page_input_path = "git/branches.md";
+    var mkdocs_page_url = "/git/branches/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Anotações</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../amazon/">Amazon</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../banco_de_dados/">Banco de dados</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../benchmarks/">Benchmarks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../bash/">Bash</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../docker/">Docker</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Git</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/">Geral</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Branches</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#showing-which-files-have-changed-between-git-branches">Showing which files have changed between git branches</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#git-rename-local-git-branch">Git rename local git branch</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#pushing-local-branch-to-origin">Pushing local branch to origin</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#remove-remote-branches">Remove remote branches</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#visualization">Visualization</a></li>
+                
+                    <li><a class="toctree-l4" href="#branches-hierarchy">Branches Hierarchy</a></li>
+                
+                    <li><a class="toctree-l4" href="#git-log-all-branches">Git log all branches</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#moving">Moving</a></li>
+                
+                    <li><a class="toctree-l4" href="#move-commits-from-one-branch-to-another">Move commits from one branch to another</a></li>
+                
+                    <li><a class="toctree-l4" href="#movendo-conteudo-de-uma-branch-para-outra">Movendo conteúdo de uma branch para outra</a></li>
+                
+                    <li><a class="toctree-l4" href="#move-the-most-recent-commit">Move the most recent commit</a></li>
+                
+                    <li><a class="toctree-l4" href="#movendo-um-diretorio-de-um-repositorio-para-outro-preservando-o-historico">Movendo um diretório de um repositório para outro, preservando o histórico!</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-do-you-squash-commits-into-one-patch-with-git-format-patch">How do you squash commits into one patch with git format-patch?</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../history/">History</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../undoing/">Undoing Mistakes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../latex/">Latex</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Linux</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../linux/">General</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../linux/dropbox/">Dropxbox</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../linux/file_handling/">File Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../linux/format_conversions/">Format Conversion</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../linux/logs/">Logs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../linux/tmux/">Tmux</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../linux/youtube/">Youtube</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../perl/">Perl</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../ruby/">Ruby</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../vim/">Vim</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Anotações</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Git &raquo;</li>
+        
+      
+    
+    <li>Branches</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Dicas de como se utilizar branches no git.</p>
+<h2 id="showing-which-files-have-changed-between-git-branches">Showing which files have changed between git branches</h2>
+<p>From <a href="http://stackoverflow.com/questions/822811/showing-which-files-have-changed-between-git-branches">Showing which files have changed between git branches</a> :</p>
+<pre><code class="Bash">git diff --name-status master..branchName
+</code></pre>
+
+<h2 id="git-rename-local-git-branch">Git rename local git branch</h2>
+<p>From <a href="http://stackoverflow.com/questions/6591213/rename-local-git-branch">Git rename local git branch</a> :</p>
+<pre><code class="Bash">git branch -m &lt;oldname&gt; &lt;newname&gt;
+# or, if you want to rename the current branch:
+git branch -m &lt;newname&gt;
+</code></pre>
+
+<h2 id="pushing-local-branch-to-origin">Pushing local branch to origin</h2>
+<pre><code class="Bash">git push origin &lt;branchName&gt;
+</code></pre>
+
+<h2 id="remove-remote-branches">Remove remote branches</h2>
+<p>From <a href="http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely">Remove remote branches</a> :</p>
+<pre><code class="Bash">git push origin --delete &lt;branchName&gt; # or
+git push origin :&lt;branchName&gt;
+</code></pre>
+
+<h1 id="visualization">Visualization</h1>
+<h2 id="branches-hierarchy">Branches Hierarchy</h2>
+<pre><code class="Bash">git log --oneline --decorate --color --graph --all --simplify-by-decoration
+# ou
+git log --graph --simplify-by-decoration --pretty=format:'%d' --all
+</code></pre>
+
+<h2 id="git-log-all-branches">Git log all branches</h2>
+<p>From <a href="http://www.lornajane.net/posts/2014/git-log-all-branches">Git log all branches</a> :</p>
+<pre><code class="Bash">git log --oneline --graph --decorate --all
+</code></pre>
+
+<h1 id="moving">Moving</h1>
+<h2 id="move-commits-from-one-branch-to-another">Move commits from one branch to another</h2>
+<p>From <a href="http://effectif.com/git/move-commit-from-one-branch-to-another">Move commits from one branch to another</a> :</p>
+<pre><code class="Bash"># This will move commits from master to the new branch
+git checkout -b some-feature
+git checkout master
+git reset --hard HEAD^
+git checkout some-feature
+</code></pre>
+
+<h2 id="movendo-conteudo-de-uma-branch-para-outra">Movendo conteúdo de uma branch para outra</h2>
+<p>De vez em quando não podemos simplesmente mergear uma branch com a outra, pois isso pode trazer algumas modificações indesejadas.
+Uma coisa que podemos fazer é crirar um conjunto de patches e transportá-los para a branch onde queremos aplicar as mudanças que foram feitas na outra branch.</p>
+<p><strong>Gerando os patches:</strong></p>
+<pre><code class="Bash">git checkout &lt;SHA-1 do commit que você quer considerar como último&gt;
+git format-patch &lt;SHA-1 do commit que você quer utilizar como primeiro&gt;
+# Serão gerados vários arquivos .patch
+</code></pre>
+
+<p><strong>Aplicando os patches:</strong></p>
+<pre><code class="Bash"># Primeiramente, mude seu workspace para a branch onde você quer aplicar as mudanças
+# e.g.: git checkout production
+
+git am *.patch
+# No caso que enfrentei tinha alguns problemas de espaço, final de linha, etc. então utilizei:
+git am -3 --ignore-whitespace *.patch
+</code></pre>
+
+<p>Caso algum dos patches falhe na sua aplicação basta editar o arquivo, adicioná-lo com <code>git add</code> e dar um <code>git am --continue</code></p>
+<h2 id="move-the-most-recent-commit">Move the most recent commit</h2>
+<p>From <a href="http://stackoverflow.com/questions/1628563/move-the-most-recent-commits-to-a-new-branch-with-git">Move the most recent commit(s) to a new branch with Git</a> :</p>
+<pre><code class="Bash">git branch newbranch
+git reset --hard HEAD~3 # Go back 3 commits. You *will* lose uncommitted work.
+git checkout newbranch
+</code></pre>
+
+<h2 id="movendo-um-diretorio-de-um-repositorio-para-outro-preservando-o-historico">Movendo um diretório de um repositório para outro, preservando o histórico!</h2>
+<p>Quem nunca começou a mexer em um diretório e depois percebeu que ele precisava ficar em outro repositório, ou até ser um repositório separado (uma biblioteca, por exemplo)? Seus problemas se acabaram-se!! <code>git filter-branch</code> ao resgate!</p>
+<p>Para esta receita de bolo queremos:</p>
+<ul>
+<li>Mover um diretório de um repositório A para um repositório B</li>
+</ul>
+<p>E temos as seguintes condições:</p>
+<ul>
+<li>O repositório A contém outras coisas além do diretório que queremos mover</li>
+<li>Queremos preservar todo o histórico de commits que envolvam o diretório em questão</li>
+</ul>
+<p>(depois de fazer um backup do seu repositório, utilizando sua forma favorita)</p>
+<p>Na raiz do "repositório A":</p>
+<pre><code class="Bash">git filter-branch --subdirectory-filter [oDitoCujoDoDiretorioQueQueremosSeparar] -- --all
+</code></pre>
+
+<p>Este lindo comando fará, segundo a documentação, como se o repositório fosse a raíz do repositório e todo o resto, desconhecido.</p>
+<p>Já no seu "repositório B":</p>
+<pre><code class="Bash">git checkout -b new_branch
+git remote add branchA [caminhoParaORepositorioA]
+git pull branchA master # Ao invés de master você pode colocar a branch que estava sendo utilizada no repositório A
+git remote rm branchA
+git checkout master
+git merge --no-ff new_branch
+git branch -d new_branch
+</code></pre>
+
+<p>Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório que estava no "repositório A", e com o histórico preservado!
+E isto tudo só foi possível devido às dicas <a href="http://www.google.com/url?q=http%3A%2F%2Fgbayer.com%2Fdevelopment%2Fmoving-files-from-one-git-repository-to-another-preserving-history%2F&amp;sa=D&amp;sntz=1&amp;usg=AFrqEzd245648I-fl6TPK2YXtsyvjdMGLw">deste site</a>!</p>
+<h1 id="how-do-you-squash-commits-into-one-patch-with-git-format-patch">How do you squash commits into one patch with git format-patch?</h1>
+<p>With the help of <a href="http://stackoverflow.com/questions/616556/how-do-you-squash-commits-into-one-patch-with-git-format-patch">StackOverflow</a>.</p>
+<pre><code class="Bash">[(master)]$ git checkout -b tmpsquash
+Switched to a new branch &quot;tmpsquash&quot;
+
+[(tmpsquash)]$ git merge --squash newlines
+Updating 4d2de39..b6768b2
+Fast forward
+Squash commit -- not updating HEAD
+ test.txt |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+[(tmpsquash)]$ git commit -a -m &quot;My squashed commits&quot;
+[tmpsquash]: created 75b0a89: &quot;My squashed commits&quot;
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+[(tmpsquash)]$ git format-patch master
+0001-My-squashed-commits.patch
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../history/" class="btn btn-neutral float-right" title="History">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../git/" class="btn btn-neutral" title="Geral"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../git/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../history/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

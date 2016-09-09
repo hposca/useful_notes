@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>General - Anotações</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "General";
+    var mkdocs_page_input_path = "linux/index.md";
+    var mkdocs_page_url = "/linux/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Anotações</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../amazon/">Amazon</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../banco_de_dados/">Banco de dados</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../benchmarks/">Benchmarks</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bash/">Bash</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../docker/">Docker</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Git</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/git/">Geral</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/branches/">Branches</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/history/">History</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git/undoing/">Undoing Mistakes</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../latex/">Latex</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Linux</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">General</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#dicas-linux">Dicas Linux</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-do-i-list-all-cron-jobs-for-all-users">How do I list all cron jobs for all users?</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-to-create-a-cpu-spike-with-a-bash-command">How to create a CPU spike with a bash command</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#rsync">Rsync</a></li>
+                
+                    <li><a class="toctree-l4" href="#pegando-e-enviando-arquivos-para-a-amazon">Pegando e enviando arquivos para a Amazon</a></li>
+                
+                    <li><a class="toctree-l4" href="#apenas-arquivos-novos">Apenas arquivos novos</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-to-gzip-a-directory-transfer-via-scp-and-decompress-in-one-command">How to gzip a directory, transfer via scp, and decompress in one command?</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#encontrando-arquivos-com-setuid-ativado">Encontrando arquivos com setuid ativado</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#mouse">Mouse</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#sort">Sort</a></li>
+                
+                    <li><a class="toctree-l4" href="#sort-com-delimitador-diferente-de-espacos">Sort com delimitador diferente de espaços</a></li>
+                
+                    <li><a class="toctree-l4" href="#sort-n-esima-coluna">Sort n-ésima coluna</a></li>
+                
+                    <li><a class="toctree-l4" href="#sort-com-ordenacao-numerica-de-verdade-9-100">Sort com ordenação numérica de verdade ( 9 &lt; 100 )</a></li>
+                
+                    <li><a class="toctree-l4" href="#ativando-swap">Ativando swap</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#loop-com-arquivos-que-tem-espacos-no-nome">Loop com arquivos que têm espaços no nome</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#descobrindo-a-placa-de-video">Descobrindo a placa de vídeo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#copying">Copying</a></li>
+                
+                    <li><a class="toctree-l4" href="#avoid-copy-if-files-exist-in-destination">Avoid copy if files exist in destination</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#displaying-todays-files-only">Displaying Today’s Files Only</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-to-zip-files-that-are-listed-in-a-text-file">How to zip files that are listed in a text file</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#desabilitando-um-usuario-mas-sem-apaga-lo">Desabilitando um usuário, mas sem apagá-lo</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#iptables-firewall">IPTables (Firewall)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-to-run-multiple-simultaneous-x-window-sessions">How to run multiple simultaneous X Window sessions</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#create-another-ssh-server">Create another SSH server</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#no-wired-connection-after-suspend">No wired connection after suspend</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#validating-rsa-public-keys">Validating RSA public keys</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-you-own-key-from-the-command-line">Getting you own key from the command line</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#getting-home-directory-by-username">Getting home directory by username</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#reduce-size-of-pdf-files">Reduce size of PDF files</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-do-i-find-out-which-process-is-eating-up-my-bandwidth">How do I find out which process is eating up my bandwidth</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#splitting-and-merging-pdf-files">Splitting and merging PDF files</a></li>
+                
+                    <li><a class="toctree-l4" href="#splitting">Splitting</a></li>
+                
+                    <li><a class="toctree-l4" href="#merging">Merging</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#discovering-available-versions-of-a-package-to-install">Discovering available versions of a package to install</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#copying-text-from-the-command-line">Copying text from the command line</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="dropbox/">Dropxbox</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="file_handling/">File Handling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="format_conversions/">Format Conversion</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="logs/">Logs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="tmux/">Tmux</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="youtube/">Youtube</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../perl/">Perl</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ruby/">Ruby</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../vim/">Vim</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Anotações</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+    
+    <li>General</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>﻿</p>
+<h1 id="dicas-linux">Dicas Linux</h1>
+<h2 id="how-do-i-list-all-cron-jobs-for-all-users">How do I list all cron jobs for all users?</h2>
+<p>From <a href="http://stackoverflow.com/questions/134906/how-do-i-list-all-cron-jobs-for-all-users">How do I list all cron jobs for all users?</a> :</p>
+<pre><code class="Bash"># As root:
+for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
+</code></pre>
+
+<h2 id="how-to-create-a-cpu-spike-with-a-bash-command">How to create a CPU spike with a bash command</h2>
+<p>From <a href="http://stackoverflow.com/questions/2925606/how-to-create-a-cpu-spike-with-a-bash-command">How to create a CPU spike with a bash command</a> :</p>
+<pre><code class="Bash">dd if=/dev/zero of=/dev/null
+</code></pre>
+
+<p>To run more of those to put load on more cores, try to fork it:</p>
+<pre><code class="Bash">fulload() { dd if=/dev/zero of=/dev/null | dd if=/dev/zero of=/dev/null | dd if=/dev/zero of=/dev/null | dd if=/dev/zero of=/dev/null &amp; }; fulload; read; killall dd
+</code></pre>
+
+<p>Repeat the command in the curly brackets as many times as the number of threads you want to produce (here 4 threads). Simple enter hit will stop it (just make sure no other dd is running on this user or you kill it too).</p>
+<h1 id="rsync">Rsync</h1>
+<h2 id="pegando-e-enviando-arquivos-para-a-amazon">Pegando e enviando arquivos para a Amazon</h2>
+<pre><code class="Bash">rsync -avz --progress -e &quot;ssh -i chave.pem&quot; ubuntu@ip:arquivo .
+</code></pre>
+
+<h2 id="apenas-arquivos-novos">Apenas arquivos novos</h2>
+<p>Dicas <a href="http://www.electrictoolbox.com/rsync-ignore-existing-update-newer/">aqui</a></p>
+<pre><code class="Bash">rsync --update -raz --progress &lt;origem&gt; &lt;destino&gt;
+</code></pre>
+
+<h2 id="how-to-gzip-a-directory-transfer-via-scp-and-decompress-in-one-command">How to gzip a directory, transfer via scp, and decompress in one command?</h2>
+<pre><code class="Bash">rsync -az --progress source_dir/* remote_host:/destination_dir # Show progress bar
+#or:
+tar -zc path/to/source | ssh user@remote tar -zxC path/to/destination # Doesn't show progress bar
+</code></pre>
+
+<h1 id="encontrando-arquivos-com-setuid-ativado">Encontrando arquivos com setuid ativado</h1>
+<p>Com <a href="http://www.cyberciti.biz/faq/unix-bsd-linux-setuid-file/">ajuda</a>, conseguimos encontrar todos os arquivos que estão com setuid ativado. Isso foi útil para resolver um problema que estava dando no SAS devido ao fato dos bin não estarem setados com ele:</p>
+<pre><code class="Bash">find . -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
+</code></pre>
+
+<p>Para se setar o setuid basta se adicionar qual bit será será setado como steuid (u,g,o):</p>
+<pre><code class="Bash">chmod 4444 arquivo
+# ou
+chmod 2444 arquivo
+# ou
+chmod 1444 arquivo
+</code></pre>
+
+<h1 id="mouse">Mouse</h1>
+<p>Quando o touchpad parar de funcionar basta executar estes dois comandos:</p>
+<pre><code class="Bash"># Como root:
+modprobe -r psmouse
+modprobe psmouse
+</code></pre>
+
+<h1 id="sort">Sort</h1>
+<h3 id="sort-com-delimitador-diferente-de-espacos">Sort com delimitador diferente de espaços</h3>
+<pre><code class="Bash">sort -t: myFile
+</code></pre>
+
+<h3 id="sort-n-esima-coluna">Sort n-ésima coluna</h3>
+<pre><code class="Bash">sort -k3,3 myFile
+</code></pre>
+
+<h3 id="sort-com-ordenacao-numerica-de-verdade-9-100">Sort com ordenação numérica de verdade ( 9 &lt; 100 )</h3>
+<pre><code class="Bash">sort -n myFile
+</code></pre>
+
+<h2 id="ativando-swap">Ativando swap</h2>
+<p>Ativando swap, seguindo o <a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-ubuntu-14-04">tutorial da DigitalOcean</a>:</p>
+<pre><code>#!/usr/bin/env bash
+if [ $(id -u) -ne 0 ]; then echo &quot;Run as root&quot;; exit 1; fi
+free -m
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+swapon -s
+free -m
+</code></pre>
+
+<h1 id="loop-com-arquivos-que-tem-espacos-no-nome">Loop com arquivos que têm espaços no nome</h1>
+<p>Dicas extraídas <a href="http://askubuntu.com/questions/343727/filenames-with-spaces-breaking-for-loop-find-command">daqui</a> e <a href="http://www.cyberciti.biz/tips/handling-filenames-with-spaces-in-bash.html">daqui</a>.</p>
+<pre><code class="Bash">find . -print0 | while read -d $'\0' file; do cp -v &quot;$file&quot; /tmp; done
+</code></pre>
+
+<pre><code class="Bash">find . -type f -name '*.*' -printf '%p\0' | tar --null -uf archive.tar -T -
+</code></pre>
+
+<h1 id="descobrindo-a-placa-de-video">Descobrindo a placa de vídeo</h1>
+<p>Para se decobrir qual placa de vídeo estamos usando podemos utilizar o <code>lspci</code> como descrito <a href="http://www.binarytides.com/linux-get-gpu-information/">aqui</a> e <a href="http://www.cyberciti.biz/faq/linux-tell-which-graphics-vga-card-installed/">aqui</a>:</p>
+<pre><code class="Bash">lspci -v
+</code></pre>
+
+<h1 id="copying">Copying</h1>
+<h2 id="avoid-copy-if-files-exist-in-destination">Avoid copy if files exist in destination</h2>
+<pre><code>cp -R -u -p /source /destination
+</code></pre>
+<p>Due to these options:</p>
+<pre><code>-p                           same as --preserve=mode,ownership,timestamps
+    --preserve[=ATTR_LIST]   preserve the specified attributes (default:
+                            mode,ownership,timestamps), if possible
+                            additional attributes: context, links, xattr,
+                            all
+-R, -r, --recursive          copy directories recursively
+    --reflink[=WHEN]         control clone/CoW copies. See below
+    --remove-destination     remove each existing destination file before
+                            attempting to open it (contrast with --force)
+    --sparse=WHEN            control creation of sparse files. See below
+    --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                            argument
+-u, --update                 copy only when the SOURCE file is newer
+                            than the destination file or when the
+                            destination file is missing
+</code></pre>
+<h1 id="displaying-todays-files-only">Displaying Today’s Files Only</h1>
+<pre><code>find -maxdepth 1 -type f -mtime -1
+</code></pre>
+<h1 id="how-to-zip-files-that-are-listed-in-a-text-file">How to zip files that are listed in a text file</h1>
+<pre><code>cat input.txt | zip filename.zip -@
+</code></pre>
+<h1 id="desabilitando-um-usuario-mas-sem-apaga-lo">Desabilitando um usuário, mas sem apagá-lo</h1>
+<pre><code>usermod --expiredate 1 [LOGIN]
+
+passwd -l [LOGIN]
+</code></pre>
+<h1 id="iptables-firewall">IPTables (Firewall)</h1>
+<p>Algumas dicas interessantes:</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/10197405/iptables-remove-specific-rules">Apagando uma regra do firewall por linha</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/02/iptables-add-rule/">Um bom tutorial explicando como funciona</a></li>
+<li><a href="https://wiki.centos.org/HowTos/Network/IPTables">Um tutorial simples</a></li>
+</ul>
+<p>Listando as regras, com portas e número das linhas:</p>
+<pre><code>iptables -L -n --line-numbers
+</code></pre>
+<p>Apagando uma linha específica:</p>
+<pre><code>iptables -D INPUT [num]
+</code></pre>
+<p>Adicionando regra para novas conexões:</p>
+<pre><code>iptables -A INPUT -m state --state NEW -p tcp --dport [porta] -j ACCEPT
+</code></pre>
+<p>Regra para se rejeitar demais conexões:</p>
+<pre><code>iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
+iptables -A INPUT -j DROP
+</code></pre>
+<p>Bloqueando acesso de saída (upload) de um IP:</p>
+<pre><code>iptables -A OUTPUT -d [ip-address] -j DROP
+</code></pre>
+<p>Bloqueando saída por porta:</p>
+<pre><code>iptables -A OUTPUT -p tcp --dport [port] -j DROP
+</code></pre>
+<p>To block tcp port for an IP address:</p>
+<pre><code>iptables -A OUTPUT -p tcp -d [ip address] --dport [port] -j DROP
+</code></pre>
+<h1 id="how-to-run-multiple-simultaneous-x-window-sessions">How to run multiple simultaneous X Window sessions</h1>
+<p>From <a href="http://linuxcommando.blogspot.com.br/2015/02/how-to-run-multiple-simultaneous-x.html">Linux Commando</a></p>
+<ul>
+<li>Switch to a virtual terminal<ul>
+<li>By default, six virtual text terminals are available to you (Ctrl+Alt+F1 to F6)</li>
+<li>Press Control+Alt+F1 to go to virtual terminal 1</li>
+</ul>
+</li>
+<li>Login as her</li>
+<li>Execute the following command
+    <code>startx -- :1</code></li>
+<li>This starts another X session using the first free graphical console.<ul>
+<li>By default, 6 X consoles are available (Ctrl+Alt+F7 to F12)</li>
+<li>Your own existing X session is Ctrl+Alt+F7</li>
+<li>The next free X console is therefore Ctrl+Alt+F8</li>
+</ul>
+</li>
+<li>To switch from her X session to yours, and vice versa, press Ctrl+Alt+F7 and Ctrl+Alt+F8 respectively.</li>
+</ul>
+<p>You may use the above procedure to create up to 5 additional X sessions (Ctrl+Alt+F8 to Ctrl+Alt+F12).
+For each additional X session, increment the console number in both step 1 and 3.
+For instance, switch to virtual terminal 2 (Control+Alt+F2) to execute the command <code>startx -- :2</code>.</p>
+<h1 id="create-another-ssh-server">Create another SSH server</h1>
+<p>Sometimes you need to debug your SSH connection, for those times you can open another SSH server and watch what is happening inside it.</p>
+<pre><code>/usr/sbin/sshd -d -p 2222
+</code></pre>
+<p>And when (from other machine) need to connect to it:</p>
+<pre><code>ssh -p 2222 user@machine
+</code></pre>
+<h1 id="no-wired-connection-after-suspend">No wired connection after suspend</h1>
+<p><strong>(Not tested yet)</strong></p>
+<p>From <a href="http://ubuntuforums.org/showthread.php?t=2179603">this Ubuntu Forum thread</a>:</p>
+<ul>
+<li>Get the Kernel module with <code>lspci -k | grep -iA3 NETWORK</code> or <code>lspci -k | grep -iA3 ethernet</code></li>
+<li>Edit <code>/etc/pm/config.d/modules</code><ul>
+<li>Add <code>SUSPEND_MODULES="&lt;the_kernel_module_for_your_network_card&gt;"</code></li>
+</ul>
+</li>
+</ul>
+<p>Or in one shot:</p>
+<pre><code>lspci -k | grep -iA3 ethernet | grep -i "Kernel driver" | awk '{print $NF}'
+</code></pre>
+<p>Knowing that your Kernel module is 8139:</p>
+<ol>
+<li>
+<p>Unload 8139:</p>
+<p>sudo modprobe -r 8139</p>
+</li>
+<li>
+<p>Suspend:</p>
+<p>sudo pm-suspend</p>
+</li>
+<li>
+<p>Resume the computer from suspend</p>
+</li>
+<li>
+<p>Reload the module:</p>
+<p>sudo modprobe 8139</p>
+</li>
+<li>
+<p>Test the network connection.</p>
+</li>
+</ol>
+<h1 id="validating-rsa-public-keys">Validating RSA public keys</h1>
+<pre><code>ssh-keygen -l -f key.pub
+</code></pre>
+<p>More info on <a href="http://serverfault.com/questions/453296/how-do-i-validate-a-rsa-ssh-public-key-file-id-rsa-pub">How do I validate a RSA ssh public key file (id_rsa.pub)? - Server Fault</a></p>
+<h1 id="getting-you-own-key-from-the-command-line">Getting you own key from the command line</h1>
+<p>To get your fingerprint</p>
+<pre><code>ssh-add -l
+</code></pre>
+<p>To get your public key</p>
+<pre><code>ssh-add -L
+</code></pre>
+<p>This is useful when you are inside a Docker container that has your keys forwarded to it using:</p>
+<pre><code>-v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK)
+-e SSH_AUTH_SOCK=$SSH_AUTH_SOCK
+</code></pre>
+<h1 id="getting-home-directory-by-username">Getting home directory by username</h1>
+<pre><code>eval echo ~$USER
+</code></pre>
+<h1 id="reduce-size-of-pdf-files">Reduce size of PDF files</h1>
+<ul>
+<li><a href="http://askubuntu.com/questions/113544/how-can-i-reduce-the-file-size-of-a-scanned-pdf-file">compression - How can I reduce the file size of a scanned PDF file? - Ask Ubuntu</a></li>
+<li><a href="http://askubuntu.com/questions/207447/how-to-reduce-the-size-of-a-pdf-file">compression - How to reduce the size of a pdf file? - Ask Ubuntu</a></li>
+<li><a href="http://jorge.fbarr.net/2012/11/29/reducing-pdf-file-size-in-linux/">Reducing PDF file-size in Linux | The Road to Elysium</a></li>
+<li><a href="http://www.cyberciti.biz/faq/ignore-shell-aliases-functions-when-running-command/">Bash Shell: Ignore Aliases and Functions When Running A Command</a></li>
+</ul>
+<p>Low quality options:</p>
+<pre><code>gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -sOutputFile=new_file.pdf original_file.pdf
+gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -sOutputFile=new_file.pdf original_file.pdf
+</code></pre>
+<p>The best balance was found in:</p>
+<pre><code>gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -sOutputFile=new_file.pdf original_file.pdf
+</code></pre>
+<p><strong>Note:</strong> You may need to issue the command with a backslash in front of it if you use 'gs' as an alias:</p>
+<pre><code>\gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -sOutputFile=new_file.pdf original_file.pdf
+</code></pre>
+<h1 id="how-do-i-find-out-which-process-is-eating-up-my-bandwidth">How do I find out which process is eating up my bandwidth</h1>
+<p>From <a href="http://askubuntu.com/questions/2411/how-do-i-find-out-which-process-is-eating-up-my-bandwidth">networking - How do I find out which process is eating up my bandwidth? - Ask Ubuntu</a>:</p>
+<pre><code>sudo apt-get install -y nethogs
+sudo nethogs eth0
+</code></pre>
+<p>Another way:</p>
+<ul>
+<li>Run <code>sudo iftop</code></li>
+<li>Push <code>S</code> or <code>D</code> to display Source and Destination ports</li>
+<li>Then use <code>netstat -tup</code> to discover the process</li>
+</ul>
+<h1 id="splitting-and-merging-pdf-files">Splitting and merging PDF files</h1>
+<p>With hints from:</p>
+<ul>
+<li><a href="http://linuxcommando.blogspot.com.br/2013/02/splitting-up-is-easy-for-pdf-file.html">Linux Commando: Splitting up is easy for a PDF file</a></li>
+<li><a href="http://linuxcommando.blogspot.com.br/2014/01/how-to-split-up-pdf-files-part-2.html">Linux Commando: How to split up PDF files - part 2</a></li>
+<li>
+<p><a href="http://linuxcommando.blogspot.com.br/2015/03/how-to-merge-or-split-pdf-files-using.html">Linux Commando: How to merge or split pdf files using convert</a></p>
+<p>sudo apt-get update &amp;&amp; sudo apt-get install -y pdftk</p>
+</li>
+</ul>
+<h2 id="splitting">Splitting</h2>
+<p>You can specify page ranges like this:</p>
+<pre><code>pdftk myoldfile.pdf cat 1-2 4-5 output mynewfile.pdf
+</code></pre>
+<p>pdftk has a few more tricks in its back pocket. For example, you can specify a burst operation to split each page in the input file into a separate output file.</p>
+<pre><code>pdftk myoldfile.pdf burst
+</code></pre>
+<p>By default, the output files are named pg_0001.pdf, pg_0002.pdf, etc.</p>
+<h2 id="merging">Merging</h2>
+<p>pdftk is also capable of merging multiple pdf files into one pdf.</p>
+<pre><code>pdftk pg_0001.pdf pg_0002.pdf pg_0004.pdf pg_0005.pdf output mynewfile.pdf
+</code></pre>
+<p>That would merge the files corresponding to the first, second, fourth and fifth pages into a single output pdf.</p>
+<h1 id="discovering-available-versions-of-a-package-to-install">Discovering available versions of a package to install</h1>
+<p>Discover which versions are available using one of the following commands:</p>
+<pre><code>apt-cache policy &lt;package-name&gt;
+apt-cache madison &lt;package-name&gt;
+</code></pre>
+<p>Then, to install the chosen version:</p>
+<pre><code>sudo apt-get install package=version
+</code></pre>
+<h1 id="copying-text-from-the-command-line">Copying text from the command line</h1>
+<pre><code>xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dropbox/" class="btn btn-neutral float-right" title="Dropxbox">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../latex/" class="btn btn-neutral" title="Latex"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../latex/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="dropbox/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
