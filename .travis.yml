@@ -1,12 +1,11 @@
 language: python
-
 python:
-  - "2.7"
-
-install: "pip install mkdocs"
-
-script: "mkdocs gh-deploy --clean"
-
+- '2.7'
+install: pip install mkdocs
+script: mkdocs gh-deploy --clean
 branches:
   only:
-    - master
+  - master
+env:
+  global:
+    secure: NeKKJ8qaZmkVMzeESCm4u0zq6CNNjS+GI5GuJsZm0/cI5WR5O0f8uA80qX/6yD9CX3hbWWwrda4J4EmAqoHGFgOMP7F7ywf+LBwnPrzlK+rUTfBJZmPN2OKByrParWxk+EUcPwj0r/+KpBV1GU+WfgbQVmUuv6j+OMvAgRE0jgeCVx/+jq00ZlWNi+5PvD8ld2/eYJmick7ckhFV/leMt27M7ybULRHxo4KAnNL31jSUGRS6HZc9FgoDma1dq8PdwOTyZV9B1bYNEDcAqnOfPsVQBW5rg00TF6f2X3F9BTMR6MT9ac6yzFyFYfz3t9ik09zIGHJm2YWi9i2R2mRg6iJS5D0neDPuv7eCIZ5muzeqzkgnIDEMJU0xvr76yppJ1u5xJ+9g3bYK7PupA6R3nHCOxA8zBtx5dsKa8dZEidwD6oj7Y3jcShzgQsdSMtevpWPOnP/U+gV1JYHtwlqu+StFCf8QuxDLQUFZ/vQD3rhMgJuSum9fWtKty0DZGCSG7IBAkGYbXUJYsH9ace8CUTpcmaNrT8z45RjEXKEtoCwyY+YCUDjj5Y4xiq6A5HXXlE7JAyDat69oqnRWyjaxU7HlVH8DaRAIOtpP/xIjDc1scM1iWbQ9GHLoKI5VBKr+QGFPvKrahS61tinJKHG/EM7NTmMqhxRhBpeTAHpnnoE=
