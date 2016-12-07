@@ -161,3 +161,11 @@ Squash commit -- not updating HEAD
 [(tmpsquash)]$ git format-patch master
 0001-My-squashed-commits.patch
 ~~~
+
+# Moving branch pointer without checkout
+
+As stated [here](http://stackoverflow.com/questions/5471174/git-move-branch-pointer-to-different-commit-without-checkout) we can use:
+
+```
+git branch -f branch-name new-tip-commit
+```
