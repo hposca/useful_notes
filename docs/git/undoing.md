@@ -95,3 +95,15 @@ From this [StackOverflow hint](http://stackoverflow.com/questions/7099833/how-to
     git revert merge_sha -m [1,2]
 
 To discover if you have to use 1 or 2 do a `git log` on the merge_sha, then 1 will represent the left SHA and 2 the right SHA that appear in the 'Merge' line.
+
+# Removing sensitive files from old commits
+
+From [Remove sensitive data - User Documentation](https://help.github.com/articles/remove-sensitive-data/):
+
+    git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA' --prune-empty --tag-name-filter cat -- --all
+
+Then, to remove the newly generated 'refs/original' reference and clear the reflog and do a garbage collect:
+
+    git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
+    git reflog expire --expire=now --all
+    git gc --prune=now
