@@ -147,6 +147,9 @@
                 <li class="toctree-l3"><a href="#how-do-you-squash-commits-into-one-patch-with-git-format-patch">How do you squash commits into one patch with git format-patch?</a></li>
                 
             
+                <li class="toctree-l3"><a href="#moving-branch-pointer-without-checkout">Moving branch pointer without checkout</a></li>
+                
+            
             </ul>
         
     </li>
@@ -408,6 +411,11 @@ Squash commit -- not updating HEAD
 
 [(tmpsquash)]$ git format-patch master
 0001-My-squashed-commits.patch
+</code></pre>
+
+<h1 id="moving-branch-pointer-without-checkout">Moving branch pointer without checkout</h1>
+<p>As stated <a href="http://stackoverflow.com/questions/5471174/git-move-branch-pointer-to-different-commit-without-checkout">here</a> we can use:</p>
+<pre><code>git branch -f branch-name new-tip-commit
 </code></pre>
               
             </div>

@@ -144,6 +144,9 @@
                     <li><a class="toctree-l4" href="#how-to-revert-a-merge-that-is-already-pushed-to-remote">How to revert a merge that is already pushed to remote?</a></li>
                 
             
+                <li class="toctree-l3"><a href="#removing-sensitive-files-from-old-commits">Removing sensitive files from old commits</a></li>
+                
+            
             </ul>
         
     </li>
@@ -340,6 +343,15 @@ git reset --merge ORIG_HEAD
 <pre><code>git revert merge_sha -m [1,2]
 </code></pre>
 <p>To discover if you have to use 1 or 2 do a <code>git log</code> on the merge_sha, then 1 will represent the left SHA and 2 the right SHA that appear in the 'Merge' line.</p>
+<h1 id="removing-sensitive-files-from-old-commits">Removing sensitive files from old commits</h1>
+<p>From <a href="https://help.github.com/articles/remove-sensitive-data/">Remove sensitive data - User Documentation</a>:</p>
+<pre><code>git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA' --prune-empty --tag-name-filter cat -- --all
+</code></pre>
+<p>Then, to remove the newly generated 'refs/original' reference and clear the reflog and do a garbage collect:</p>
+<pre><code>git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
+git reflog expire --expire=now --all
+git gc --prune=now
+</code></pre>
               
             </div>
           </div>
