@@ -651,6 +651,21 @@
             "title": "Convert the downloaded audio"
         }, 
         {
+            "location": "/python/", 
+            "text": "Hints, tips and tricks in python\n\n\nLocating the line number of an exception\n\n\nFrom this \nanswer in StackOverflow\n:\n\n\nimport traceback\nimport sys\n\ntry:\n    raise Exception(\nfoo\n)\nexcept:\n    for frame in traceback.extract_tb(sys.exc_info()[2]):\n        fname,lineno,fn,text = frame\n        print \nError in %s on line %d\n % (fname, lineno)", 
+            "title": "Python"
+        }, 
+        {
+            "location": "/python/#hints-tips-and-tricks-in-python", 
+            "text": "", 
+            "title": "Hints, tips and tricks in python"
+        }, 
+        {
+            "location": "/python/#locating-the-line-number-of-an-exception", 
+            "text": "From this  answer in StackOverflow :  import traceback\nimport sys\n\ntry:\n    raise Exception( foo )\nexcept:\n    for frame in traceback.extract_tb(sys.exc_info()[2]):\n        fname,lineno,fn,text = frame\n        print  Error in %s on line %d  % (fname, lineno)", 
+            "title": "Locating the line number of an exception"
+        }, 
+        {
             "location": "/perl/", 
             "text": "Como se instalar pacotes perl\n\n\nComo dito \naqui\n:\n\n\nsudo apt-get install build-essential\n\n\n\n\ncpan\ncpan\n make install\ncpan\n install Bundle::CPAN\n# Depois podemos instalar o m\u00f3dulo que quisermos com\ncpan\n install ...", 
             "title": "Perl"

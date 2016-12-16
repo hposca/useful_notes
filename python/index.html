@@ -8,7 +8,7 @@
   
   
   
-  <title>Banco de dados - Anotações</title>
+  <title>Python - Anotações</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Banco de dados";
-    var mkdocs_page_input_path = "banco_de_dados.md";
-    var mkdocs_page_url = "/banco_de_dados/";
+    var mkdocs_page_name = "Python";
+    var mkdocs_page_input_path = "python/index.md";
+    var mkdocs_page_url = "/python/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -69,29 +69,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Banco de dados</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#anotacoes-referentes-a-bancos-de-dados">Anotações referentes a Bancos de Dados</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#mysql">MySQL</a></li>
-                
-                    <li><a class="toctree-l4" href="#tirando-o-dump">Tirando o dump</a></li>
-                
-                    <li><a class="toctree-l4" href="#restaurando-para-uma-base-de-dados-rails">Restaurando para uma base de dados rails</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#postgresql-amazon-rds">PostgreSQL + Amazon RDS</a></li>
-                
-                    <li><a class="toctree-l4" href="#tirando-um-dump-de-um-banco-que-esta-na-amazon-rds">Tirando um dump de um banco que está na Amazon RDS</a></li>
-                
-                    <li><a class="toctree-l4" href="#restaurando-o-banco">Restaurando o banco</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../banco_de_dados/">Banco de dados</a>
         
     </li>
 <li>
@@ -218,8 +197,17 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python/">Python</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Python</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#hints-tips-and-tricks-in-python">Hints, tips and tricks in python</a></li>
+                
+                    <li><a class="toctree-l4" href="#locating-the-line-number-of-an-exception">Locating the line number of an exception</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -267,7 +255,7 @@
     
       
     
-    <li>Banco de dados</li>
+    <li>Python</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -277,39 +265,18 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="anotacoes-referentes-a-bancos-de-dados">Anotações referentes a Bancos de Dados</h1>
-<h1 id="mysql">MySQL</h1>
-<p>Primeiramente temos que ter o pacote <code>mysql-client</code> instalado.</p>
-<h2 id="tirando-o-dump">Tirando o dump</h2>
-<pre><code>mysqldump -u root --host=&lt;HOST DO BANCO&gt; --user='&lt;username&gt;' --password='&lt;senha do banco&gt;' database_name &gt; /tmp/dump.sql
-</code></pre>
-<h2 id="restaurando-para-uma-base-de-dados-rails">Restaurando para uma base de dados rails</h2>
-<pre><code>rails db -p &lt; dump.sql
-</code></pre>
-<h1 id="postgresql-amazon-rds">PostgreSQL + Amazon RDS</h1>
-<h2 id="tirando-um-dump-de-um-banco-que-esta-na-amazon-rds">Tirando um dump de um banco que está na Amazon RDS</h2>
-<p>Para se facilitar o processo de se tirar o dump precisamos ter uma instância EC2 em pé, que servirá apenas para se tirar o dump.</p>
-<ul>
-<li>Precisamos instalar os pacotes que contêm o <code>pg_dump</code>:</li>
-</ul>
-<pre><code class="Bash">sudo apt-get install -y postgresql-client-9.3 postgresql-client-common
-</code></pre>
+                <h1 id="hints-tips-and-tricks-in-python">Hints, tips and tricks in python</h1>
+<h2 id="locating-the-line-number-of-an-exception">Locating the line number of an exception</h2>
+<p>From this <a href="http://stackoverflow.com/questions/6961750/locating-the-line-number-where-an-exception-occurs-in-python-code#answer-6961861">answer in StackOverflow</a>:</p>
+<pre><code>import traceback
+import sys
 
-<ul>
-<li>Depois, temos que configurar a variável de ambiente que tem a senha do banco de dados:</li>
-</ul>
-<pre><code class="Bash">export PGPASSWORD=&quot;senha do banco&quot;
-</code></pre>
-
-<ul>
-<li>Finalmente, começamos a tirar o dump:</li>
-</ul>
-<pre><code class="Bash">pg_dump -Fc -h host_para_o_banco -U usuario nome_do_banco | gzip -9 &gt; dump.sql.gz
-</code></pre>
-
-<h2 id="restaurando-o-banco">Restaurando o banco</h2>
-<p>Ao final do processo acima temos um arquivo comprimido. Para restaurar o banco a partir deste arquivo podemos fazer algo como o seguinte:</p>
-<pre><code class="Bash">gunzip -c dump.sql.gz | pg_restore -U usuario -d nome_da_base
+try:
+    raise Exception(&quot;foo&quot;)
+except:
+    for frame in traceback.extract_tb(sys.exc_info()[2]):
+        fname,lineno,fn,text = frame
+        print &quot;Error in %s on line %d&quot; % (fname, lineno)
 </code></pre>
               
             </div>
@@ -318,10 +285,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../benchmarks/" class="btn btn-neutral float-right" title="Benchmarks">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../perl/" class="btn btn-neutral float-right" title="Perl">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../amazon/" class="btn btn-neutral" title="Amazon"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../linux/youtube/" class="btn btn-neutral" title="Youtube"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -347,10 +314,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../amazon/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../linux/youtube/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../benchmarks/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../perl/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
