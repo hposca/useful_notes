@@ -20,6 +20,7 @@ pages:
   - Logs: 'linux/logs.md'
   - Tmux: 'linux/tmux.md'
   - Youtube: 'linux/youtube.md'
+- Python: 'python/index.md'
 - Perl: 'perl.md'
 - Ruby: 'ruby.md'
 - Vim: 'vim.md'
