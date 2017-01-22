@@ -1,6 +1,0 @@
-{
-    "content": "<h2 id=\"utilizando-o-apache-benchmark\">Utilizando o Apache Benchmark</h2>\n<p>O <code>ab</code> ou <code>Apache HTTP server benchmarking tool</code> <em>\"is a tool for benchmarking your Apache Hypertext Transfer Protocol (HTTP) server. It is designed to give you an impression of how your current Apache installation performs. This especially shows you how many requests per second your Apache installation is capable of serving\"</em>.</p>\n<p>Para se instalar o <code>ab</code> basta executar um</p>\n<pre><code class=\"Bash\">sudo apt-get install apache2-utils\n</code></pre>\n\n<h3 id=\"exemplos\">Exemplos</h3>\n<ul>\n<li>Para se fazer 10000 requisi\u00e7\u00f5es, de 100 em 100 dizendo ser o firefox:</li>\n</ul>\n<pre><code class=\"Bash\">ab -n 10000 -c 100 -H &quot;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0&quot; http://45.55.95.61:3000/\n</code></pre>\n\n<p>Para saber todos os par\u00e2metros e op\u00e7\u00f5es pode-se ver a <a href=\"http://httpd.apache.org/docs/2.4/programs/ab.html\">documenta\u00e7\u00e3o</a>.</p>", 
-    "url": "/benchmarks/", 
-    "language": "en", 
-    "title": "Benchmarks"
-}
