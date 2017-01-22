@@ -9,7 +9,7 @@ With `git archive` you export the repository but only the files on `HEAD`, witho
 At the repository's root:
 
 ```
-git archive -o ${PWD##*/}.zip HEAD
+git archive -o ${PWD##*/}-$(date +%Y%m%d).zip HEAD
 ```
 
 ## Git bundle
@@ -19,7 +19,7 @@ With `git bundle` you export the repository including the entire history.
 At the repository's root, create the bundle file:
 
 ```
-git bundle create ${PWD##*/}.bundle --all
+git bundle create ${PWD##*/}-$(date +%Y%m%d).bundle --all
 ```
 
 After sending this file to another person s/he can clone it and start analyzing it:
