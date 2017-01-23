@@ -7,9 +7,13 @@ pages:
 - Bash: 'bash.md'
 - Docker: 'docker.md'
 - Git:
-  - Geral: 'git/git.md'
+  - General: 'git/git.md'
   - Branches: 'git/branches.md'
+  - Cleaning: 'git/cleaning.md'
+  - Exporting: 'git/exporting.md'
   - History: 'git/history.md'
+  - Releasing: 'git/releasing.md'
+  - Submodules: 'git/submodules.md'
   - Undoing Mistakes: 'git/undoing.md'
 - Latex: 'latex.md'
 - Linux:
