@@ -1,0 +1,6 @@
+{
+    "content": "<h1 id=\"send-command-to-all-panes\">Send command to all panes</h1>\n<pre><code>prefix :set-window-option synchronize-panes on|off\n</code></pre>\n<p>On a default configuration:</p>\n<pre><code>ctrl-b :set-window-option synchronize-panes on\n</code></pre>\n<p>Credits to: <a href=\"http://openbsd-archive.7691.n7.nabble.com/tmux-send-command-to-all-panes-td95883.html\">tmux send command to all panes</a></p>", 
+    "url": "/linux/tmux/", 
+    "language": "en", 
+    "title": "Tmux"
+}

@@ -157,6 +157,14 @@
 
     
     <url>
+     <loc>None/python/</loc>
+     <lastmod>2017-01-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>None/perl/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
