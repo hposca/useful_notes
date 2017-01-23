@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>History - Anotações</title>
+  <title>Releasing - Anotações</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "History";
+    var mkdocs_page_name = "Releasing";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -125,35 +125,22 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">History</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#analisando-a-historia">Analisando a história</a></li>
-                
-                    <li><a class="toctree-l4" href="#mudancas-entre-dois-changests">Mudanças entre dois changests</a></li>
-                
-                    <li><a class="toctree-l4" href="#branches-and-commits-between-two-commits">Branches and commits between two commits</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#revert-a-commit-alredy-pushed-to-a-remote-repository">Revert a commit alredy pushed to a remote repository</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#making-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore">Making git “forget” about a file that was tracked but is now in .gitignore</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#edit-an-incorrect-commit-message-in-git">Edit an incorrect commit message in Git</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../history/">History</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../releasing/">Releasing</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Releasing</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#changelog-of-what-has-been-added-to-your-project-since-your-last-release">Changelog of what has been added to your project since your last release</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -286,7 +273,7 @@
         
       
     
-    <li>History</li>
+    <li>Releasing</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -296,73 +283,11 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="analisando-a-historia">Analisando a história</h1>
-<h2 id="mudancas-entre-dois-changests">Mudanças entre dois changests</h2>
-<p>Apenas os arquivos que foram mudados:</p>
-<pre><code class="Bash">git diff --name-only sha1..sha2
-# ou
-git diff --name-only HEAD~10..HEAD~5
+                <h1 id="changelog-of-what-has-been-added-to-your-project-since-your-last-release">Changelog of what has been added to your project since your last release</h1>
+<p>It’s time to email your mailing list of people who want to know what’s happening in your project.</p>
+<pre><code>$ git shorlog --no-merges base...latest
 </code></pre>
-
-<p>O conteúdo do que foi mudado:</p>
-<pre><code class="Bash">git diff sha1..sha2
-# ou
-git diff HEAD~10..HEAD~5
-</code></pre>
-
-<h2 id="branches-and-commits-between-two-commits">Branches and commits between two commits</h2>
-<ul>
-<li>
-<p>All commits between two commits (only the direct path)</p>
-<p>git log --ancestry-path <root>..<descendant></p>
-</li>
-<li>
-<p>Current branches that are children of another</p>
-<p>git branch --contains <root branch></p>
-</li>
-</ul>
-<h1 id="revert-a-commit-alredy-pushed-to-a-remote-repository">Revert a commit alredy pushed to a remote repository</h1>
-<p>From <a href="http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html">this blog entry</a> there are two good ways:</p>
-<pre><code class="Bash">git push origin +commit_sha^:master
-</code></pre>
-
-<p>or (The one I used):</p>
-<pre><code class="Bash">git reset HEAD^ --hard
-git push origin -f
-</code></pre>
-
-<h1 id="making-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore">Making git “forget” about a file that was tracked but is now in .gitignore</h1>
-<p>.gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked.</p>
-<p>To stop tracking a file you need to remove it from the index. This can be achieved with this command.</p>
-<pre><code class="Bash">git rm --cached &lt;file&gt;
-</code></pre>
-
-<p>The removal of the file from the head revision will happen on the next commit.</p>
-<h1 id="edit-an-incorrect-commit-message-in-git">Edit an incorrect commit message in Git</h1>
-<p>With hints from <a href="http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git">StackOverflow</a>:</p>
-<ol>
-<li>
-<p>If the commit you want to fix isn’t the most recent one:</p>
-<p>If you want to fix several flawed commits, pass the parent of the oldest one of them.
-<code>git rebase --interactive $parent_of_flawed_commit</code></p>
-</li>
-<li>
-<p>An editor will come up, with a list of all commits since the one you gave.</p>
-<ol>
-<li>Change <code>pick</code> to <code>reword</code> (or on old versions of Git, to <em>edit</em>) in front of any commits you want to fix.</li>
-<li>Once you save, Git will replay the listed commits.</li>
-</ol>
-</li>
-<li>
-<p>For each commit you want to <code>reword</code>, Git will drop you back into your editor. For each commit you want to edit, Git drops you into the shell. If you’re in the shell:</p>
-<ol>
-<li>Change the commit in any way you like.</li>
-<li><code>git commit --amend</code></li>
-<li><code>git rebase --continue</code></li>
-</ol>
-</li>
-</ol>
-<p>Most of this sequence will be explained to you by the output of the various commands as you go. It’s very easy, you don’t need to memorise it – just remember that <code>git rebase --interactive</code> lets you correct commits no matter how long ago they were.</p>
+<p>More info at <a href="https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project#The-Shortlog">The Shortlog</a>.</p>
               
             </div>
           </div>
@@ -370,10 +295,10 @@ git push origin -f
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../releasing/" class="btn btn-neutral float-right" title="Releasing"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../submodules/" class="btn btn-neutral float-right" title="Submodules"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../exporting/" class="btn btn-neutral" title="Exporting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../history/" class="btn btn-neutral" title="History"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -399,10 +324,10 @@ git push origin -f
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../exporting/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../history/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../releasing/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../submodules/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

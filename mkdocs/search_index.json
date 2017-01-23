@@ -158,7 +158,7 @@
         {
             "location": "/git/git/",
             "text": "\ufeffDicas gerais sobre o git.\n\n\nHow can I determine the url that a local git repo was originally cloned from?\n\n\nFrom \nHow can I determine the url that a local git repo was originally cloned from?\n :\n\n\n# If referential integrity has been broken:\ngit config --get remote.origin.url\n# If referential integrity is intact:\ngit remote show origin\n\n\n\n\nProblema ao se fazer push para um reposit\u00f3rio \"non-bare\"\n\n\n$ git push\nCounting objects: 20, done.\nDelta compression using up to 8 threads.\nCompressing objects: 100% (17/17), done.\nWriting objects: 100% (18/18), 2.69 KiB | 0 bytes/s, done.\nTotal 18 (delta 9), reused 0 (delta 0)\nremote: error: refusing to update checked out branch: refs/heads/master\nremote: error: By default, updating the current branch in a non-bare repository\nremote: error: is denied, because it will make the index and work tree inconsistent\nremote: error: with what you pushed, and will require 'git reset --hard' to match\nremote: error: the work tree to HEAD.\nremote: error:\nremote: error: You can set 'receive.denyCurrentBranch' configuration variable to\nremote: error: 'ignore' or 'warn' in the remote repository to allow pushing into\nremote: error: its current branch; however, this is not recommended unless you\nremote: error: arranged to update its work tree to match what you pushed in some\nremote: error: other way.\nremote: error:\nremote: error: To squelch this message and still keep the default behaviour, set\nremote: error: 'receive.denyCurrentBranch' configuration variable to 'refuse'.\nTo /home/hugo/Dropbox/workplace/eve_grabber\n ! [remote rejected] master -> master (branch is currently checked out)\nerror: failed to push some refs to '/home/hugo/Dropbox/workplace/eve_grabber'\n\n\n\n\nCom a ajuda do \nstack overflow\n:\n\n\nAt the remote repo:\n\n\ngit config --bool core.bare true\n\n\n\n\nThen delete all the files except .git in that folder. And then you will be able to perform git push to the remote repository without any errors.\n\n\nGerando Patches\n\n\nDica do \nHow to create and apply a patch with Git\n:\n\n\nPara se gerar o patch:\n\n\ngit format-patch against_branch_name --stdout > name_of.patch\n\n\n\n\nOutra forma de se gerar o patch \u00e9 com \ngit diff\n:\n\n\ngit diff sha1..sha2 > name_of.patch\n\n\n\n\nPara se aplicar o patch:\n\n\ngit apply --stat name_of.patch\n\n\n\n\nAssim, ele s\u00f3 ir\u00e1 mostrar como ser\u00e1 a aplica\u00e7\u00e3o do patch, n\u00e3o aplicar\u00e1 de verdade.\n\n\nPara realmente se aplicar o patch devemos chamar\n\n\ngit am name_of.patch\n\n\n\n\nSubmodules\n\n\nAtualizando todos os submodules:\n\n\ngit submodule update --init --recursive\n\n\n\n\nHow to grep (search) committed code in the git history?\n\n\ngit grep [regexp] $(git rev-list --all)\n\n\n\n\nAdd only non-whitespace changes\n\n\nSuponha que o seu editor tenha feito mudan\u00e7as nos whitespaces/tabs, para apenas adicionar ao staging as mudan\u00e7as de verdade:\n\n\ngit diff -w --no-color <arquivo> | git apply --cached --ignore-whitespace\n\n\n\nTemporarily stop watching a file\n\n\ngit update-index --assume-unchanged <file>\n\n\n\nNow the file, even if modified, will not appear in a git status.\n\n\nTo undo it:\n\n\ngit update-index --no-assume-unchanged <file>\n\n\n\nTo list all the files that are \"hidden\" in this way:\n\n\ngit ls-files -v | grep '^h'\n\n\n\nWith the help of \nStackOverflow\n\n\nDiscovering when text was modified in a file\n\n\nWith the help of \nStackOverflow\n:\n\n\ngit log -c -S'missingtext' /path/to/file",
-            "title": "Geral"
+            "title": "General"
         },
         {
             "location": "/git/git/#how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from",
@@ -276,6 +276,36 @@
             "title": "Moving branch pointer without checkout"
         },
         {
+            "location": "/git/cleaning/",
+            "text": "Deleting a git tag\n\n\nFrom: \nHow to: Delete a remote Git tag - Nathan Hoad\n\n\n\n\n\n\nDelete your local tag\n\n\ngit tag -d 12345\n\n\n\n\n\n\nRemove it from the remote\n\n\ngit push origin :refs/tags/12345",
+            "title": "Cleaning"
+        },
+        {
+            "location": "/git/cleaning/#deleting-a-git-tag",
+            "text": "From:  How to: Delete a remote Git tag - Nathan Hoad    Delete your local tag  git tag -d 12345    Remove it from the remote  git push origin :refs/tags/12345",
+            "title": "Deleting a git tag"
+        },
+        {
+            "location": "/git/exporting/",
+            "text": "Exporting your repository\n\n\nTo export your repository to another person you have two options: \ngit archive\n and \ngit bundle\n\n\nGit archive\n\n\nWith \ngit archive\n you export the repository but only the files on \nHEAD\n, without the history.\n\n\nAt the repository's root:\n\n\ngit archive -o ${PWD##*/}-$(date +%Y%m%d).zip HEAD\n\n\n\n\nGit bundle\n\n\nWith \ngit bundle\n you export the repository including the entire history.\n\n\nAt the repository's root, create the bundle file:\n\n\ngit bundle create ${PWD##*/}-$(date +%Y%m%d).bundle --all\n\n\n\n\nAfter sending this file to another person s/he can clone it and start analyzing it:\n\n\ngit clone repositry.bundle",
+            "title": "Exporting"
+        },
+        {
+            "location": "/git/exporting/#exporting-your-repository",
+            "text": "To export your repository to another person you have two options:  git archive  and  git bundle",
+            "title": "Exporting your repository"
+        },
+        {
+            "location": "/git/exporting/#git-archive",
+            "text": "With  git archive  you export the repository but only the files on  HEAD , without the history.  At the repository's root:  git archive -o ${PWD##*/}-$(date +%Y%m%d).zip HEAD",
+            "title": "Git archive"
+        },
+        {
+            "location": "/git/exporting/#git-bundle",
+            "text": "With  git bundle  you export the repository including the entire history.  At the repository's root, create the bundle file:  git bundle create ${PWD##*/}-$(date +%Y%m%d).bundle --all  After sending this file to another person s/he can clone it and start analyzing it:  git clone repositry.bundle",
+            "title": "Git bundle"
+        },
+        {
             "location": "/git/history/",
             "text": "Analisando a hist\u00f3ria\n\n\nMudan\u00e7as entre dois changests\n\n\nApenas os arquivos que foram mudados:\n\n\ngit diff --name-only sha1..sha2\n# ou\ngit diff --name-only HEAD~10..HEAD~5\n\n\n\n\nO conte\u00fado do que foi mudado:\n\n\ngit diff sha1..sha2\n# ou\ngit diff HEAD~10..HEAD~5\n\n\n\n\nBranches and commits between two commits\n\n\n\n\n\n\nAll commits between two commits (only the direct path)\n\n\ngit log --ancestry-path \n..\n\n\n\n\n\n\nCurrent branches that are children of another\n\n\ngit branch --contains \n\n\n\n\n\n\nRevert a commit alredy pushed to a remote repository\n\n\nFrom \nthis blog entry\n there are two good ways:\n\n\ngit push origin +commit_sha^:master\n\n\n\n\nor (The one I used):\n\n\ngit reset HEAD^ --hard\ngit push origin -f\n\n\n\n\nMaking git \u201cforget\u201d about a file that was tracked but is now in .gitignore\n\n\n.gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked.\n\n\nTo stop tracking a file you need to remove it from the index. This can be achieved with this command.\n\n\ngit rm --cached <file>\n\n\n\n\nThe removal of the file from the head revision will happen on the next commit.\n\n\nEdit an incorrect commit message in Git\n\n\nWith hints from \nStackOverflow\n:\n\n\n\n\n\n\nIf the commit you want to fix isn\u2019t the most recent one:\n\n\nIf you want to fix several flawed commits, pass the parent of the oldest one of them.\n\ngit rebase --interactive $parent_of_flawed_commit\n\n\n\n\n\n\nAn editor will come up, with a list of all commits since the one you gave.\n\n\n\n\nChange \npick\n to \nreword\n (or on old versions of Git, to \nedit\n) in front of any commits you want to fix.\n\n\nOnce you save, Git will replay the listed commits.\n\n\n\n\n\n\n\n\nFor each commit you want to \nreword\n, Git will drop you back into your editor. For each commit you want to edit, Git drops you into the shell. If you\u2019re in the shell:\n\n\n\n\nChange the commit in any way you like.\n\n\ngit commit --amend\n\n\ngit rebase --continue\n\n\n\n\n\n\n\n\nMost of this sequence will be explained to you by the output of the various commands as you go. It\u2019s very easy, you don\u2019t need to memorise it \u2013 just remember that \ngit rebase --interactive\n lets you correct commits no matter how long ago they were.",
             "title": "History"
@@ -309,6 +339,26 @@
             "location": "/git/history/#edit-an-incorrect-commit-message-in-git",
             "text": "With hints from  StackOverflow :    If the commit you want to fix isn\u2019t the most recent one:  If you want to fix several flawed commits, pass the parent of the oldest one of them. git rebase --interactive $parent_of_flawed_commit    An editor will come up, with a list of all commits since the one you gave.   Change  pick  to  reword  (or on old versions of Git, to  edit ) in front of any commits you want to fix.  Once you save, Git will replay the listed commits.     For each commit you want to  reword , Git will drop you back into your editor. For each commit you want to edit, Git drops you into the shell. If you\u2019re in the shell:   Change the commit in any way you like.  git commit --amend  git rebase --continue     Most of this sequence will be explained to you by the output of the various commands as you go. It\u2019s very easy, you don\u2019t need to memorise it \u2013 just remember that  git rebase --interactive  lets you correct commits no matter how long ago they were.",
             "title": "Edit an incorrect commit message in Git"
+        },
+        {
+            "location": "/git/releasing/",
+            "text": "Changelog of what has been added to your project since your last release\n\n\nIt\u2019s time to email your mailing list of people who want to know what\u2019s happening in your project.\n\n\n$ git shorlog --no-merges base...latest\n\n\n\nMore info at \nThe Shortlog\n.",
+            "title": "Releasing"
+        },
+        {
+            "location": "/git/releasing/#changelog-of-what-has-been-added-to-your-project-since-your-last-release",
+            "text": "It\u2019s time to email your mailing list of people who want to know what\u2019s happening in your project.  $ git shorlog --no-merges base...latest  More info at  The Shortlog .",
+            "title": "Changelog of what has been added to your project since your last release"
+        },
+        {
+            "location": "/git/submodules/",
+            "text": "Getting all submodules recursively\n\n\ngit submodule foreach --recursive git submodule update --init",
+            "title": "Submodules"
+        },
+        {
+            "location": "/git/submodules/#getting-all-submodules-recursively",
+            "text": "git submodule foreach --recursive git submodule update --init",
+            "title": "Getting all submodules recursively"
         },
         {
             "location": "/git/undoing/",
