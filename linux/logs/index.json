@@ -1,0 +1,6 @@
+{
+    "content": "<h1 id=\"onde-logs-estao-localizados-no-linux\">Onde logs est\u00e3o localizados no Linux</h1>\n<h2 id=\"logs-de-ssh\">Logs de ssh</h2>\n<ul>\n<li>/var/log/auth.log</li>\n<li>/var/log/secure</li>\n<li><code>journalctl -u sshd | tail -100</code></li>\n</ul>", 
+    "url": "/linux/logs/", 
+    "language": "en", 
+    "title": "Logs"
+}

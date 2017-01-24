@@ -1,0 +1,6 @@
+{
+    "content": "<h1 id=\"find-and-replace-string-in-all-files\">Find and Replace string in all files</h1>\n<p>From <a href=\"http://stackoverflow.com/questions/15920276/find-and-replace-string-in-all-files-recursive-using-grep-and-sed\">Find and Replace string in all files recursive using grep and sed</a>:</p>\n<pre><code>grep -rl $oldstring /path/to/folder | xargs sed -i s@$oldstring@$newstring@g\n</code></pre>", 
+    "url": "/linux/file_handling/", 
+    "language": "en", 
+    "title": "File Handling"
+}

@@ -107,6 +107,9 @@
                 <li class="toctree-l3"><a href="#checking-environment-variables-on-a-live-container">Checking environment variables on a live container</a></li>
                 
             
+                <li class="toctree-l3"><a href="#accessing-a-stopped-container">Accessing a stopped container</a></li>
+                
+            
             </ul>
         
     </li>
@@ -340,6 +343,14 @@ rails s
 <h1 id="checking-environment-variables-on-a-live-container">Checking environment variables on a live container</h1>
 <p>With the help of <a href="http://stackoverflow.com/questions/34051747/get-environment-variable-from-docker-container">1</a> and <a href="http://stackoverflow.com/questions/30342796/how-to-get-env-variable-when-doing-docker-inspect">2</a>:</p>
 <pre><code>docker inspect --format '{{ range $index, $value := .Config.Env }}{{ println $value }}{{ end }}' &lt;container_id&gt;
+</code></pre>
+
+<h1 id="accessing-a-stopped-container">Accessing a stopped container</h1>
+<p>With the help of <a href="https://github.com/docker/docker/issues/18078">1</a> and <a href="https://github.com/jpetazzo/nsenter/issues/27">2</a>:</p>
+<pre><code>docker commit STOPPED_CONTAINER NEW_IMAGE_NAME
+docker run -ti NEW_IMAGE_NAME /bin/bash
+# or
+docker run -ti --entrypoint=/bin/sh NEW_IMAGE_NAME
 </code></pre>
               
             </div>

@@ -1,0 +1,6 @@
+{
+    "content": "<h1 id=\"download-a-video-from-youtube\">Download a video from youtube</h1>\n<p>To download a video from youtube:</p>\n<pre><code>youtube-dl --list-formats $youtube_link\n</code></pre>\n<p>After seeing the list of options and formats</p>\n<pre><code>youtube-dl -f $format $youtube_link\n</code></pre>\n<p>e.g. for download only the audio:</p>\n<pre><code>youtube-dl -f 140 $youtube_link\n</code></pre>\n<h1 id=\"convert-the-downloaded-audio\">Convert the downloaded audio</h1>\n<p>When you download the audio it have an <code>m4a</code> extension, to convert to a <code>mp3</code> audio file:</p>\n<pre><code>ffmpeg -i $m4a_file -acodec libmp3lame -ab 128k ${m4a_file%.*}.mp3\n</code></pre>\n<p>To to a batch conversion, and have safe names:</p>\n<pre><code>for file in *m4a; do rename 's/ /_/g' $file; done &amp;&amp; for file in *m4a; do ffmpeg -i $file -acodec libmp3lame -ab 128k ${file%.*}.mp3; done\n</code></pre>", 
+    "url": "/linux/youtube/", 
+    "language": "en", 
+    "title": "Youtube"
+}
