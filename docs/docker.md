@@ -46,3 +46,11 @@ As we need to be on the same terminal that is running the process we need to sta
     rails s
 
 And then, when we hit the breakpoint (`binding.pry`) we can [use pry](https://github.com/pry/pry/wiki) normally.
+
+# Checking environment variables on a live container
+
+With the help of [1](http://stackoverflow.com/questions/34051747/get-environment-variable-from-docker-container) and [2](http://stackoverflow.com/questions/30342796/how-to-get-env-variable-when-doing-docker-inspect):
+
+```
+docker inspect --format '{{ range $index, $value := .Config.Env }}{{ println $value }}{{ end }}' <container_id>
+```
