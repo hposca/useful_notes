@@ -104,6 +104,9 @@
                 <li class="toctree-l3"><a href="#acessing-the-container-to-use-debugging-tools">Acessing the container to use debugging tools</a></li>
                 
             
+                <li class="toctree-l3"><a href="#checking-environment-variables-on-a-live-container">Checking environment variables on a live container</a></li>
+                
+            
             </ul>
         
     </li>
@@ -334,6 +337,10 @@
 rails s
 </code></pre>
 <p>And then, when we hit the breakpoint (<code>binding.pry</code>) we can <a href="https://github.com/pry/pry/wiki">use pry</a> normally.</p>
+<h1 id="checking-environment-variables-on-a-live-container">Checking environment variables on a live container</h1>
+<p>With the help of <a href="http://stackoverflow.com/questions/34051747/get-environment-variable-from-docker-container">1</a> and <a href="http://stackoverflow.com/questions/30342796/how-to-get-env-variable-when-doing-docker-inspect">2</a>:</p>
+<pre><code>docker inspect --format '{{ range $index, $value := .Config.Env }}{{ println $value }}{{ end }}' &lt;container_id&gt;
+</code></pre>
               
             </div>
           </div>

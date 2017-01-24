@@ -1,6 +1,0 @@
-{
-    "content": "<h1 id=\"how-to-convert-between-formats\">How to convert between formats</h1>\n<h2 id=\"m4a-to-mp3\">m4a to mp3</h2>\n<pre><code>ffmpeg -i &lt;file&gt;.m4a -acodec libmp3lame -ab 128k &lt;file&gt;.mp3\n</code></pre>\n<h3 id=\"automatically\">Automatically</h3>\n<pre><code>for file in *m4a; do echo ffmpeg -i $file -acodec libmp3lame -ab 128k ${file%.*}.mp3; done\n</code></pre>\n<h1 id=\"how-to-remove-accent-characters\">How to remove accent characters</h1>\n<p>With the help of: http://www.linuxquestions.org/questions/linux-newbie-8/how-to-remove-accent-characters-4175431373/</p>\n<pre><code>find . -type f -iname \"*.py\" | while read file; do\n    iconv -f UTF-8 -t ASCII//TRANSLIT $file &gt; $file-tmp\n    mv $file-tmp $file\ndone\n</code></pre>", 
-    "url": "/linux/format_conversions/", 
-    "language": "en", 
-    "title": "Format Conversion"
-}
