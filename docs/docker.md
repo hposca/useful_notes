@@ -54,3 +54,14 @@ With the help of [1](http://stackoverflow.com/questions/34051747/get-environment
 ```
 docker inspect --format '{{ range $index, $value := .Config.Env }}{{ println $value }}{{ end }}' <container_id>
 ```
+
+# Accessing a stopped container
+
+With the help of [1](https://github.com/docker/docker/issues/18078) and [2](https://github.com/jpetazzo/nsenter/issues/27):
+
+```
+docker commit STOPPED_CONTAINER NEW_IMAGE_NAME
+docker run -ti NEW_IMAGE_NAME /bin/bash
+# or
+docker run -ti --entrypoint=/bin/sh NEW_IMAGE_NAME
+```
