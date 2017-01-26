@@ -372,3 +372,20 @@ Then, to install the chosen version:
 # Copying text from the command line
 
     xclip -sel clip < ~/.ssh/id_rsa.pub
+
+# Which package an executable came from?
+
+With the help of [apt - How can I tell which package an executable came from? - Ask Ubuntu](http://askubuntu.com/questions/257905/how-can-i-tell-which-package-an-executable-came-from) there are two alternatives:
+
+```
+sudo apt-get install apt-file
+# It takes a bit of time
+sudo apt-file update
+apt-file search filename
+```
+
+OR
+
+```
+dpkg-query -S [executable]
+```
