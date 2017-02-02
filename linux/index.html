@@ -271,6 +271,9 @@
                 <li class="toctree-l3"><a href="#copying-text-from-the-command-line">Copying text from the command line</a></li>
                 
             
+                <li class="toctree-l3"><a href="#which-package-an-executable-came-from">Which package an executable came from?</a></li>
+                
+            
             </ul>
         
     </li>
@@ -681,6 +684,17 @@ apt-cache madison &lt;package-name&gt;
 </code></pre>
 <h1 id="copying-text-from-the-command-line">Copying text from the command line</h1>
 <pre><code>xclip -sel clip &lt; ~/.ssh/id_rsa.pub
+</code></pre>
+<h1 id="which-package-an-executable-came-from">Which package an executable came from?</h1>
+<p>With the help of <a href="http://askubuntu.com/questions/257905/how-can-i-tell-which-package-an-executable-came-from">apt - How can I tell which package an executable came from? - Ask Ubuntu</a> there are two alternatives:</p>
+<pre><code>sudo apt-get install apt-file
+# It takes a bit of time
+sudo apt-file update
+apt-file search filename
+</code></pre>
+
+<p>OR</p>
+<pre><code>dpkg-query -S [executable]
 </code></pre>
               
             </div>

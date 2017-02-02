@@ -1,6 +1,0 @@
-{
-    "content": "<h2 id=\"como-se-instalar-pacotes-perl\">Como se instalar pacotes perl</h2>\n<p>Como dito <a href=\"https://egoleo.wordpress.com/2008/05/19/how-to-install-perl-modules-through-cpan-on-ubuntu-hardy-server/\">aqui</a>:</p>\n<pre><code class=\"Bash\">sudo apt-get install build-essential\n</code></pre>\n\n<pre><code class=\"Bash\">cpan\ncpan&gt; make install\ncpan&gt; install Bundle::CPAN\n# Depois podemos instalar o m\u00f3dulo que quisermos com\ncpan&gt; install ...\n</code></pre>", 
-    "url": "/perl/", 
-    "language": "en", 
-    "title": "Perl"
-}

@@ -1,6 +1,0 @@
-{
-    "content": "<h1 id=\"hints-tips-and-tricks-in-python\">Hints, tips and tricks in python</h1>\n<h2 id=\"locating-the-line-number-of-an-exception\">Locating the line number of an exception</h2>\n<p>From this <a href=\"http://stackoverflow.com/questions/6961750/locating-the-line-number-where-an-exception-occurs-in-python-code#answer-6961861\">answer in StackOverflow</a>:</p>\n<pre><code>import traceback\nimport sys\n\ntry:\n    raise Exception(&quot;foo&quot;)\nexcept:\n    for frame in traceback.extract_tb(sys.exc_info()[2]):\n        fname,lineno,fn,text = frame\n        print &quot;Error in %s on line %d&quot; % (fname, lineno)\n</code></pre>", 
-    "url": "/python/", 
-    "language": "en", 
-    "title": "Perl"
-}
