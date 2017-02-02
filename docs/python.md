@@ -1,8 +1,14 @@
-# Criando um servidor HTTP para disponibilizar arquivos rapidamente
+# Creating a simple webserver
 
-Para se criar um servidor HTTP para disponibilizar arquivos rapidamente, em um terminal:
+To create a simple webserver:
+
+**Python 2:**
 
     python -m SimpleHTTPServer 7777
+
+**Python 3:**
+
+    python -m http.server 7777
 
 # Vendo os atributos de um objeto
 
