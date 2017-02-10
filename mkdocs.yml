@@ -24,7 +24,9 @@ pages:
   - Logs: 'linux/logs.md'
   - Tmux: 'linux/tmux.md'
   - Youtube: 'linux/youtube.md'
-- Python: 'python/index.md'
+- Python:
+  - General: 'python/index.md'
+  - Virtual Environment: 'python/virtualenv.md'
 - Perl: 'perl.md'
 - Ruby: 'ruby.md'
 - Vim: 'vim.md'
