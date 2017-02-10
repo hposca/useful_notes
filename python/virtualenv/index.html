@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Releasing - Anotações</title>
+  <title>Virtual Environment - Anotações</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Releasing";
+    var mkdocs_page_name = "Virtual Environment";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -98,63 +98,56 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../git/">General</a>
+        <a class="" href="../../git/git/">General</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../branches/">Branches</a>
+        <a class="" href="../../git/branches/">Branches</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../cleaning/">Cleaning</a>
+        <a class="" href="../../git/cleaning/">Cleaning</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../exporting/">Exporting</a>
+        <a class="" href="../../git/exporting/">Exporting</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../history/">History</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Releasing</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#changelog-of-what-has-been-added-to-your-project-since-your-last-release">Changelog of what has been added to your project since your last release</a></li>
-                
-            
-            </ul>
+        <a class="" href="../../git/history/">History</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../submodules/">Submodules</a>
+        <a class="" href="../../git/releasing/">Releasing</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../undoing/">Undoing Mistakes</a>
+        <a class="" href="../../git/submodules/">Submodules</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/undoing/">Undoing Mistakes</a>
         
     </li>
 
@@ -233,14 +226,21 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../python/">General</a>
+        <a class="" href="../">General</a>
         
     </li>
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../python/virtualenv/">Virtual Environment</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Virtual Environment</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#working-with-virtualenv">Working with VirtualEnv</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -291,11 +291,11 @@
     
       
         
-          <li>Git &raquo;</li>
+          <li>Python &raquo;</li>
         
       
     
-    <li>Releasing</li>
+    <li>Virtual Environment</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -305,11 +305,20 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="changelog-of-what-has-been-added-to-your-project-since-your-last-release">Changelog of what has been added to your project since your last release</h1>
-<p>It’s time to email your mailing list of people who want to know what’s happening in your project.</p>
-<pre><code>$ git shorlog --no-merges base...latest
+                <h1 id="working-with-virtualenv">Working with VirtualEnv</h1>
+<p>Withe the help of <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">Virtual Environments — The Hitchhiker's Guide to Python</a>:</p>
+<p>Install virtualenv first with:</p>
+<pre><code>sudo pip install virtualenv
 </code></pre>
-<p>More info at <a href="https://git-scm.com/book/en/v2/Distributed-Git-Maintaining-a-Project#The-Shortlog">The Shortlog</a>.</p>
+
+<p>Then create and use a virtual environment for the project:</p>
+<pre><code>cd project
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+# Do what you have to do
+deactivate
+</code></pre>
               
             </div>
           </div>
@@ -317,10 +326,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../submodules/" class="btn btn-neutral float-right" title="Submodules"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../perl/" class="btn btn-neutral float-right" title="Perl"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../history/" class="btn btn-neutral" title="History"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../" class="btn btn-neutral" title="General"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -346,10 +355,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../history/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../submodules/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../perl/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
