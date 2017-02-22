@@ -389,3 +389,13 @@ OR
 ```
 dpkg-query -S [executable]
 ```
+
+# Finding the size of files older than X days
+
+With the great help of [StackOverflow](http://unix.stackexchange.com/questions/21678/is-there-a-way-to-sum-up-the-size-of-files-listed):
+
+```
+find . -mtime +180 -exec ls -lrt {} \; | awk '{ total += $5}; END { print total }'
+```
+
+It will give the total size of files, in bytes.
