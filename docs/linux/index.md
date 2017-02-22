@@ -399,3 +399,9 @@ find . -mtime +180 -exec ls -lrt {} \; | awk '{ total += $5}; END { print total 
 ```
 
 It will give the total size of files, in bytes.
+
+But if you want to see the sizes in a more human readable way:
+
+```
+find . -mtime +180 -exec ls -lrt {} \; | awk '{ total += $5}; END { print total }' | awk '{ split( "KB MB GB" , v ); s=0; while( $1>1024 ){ $1/=1024; s++ } print int($1) v[s] }'
+```
