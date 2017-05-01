@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>None/amazon/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>None/banco_de_dados/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>None/benchmarks/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>None/bash/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>None/docker/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -53,49 +53,49 @@
         
     <url>
      <loc>None/git/git/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/git/branches/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/git/cleaning/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/git/exporting/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/git/history/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/git/releasing/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/git/submodules/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/git/undoing/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -104,7 +104,7 @@
     
     <url>
      <loc>None/latex/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -113,43 +113,49 @@
         
     <url>
      <loc>None/linux/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/linux/dropbox/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/linux/file_handling/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/linux/format_conversions/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/linux/logs/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/linux/pdf/</loc>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/linux/tmux/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/linux/youtube/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -159,13 +165,13 @@
         
     <url>
      <loc>None/python/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/python/virtualenv/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -174,7 +180,7 @@
     
     <url>
      <loc>None/perl/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -182,7 +188,7 @@
     
     <url>
      <loc>None/ruby/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -190,7 +196,7 @@
     
     <url>
      <loc>None/vim/</loc>
-     <lastmod>2017-02-10</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

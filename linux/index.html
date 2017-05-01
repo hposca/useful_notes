@@ -247,17 +247,7 @@
                 <li class="toctree-l3"><a href="#getting-home-directory-by-username">Getting home directory by username</a></li>
                 
             
-                <li class="toctree-l3"><a href="#reduce-size-of-pdf-files">Reduce size of PDF files</a></li>
-                
-            
                 <li class="toctree-l3"><a href="#how-do-i-find-out-which-process-is-eating-up-my-bandwidth">How do I find out which process is eating up my bandwidth</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#splitting-and-merging-pdf-files">Splitting and merging PDF files</a></li>
-                
-                    <li><a class="toctree-l4" href="#splitting">Splitting</a></li>
-                
-                    <li><a class="toctree-l4" href="#merging">Merging</a></li>
                 
             
                 <li class="toctree-l3"><a href="#discovering-available-versions-of-a-package-to-install">Discovering available versions of a package to install</a></li>
@@ -267,6 +257,9 @@
                 
             
                 <li class="toctree-l3"><a href="#which-package-an-executable-came-from">Which package an executable came from?</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#finding-the-size-of-files-older-than-x-days">Finding the size of files older than X days</a></li>
                 
             
             </ul>
@@ -298,6 +291,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="logs/">Logs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="pdf/">PDF</a>
         
     </li>
 
@@ -633,23 +633,6 @@ For instance, switch to virtual terminal 2 (Control+Alt+F2) to execute the comma
 <h1 id="getting-home-directory-by-username">Getting home directory by username</h1>
 <pre><code>eval echo ~$USER
 </code></pre>
-<h1 id="reduce-size-of-pdf-files">Reduce size of PDF files</h1>
-<ul>
-<li><a href="http://askubuntu.com/questions/113544/how-can-i-reduce-the-file-size-of-a-scanned-pdf-file">compression - How can I reduce the file size of a scanned PDF file? - Ask Ubuntu</a></li>
-<li><a href="http://askubuntu.com/questions/207447/how-to-reduce-the-size-of-a-pdf-file">compression - How to reduce the size of a pdf file? - Ask Ubuntu</a></li>
-<li><a href="http://jorge.fbarr.net/2012/11/29/reducing-pdf-file-size-in-linux/">Reducing PDF file-size in Linux | The Road to Elysium</a></li>
-<li><a href="http://www.cyberciti.biz/faq/ignore-shell-aliases-functions-when-running-command/">Bash Shell: Ignore Aliases and Functions When Running A Command</a></li>
-</ul>
-<p>Low quality options:</p>
-<pre><code>gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -sOutputFile=new_file.pdf original_file.pdf
-gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -sOutputFile=new_file.pdf original_file.pdf
-</code></pre>
-<p>The best balance was found in:</p>
-<pre><code>gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -sOutputFile=new_file.pdf original_file.pdf
-</code></pre>
-<p><strong>Note:</strong> You may need to issue the command with a backslash in front of it if you use 'gs' as an alias:</p>
-<pre><code>\gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -sOutputFile=new_file.pdf original_file.pdf
-</code></pre>
 <h1 id="how-do-i-find-out-which-process-is-eating-up-my-bandwidth">How do I find out which process is eating up my bandwidth</h1>
 <p>From <a href="http://askubuntu.com/questions/2411/how-do-i-find-out-which-process-is-eating-up-my-bandwidth">networking - How do I find out which process is eating up my bandwidth? - Ask Ubuntu</a>:</p>
 <pre><code>sudo apt-get install -y nethogs
@@ -661,29 +644,6 @@ sudo nethogs eth0
 <li>Push <code>S</code> or <code>D</code> to display Source and Destination ports</li>
 <li>Then use <code>netstat -tup</code> to discover the process</li>
 </ul>
-<h1 id="splitting-and-merging-pdf-files">Splitting and merging PDF files</h1>
-<p>With hints from:</p>
-<ul>
-<li><a href="http://linuxcommando.blogspot.com.br/2013/02/splitting-up-is-easy-for-pdf-file.html">Linux Commando: Splitting up is easy for a PDF file</a></li>
-<li><a href="http://linuxcommando.blogspot.com.br/2014/01/how-to-split-up-pdf-files-part-2.html">Linux Commando: How to split up PDF files - part 2</a></li>
-<li>
-<p><a href="http://linuxcommando.blogspot.com.br/2015/03/how-to-merge-or-split-pdf-files-using.html">Linux Commando: How to merge or split pdf files using convert</a></p>
-<p>sudo apt-get update &amp;&amp; sudo apt-get install -y pdftk</p>
-</li>
-</ul>
-<h2 id="splitting">Splitting</h2>
-<p>You can specify page ranges like this:</p>
-<pre><code>pdftk myoldfile.pdf cat 1-2 4-5 output mynewfile.pdf
-</code></pre>
-<p>pdftk has a few more tricks in its back pocket. For example, you can specify a burst operation to split each page in the input file into a separate output file.</p>
-<pre><code>pdftk myoldfile.pdf burst
-</code></pre>
-<p>By default, the output files are named pg_0001.pdf, pg_0002.pdf, etc.</p>
-<h2 id="merging">Merging</h2>
-<p>pdftk is also capable of merging multiple pdf files into one pdf.</p>
-<pre><code>pdftk pg_0001.pdf pg_0002.pdf pg_0004.pdf pg_0005.pdf output mynewfile.pdf
-</code></pre>
-<p>That would merge the files corresponding to the first, second, fourth and fifth pages into a single output pdf.</p>
 <h1 id="discovering-available-versions-of-a-package-to-install">Discovering available versions of a package to install</h1>
 <p>Discover which versions are available using one of the following commands:</p>
 <pre><code>apt-cache policy &lt;package-name&gt;
@@ -705,6 +665,16 @@ apt-file search filename
 
 <p>OR</p>
 <pre><code>dpkg-query -S [executable]
+</code></pre>
+
+<h1 id="finding-the-size-of-files-older-than-x-days">Finding the size of files older than X days</h1>
+<p>With the great help of <a href="http://unix.stackexchange.com/questions/21678/is-there-a-way-to-sum-up-the-size-of-files-listed">StackOverflow</a>:</p>
+<pre><code>find . -mtime +180 -exec ls -lrt {} \; | awk '{ total += $5}; END { print total }'
+</code></pre>
+
+<p>It will give the total size of files, in bytes.</p>
+<p>But if you want to see the sizes in a more human readable way:</p>
+<pre><code>find . -mtime +180 -exec ls -lrt {} \; | awk '{ total += $5}; END { print total }' | awk '{ split( &quot;KB MB GB&quot; , v ); s=0; while( $1&gt;1024 ){ $1/=1024; s++ } print int($1) v[s] }'
 </code></pre>
               
             </div>
