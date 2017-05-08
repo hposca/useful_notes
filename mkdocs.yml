@@ -22,6 +22,7 @@ pages:
   - File Handling: 'linux/file_handling.md'
   - Format Conversion: 'linux/format_conversions.md'
   - Logs: 'linux/logs.md'
+  - PDF: 'linux/pdf.md'
   - Tmux: 'linux/tmux.md'
   - Youtube: 'linux/youtube.md'
 - Python:
