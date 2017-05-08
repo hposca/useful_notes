@@ -170,12 +170,6 @@
     </url>
         
     <url>
-     <loc>None/python/</loc>
-     <lastmod>2017-05-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>None/python/virtualenv/</loc>
      <lastmod>2017-05-08</lastmod>
      <changefreq>daily</changefreq>

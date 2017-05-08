@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Exceptions - Anotações</title>
+  <title>General - Anotações</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Exceptions";
+    var mkdocs_page_name = "General";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -232,19 +232,21 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="./">General</a>
-        
-    </li>
-
-        
-            
     <li class="toctree-l1 current">
-        <a class="current" href="./">Exceptions</a>
+        <a class="current" href="./">General</a>
         
             <ul>
             
                 <li class="toctree-l3"><a href="#hints-tips-and-tricks-in-python">Hints, tips and tricks in python</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-a-simple-webserver">Creating a simple webserver</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#vendo-os-atributos-de-um-objeto">Vendo os atributos de um objeto</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#solving-attributeerror-module-object-has-no-attribute-packaging">Solving AttributeError: 'module' object has no attribute 'packaging'</a></li>
                 
                     <li><a class="toctree-l4" href="#locating-the-line-number-of-an-exception">Locating the line number of an exception</a></li>
                 
@@ -311,7 +313,7 @@
         
       
     
-    <li>Exceptions</li>
+    <li>General</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -322,6 +324,33 @@
             <div class="section">
               
                 <h1 id="hints-tips-and-tricks-in-python">Hints, tips and tricks in python</h1>
+<h1 id="creating-a-simple-webserver">Creating a simple webserver</h1>
+<p>To create a simple webserver:</p>
+<p><strong>Python 2:</strong></p>
+<pre><code>python -m SimpleHTTPServer 7777
+</code></pre>
+<p><strong>Python 3:</strong></p>
+<pre><code>python -m http.server 7777
+</code></pre>
+<h1 id="vendo-os-atributos-de-um-objeto">Vendo os atributos de um objeto</h1>
+<p>Seguindo a <a href="http://stackoverflow.com/questions/25150955/python-iterating-through-object-attributes">dica do StackOverflow</a> conseguimos ver os atributos e respectivos valores de qualquer obejto em python:</p>
+<pre><code>for attr, value in objeto.__dict__.iteritems():
+    print attr, value
+</code></pre>
+<h1 id="solving-attributeerror-module-object-has-no-attribute-packaging">Solving AttributeError: 'module' object has no attribute 'packaging'</h1>
+<p>To the "AttributeError: 'module' object has no attribute 'packaging'" error I did as stated <a href="http://stackoverflow.com/questions/28967785/attribute-error-installing-with-pip/30310206#30310206">here</a>:</p>
+<ol>
+<li>
+<p>Start a python session, import pkg_resources, and view the file from which it is loaded:</p>
+<p>In [1]: import pkg_resources</p>
+<p>In [2]: pkg_resources.<strong>file</strong>
+Out[2]: '/usr/lib/python2.7/dist-packages/pkg_resources.pyc'</p>
+</li>
+<li>
+<p>Remove this file (and the associated *.py file):</p>
+<p>$ sudo rm /usr/lib/python2.7/dist-packages/pkg_resources.py*</p>
+</li>
+</ol>
 <h2 id="locating-the-line-number-of-an-exception">Locating the line number of an exception</h2>
 <p>From this <a href="http://stackoverflow.com/questions/6961750/locating-the-line-number-where-an-exception-occurs-in-python-code#answer-6961861">answer in StackOverflow</a>:</p>
 <pre><code>import traceback
@@ -344,7 +373,7 @@ except:
         <a href="virtualenv/" class="btn btn-neutral float-right" title="Virtual Environment"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="./" class="btn btn-neutral" title="General"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../linux/youtube/" class="btn btn-neutral" title="Youtube"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -370,7 +399,7 @@ except:
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="./" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../linux/youtube/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="virtualenv/" style="color: #fcfcfc">Next &raquo;</a></span>

@@ -692,8 +692,13 @@
         },
         {
             "location": "/python/",
-            "text": "Creating a simple webserver\n\n\nTo create a simple webserver:\n\n\nPython 2:\n\n\npython -m SimpleHTTPServer 7777\n\n\n\nPython 3:\n\n\npython -m http.server 7777\n\n\n\nVendo os atributos de um objeto\n\n\nSeguindo a \ndica do StackOverflow\n conseguimos ver os atributos e respectivos valores de qualquer obejto em python:\n\n\nfor attr, value in objeto.__dict__.iteritems():\n    print attr, value\n\n\n\nSolving AttributeError: 'module' object has no attribute 'packaging'\n\n\nTo the \"AttributeError: 'module' object has no attribute 'packaging'\" error I did as stated \nhere\n:\n\n\n\n\n\n\nStart a python session, import pkg_resources, and view the file from which it is loaded:\n\n\nIn [1]: import pkg_resources\n\n\nIn [2]: pkg_resources.\nfile\n\nOut[2]: '/usr/lib/python2.7/dist-packages/pkg_resources.pyc'\n\n\n\n\n\n\nRemove this file (and the associated *.py file):\n\n\n$ sudo rm /usr/lib/python2.7/dist-packages/pkg_resources.py*",
+            "text": "Hints, tips and tricks in python\n\n\nCreating a simple webserver\n\n\nTo create a simple webserver:\n\n\nPython 2:\n\n\npython -m SimpleHTTPServer 7777\n\n\n\nPython 3:\n\n\npython -m http.server 7777\n\n\n\nVendo os atributos de um objeto\n\n\nSeguindo a \ndica do StackOverflow\n conseguimos ver os atributos e respectivos valores de qualquer obejto em python:\n\n\nfor attr, value in objeto.__dict__.iteritems():\n    print attr, value\n\n\n\nSolving AttributeError: 'module' object has no attribute 'packaging'\n\n\nTo the \"AttributeError: 'module' object has no attribute 'packaging'\" error I did as stated \nhere\n:\n\n\n\n\n\n\nStart a python session, import pkg_resources, and view the file from which it is loaded:\n\n\nIn [1]: import pkg_resources\n\n\nIn [2]: pkg_resources.\nfile\n\nOut[2]: '/usr/lib/python2.7/dist-packages/pkg_resources.pyc'\n\n\n\n\n\n\nRemove this file (and the associated *.py file):\n\n\n$ sudo rm /usr/lib/python2.7/dist-packages/pkg_resources.py*\n\n\n\n\n\n\nLocating the line number of an exception\n\n\nFrom this \nanswer in StackOverflow\n:\n\n\nimport traceback\nimport sys\n\ntry:\n    raise Exception(\"foo\")\nexcept:\n    for frame in traceback.extract_tb(sys.exc_info()[2]):\n        fname,lineno,fn,text = frame\n        print \"Error in %s on line %d\" % (fname, lineno)",
             "title": "General"
+        },
+        {
+            "location": "/python/#hints-tips-and-tricks-in-python",
+            "text": "",
+            "title": "Hints, tips and tricks in python"
         },
         {
             "location": "/python/#creating-a-simple-webserver",
@@ -709,16 +714,6 @@
             "location": "/python/#solving-attributeerror-module-object-has-no-attribute-packaging",
             "text": "To the \"AttributeError: 'module' object has no attribute 'packaging'\" error I did as stated  here :    Start a python session, import pkg_resources, and view the file from which it is loaded:  In [1]: import pkg_resources  In [2]: pkg_resources. file \nOut[2]: '/usr/lib/python2.7/dist-packages/pkg_resources.pyc'    Remove this file (and the associated *.py file):  $ sudo rm /usr/lib/python2.7/dist-packages/pkg_resources.py*",
             "title": "Solving AttributeError: 'module' object has no attribute 'packaging'"
-        },
-        {
-            "location": "/python/",
-            "text": "Hints, tips and tricks in python\n\n\nLocating the line number of an exception\n\n\nFrom this \nanswer in StackOverflow\n:\n\n\nimport traceback\nimport sys\n\ntry:\n    raise Exception(\"foo\")\nexcept:\n    for frame in traceback.extract_tb(sys.exc_info()[2]):\n        fname,lineno,fn,text = frame\n        print \"Error in %s on line %d\" % (fname, lineno)",
-            "title": "Exceptions"
-        },
-        {
-            "location": "/python/#hints-tips-and-tricks-in-python",
-            "text": "",
-            "title": "Hints, tips and tricks in python"
         },
         {
             "location": "/python/#locating-the-line-number-of-an-exception",
