@@ -26,8 +26,7 @@ pages:
   - Tmux: 'linux/tmux.md'
   - Youtube: 'linux/youtube.md'
 - Python:
-  - General: 'python.md'
-  - Exceptions: 'python/index.md'
+  - General: 'python/index.md'
   - Virtual Environment: 'python/virtualenv.md'
 - Perl: 'perl.md'
 - Ruby: 'ruby.md'
