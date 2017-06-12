@@ -287,13 +287,18 @@
         },
         {
             "location": "/git/cleaning/",
-            "text": "Deleting a git tag\n\n\nFrom: \nHow to: Delete a remote Git tag - Nathan Hoad\n\n\n\n\n\n\nDelete your local tag\n\n\ngit tag -d 12345\n\n\n\n\n\n\nRemove it from the remote\n\n\ngit push origin :refs/tags/12345",
+            "text": "Deleting a git tag\n\n\nFrom: \nHow to: Delete a remote Git tag - Nathan Hoad\n\n\n\n\n\n\nDelete your local tag:\n\n\ngit tag -d 12345\n\n\n\n\n\n\nRemove it from the remote:\n\n\ngit push origin :refs/tags/12345\n\n\n\n\n\n\nDeleting unused local branches\n\n\ngit branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d",
             "title": "Cleaning"
         },
         {
             "location": "/git/cleaning/#deleting-a-git-tag",
-            "text": "From:  How to: Delete a remote Git tag - Nathan Hoad    Delete your local tag  git tag -d 12345    Remove it from the remote  git push origin :refs/tags/12345",
+            "text": "From:  How to: Delete a remote Git tag - Nathan Hoad    Delete your local tag:  git tag -d 12345    Remove it from the remote:  git push origin :refs/tags/12345",
             "title": "Deleting a git tag"
+        },
+        {
+            "location": "/git/cleaning/#deleting-unused-local-branches",
+            "text": "git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d",
+            "title": "Deleting unused local branches"
         },
         {
             "location": "/git/exporting/",

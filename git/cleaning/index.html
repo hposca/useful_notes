@@ -119,6 +119,9 @@
                 <li class="toctree-l3"><a href="#deleting-a-git-tag">Deleting a git tag</a></li>
                 
             
+                <li class="toctree-l3"><a href="#deleting-unused-local-branches">Deleting unused local branches</a></li>
+                
+            
             </ul>
         
     </li>
@@ -316,14 +319,17 @@
 <p>From: <a href="https://nathanhoad.net/how-to-delete-a-remote-git-tag">How to: Delete a remote Git tag - Nathan Hoad</a></p>
 <ul>
 <li>
-<p>Delete your local tag</p>
-<p>git tag -d 12345</p>
+<p>Delete your local tag:</p>
+<p><code>git tag -d 12345</code></p>
 </li>
 <li>
-<p>Remove it from the remote</p>
-<p>git push origin :refs/tags/12345</p>
+<p>Remove it from the remote:</p>
+<p><code>git push origin :refs/tags/12345</code></p>
 </li>
 </ul>
+<h1 id="deleting-unused-local-branches">Deleting unused local branches</h1>
+<pre><code>git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+</code></pre>
               
             </div>
           </div>
