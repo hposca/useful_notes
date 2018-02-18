@@ -416,6 +416,31 @@
             "title": "Removing sensitive files from old commits"
         },
         {
+            "location": "/git/encrypting/",
+            "text": "How to work with a encrypted repository using git-crypt\n\n\ngit-crypt repo\n\n\n\n\nClone it\n    \ngit clone git@github.com:AGWA/git-crypt.git\n\n\nInstall it\n\n\nmake && make install\n\n\nMake sure that you have \ng++\n installed\n\n\n\n\n\n\n\n\nTo generate a key\n\n\ncd $(mktemp -d); git init; git-crypt init; git-crypt export-key ~/git-crypt.key; cd\n\n\n\n\nDon't forget to secure your key in a safe place.\n\n\nConfiguring your repository to encrypt all files\n\n\nIn a repository create and commit a \n.gitattributes\n file with this content:\n\n\n/** filter=git-crypt diff=git-crypt\n/public/** !filter !diff\n.gitattributes !filter !diff\n.gitmodules !filter !diff\n.git* !filter !diff\n\n\n\n\nAfter the \n.gitattributes\n file is commited, do the following steps:\n\n\ngit-crypt unlock ~/git-crypt.key\ngit-crypt status -f\n\n\n\n\nThen commit your changes.\n\n\nOn all new clones of this repository you'll need to unlock it:\n\n\ngit-crypt unlock ~/git-crypt.key\n...do your stuff...\ngit-crypt status # to check if all files are encrypted (-f to fix)\ngit add .\ngit commit\ngit push\n\n\n\n\nCAUTION\n\n\nWhen backuping the repository do not copy it to another place, \nclone\n it.\nWhen \ngit-crypt\n \nunlocks\n a repository it creates a git-crypt directory inside \n.git\n which contains your key.\n\n\nCAUTION\n\n\nReferences\n\n\n\n\nencryption - git encrypt/decrypt remote repository files while push/pull - Stack Overflow\n\n\nStoring sensitive data in a git repository using git-crypt | Technology | Blog | Twinbit\n\n\nEncrypting all by default, then exclude... \u00b7 Issue #76 \u00b7 AGWA/git-crypt \u00b7 GitHub",
+            "title": "Encrypting"
+        },
+        {
+            "location": "/git/encrypting/#how-to-work-with-a-encrypted-repository-using-git-crypt",
+            "text": "git-crypt repo   Clone it\n     git clone git@github.com:AGWA/git-crypt.git  Install it  make && make install  Make sure that you have  g++  installed",
+            "title": "How to work with a encrypted repository using git-crypt"
+        },
+        {
+            "location": "/git/encrypting/#to-generate-a-key",
+            "text": "cd $(mktemp -d); git init; git-crypt init; git-crypt export-key ~/git-crypt.key; cd  Don't forget to secure your key in a safe place.",
+            "title": "To generate a key"
+        },
+        {
+            "location": "/git/encrypting/#configuring-your-repository-to-encrypt-all-files",
+            "text": "In a repository create and commit a  .gitattributes  file with this content:  /** filter=git-crypt diff=git-crypt\n/public/** !filter !diff\n.gitattributes !filter !diff\n.gitmodules !filter !diff\n.git* !filter !diff  After the  .gitattributes  file is commited, do the following steps:  git-crypt unlock ~/git-crypt.key\ngit-crypt status -f  Then commit your changes.  On all new clones of this repository you'll need to unlock it:  git-crypt unlock ~/git-crypt.key\n...do your stuff...\ngit-crypt status # to check if all files are encrypted (-f to fix)\ngit add .\ngit commit\ngit push  CAUTION  When backuping the repository do not copy it to another place,  clone  it.\nWhen  git-crypt   unlocks  a repository it creates a git-crypt directory inside  .git  which contains your key.  CAUTION",
+            "title": "Configuring your repository to encrypt all files"
+        },
+        {
+            "location": "/git/encrypting/#references",
+            "text": "encryption - git encrypt/decrypt remote repository files while push/pull - Stack Overflow  Storing sensitive data in a git repository using git-crypt | Technology | Blog | Twinbit  Encrypting all by default, then exclude... \u00b7 Issue #76 \u00b7 AGWA/git-crypt \u00b7 GitHub",
+            "title": "References"
+        },
+        {
             "location": "/latex/",
             "text": "\ufeff\n\n\nLaTeX\n\n\nApresenta\u00e7\u00e3o em Beamer estilo Lousa\n\n\nApresenta\u00e7\u00e3o em Beamer estilo Lousa\n\n\n[Como adicionar cores no LaTeX]\n\n\nComo adicionar cores no LaTeX",
             "title": "Latex"
