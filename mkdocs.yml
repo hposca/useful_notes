@@ -15,6 +15,7 @@ pages:
   - Releasing: 'git/releasing.md'
   - Submodules: 'git/submodules.md'
   - Undoing Mistakes: 'git/undoing.md'
+  - Encrypting: 'git/encrypting.md'
 - Latex: 'latex.md'
 - Linux:
   - General: 'linux/index.md'
