@@ -92,6 +92,18 @@ git submodule update --init --recursive
 git grep [regexp] $(git rev-list --all)
 ~~~
 
+or
+
+~~~ Bash
+git log -S"search term"
+~~~
+
+## How to grep commit messages
+
+```bash
+git log --grep "search term"
+```
+
 # Add only non-whitespace changes
 
 Suponha que o seu editor tenha feito mudanças nos whitespaces/tabs, para apenas adicionar ao staging as mudanças de verdade:
