@@ -107,3 +107,9 @@ Then, to remove the newly generated 'refs/original' reference and clear the refl
     git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
     git reflog expire --expire=now --all
     git gc --prune=now
+
+# Going way back to the origin of time
+
+```
+git checkout --orphan branch_name
+```
