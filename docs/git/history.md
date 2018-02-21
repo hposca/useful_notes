@@ -76,3 +76,11 @@ With hints from [StackOverflow](http://stackoverflow.com/questions/179123/edit-a
     1. `git rebase --continue`
 
 Most of this sequence will be explained to you by the output of the various commands as you go. It’s very easy, you don’t need to memorise it – just remember that `git rebase --interactive` lets you correct commits no matter how long ago they were.
+
+# Changing the whole history
+
+You may want to `rebase` from the beginning of your repository. For doing that the `--root` flag is very useful:
+
+```
+git rebase -i --root
+```
