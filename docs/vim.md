@@ -100,3 +100,20 @@ zw                             # Mark word as incorrect
 With help from [here](http://stackoverflow.com/questions/811193/how-to-convert-the-m-linebreak-to-normal-linebreak-in-a-file-opened-in-vim):
 
     :%s/<Ctrl-V><Ctrl-M>/\r/g
+
+# Copy the filename/full path of a file
+
+With this, it will copy the filename or full file path into the `"` register, which is the vim's default clipboard.
+
+Filename:
+
+```
+:let @" = expand("%")
+```
+
+Full path:
+
+```
+:let @" = expand("%:p")
+```
+Thanks to [clipboard - Yank file name / path of current buffer in Vim - Stack Overflow](https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim).
