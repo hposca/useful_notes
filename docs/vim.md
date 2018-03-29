@@ -117,3 +117,13 @@ Full path:
 :let @" = expand("%:p")
 ```
 Thanks to [clipboard - Yank file name / path of current buffer in Vim - Stack Overflow](https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim).
+
+And if you want to copy only the full-path of the directory:
+
+```
+:let @" = expand("%:p:h")
+```
+
+Thanks to [How can I expand the full path of the current file to pass to a command in Vim? - Stack Overflow](https://stackoverflow.com/questions/2233905/how-can-i-expand-the-full-path-of-the-current-file-to-pass-to-a-command-in-vim).
+
+More info can be found at `:help filename-modifiers`.
