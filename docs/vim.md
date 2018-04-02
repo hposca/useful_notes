@@ -127,3 +127,11 @@ And if you want to copy only the full-path of the directory:
 Thanks to [How can I expand the full path of the current file to pass to a command in Vim? - Stack Overflow](https://stackoverflow.com/questions/2233905/how-can-i-expand-the-full-path-of-the-current-file-to-pass-to-a-command-in-vim).
 
 More info can be found at `:help filename-modifiers`.
+
+# Sorting IPs
+
+From this [StackOverflow question](https://stackoverflow.com/questions/9067559/sorting-ip-addresses-in-vim#answer-9075090):
+
+```
+:%s/\<\d\d\?\>/0&/g|%&&|sor r/\(\d\{3}\)\%(\.\d\{3}\)\{3}/|%s/\<00\?\ze\d//g
+```
