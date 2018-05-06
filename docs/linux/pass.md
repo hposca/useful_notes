@@ -56,3 +56,20 @@ According to the [official site tutorial](https://www.passwordstore.org/) and th
 
 More information on how to use `pass` can be found on [its page](https://www.passwordstore.org/) and reading the [man page](https://git.zx2c4.com/password-store/about/).
 
+# Reaffirming trust
+
+If you receive some error like this one after reimporting your key
+
+```
+gpg: <KEY>: There is no assurance this key belongs to the named user
+gpg: [stdin]: encryption failed: Unusable public key
+```
+
+you can do as suggest on this [StackOverflow thread](https://stackoverflow.com/questions/33361068/gnupg-there-is-no-assurance-this-key-belongs-to-the-named-user) and do a
+
+```bash
+gpg2 --edit-key <KEY>
+gpg> trust
+# Answer that you trust ultimately (5)
+# Answer yes
+```
