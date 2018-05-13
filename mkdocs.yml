@@ -23,6 +23,8 @@ pages:
   - File Handling: 'linux/file_handling.md'
   - Format Conversion: 'linux/format_conversions.md'
   - Logs: 'linux/logs.md'
+  - Network: 'linux/network.md'
+  - Pass: 'linux/pass.md'
   - PDF: 'linux/pdf.md'
   - Tmux: 'linux/tmux.md'
   - Youtube: 'linux/youtube.md'

@@ -24,3 +24,11 @@ bundle exec rails runner "eval(File.read 'arquivo.rb')"
 With the use of the [guard-rspec gem](https://github.com/guard/guard-rspec) and the help of this [StackOverflow question](http://stackoverflow.com/questions/17974421/automatically-run-rspec-when-plain-old-ruby-not-rails-files-change) we configured the use of `guard`, to watch for modifications to our files and run `rspec` when something changes.
 
 To use guard, simply run `bundle exec guard` inside the container, in the `/app` directory, and be happy!
+
+## Discovering the version of a gem while debugging
+
+```ruby
+puts Gem.loaded_specs["activesupport"].version
+```
+
+Help from [rubygems - How do you check the Gem Version in Ruby at Runtime? - Stack Overflow](https://stackoverflow.com/questions/2954279/how-do-you-check-the-gem-version-in-ruby-at-runtime)
