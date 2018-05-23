@@ -48,3 +48,26 @@ pdftk is also capable of merging multiple pdf files into one pdf.
 
 That would merge the files corresponding to the first, second, fourth and fifth pages into a single output pdf.
 
+# Joining/merging pdf pages/files into a single one
+
+Install `pdfjam`:
+
+```bash
+sudo apt-get install -y pdfjam
+```
+
+(Maybe, there is the need to install `texlive-latex-recommended` too)
+
+Merge files with:
+
+```bash
+pdfjam Page1.pdf Page2.pdf --nup 2x1 --landscape --outfile Page1_2.pdf
+```
+
+Merge pages from the same file:
+
+```bash
+pdfjam file.pdf --nup 2x1 --landscape --outfile together.pdf
+```
+
+All this was possible with the help of https://superuser.com/questions/366490/how-to-merge-multiple-pdf-files-onto-one-page-with-pdftk/750293#750293
