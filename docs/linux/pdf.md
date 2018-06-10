@@ -71,3 +71,13 @@ pdfjam file.pdf --nup 2x1 --landscape --outfile together.pdf
 ```
 
 All this was possible with the help of https://superuser.com/questions/366490/how-to-merge-multiple-pdf-files-onto-one-page-with-pdftk/750293#750293
+
+# Convert PDFs into JPEGs
+
+## All pages into the same file
+
+```
+for i in *.pdf; do convert -density 600 -append $i ${i%.*}.jpg; done
+```
+
+With the help of [linux - How to merge images in command line? - Stack Overflow](https://stackoverflow.com/questions/20075087/how-to-merge-images-in-command-line)
