@@ -169,3 +169,19 @@ As stated [here](http://stackoverflow.com/questions/5471174/git-move-branch-poin
 ```
 git branch -f branch-name new-tip-commit
 ```
+
+# Git patch in different directory
+
+As suggested in [How to apply a Git patch to a file with a different name and path? - Stack Overflow](https://stackoverflow.com/questions/16526321/how-to-apply-a-git-patch-to-a-file-with-a-different-name-and-path):
+
+```
+git format-patch --relative <commit>
+```
+
+It can be something like: `git format-patch --relative -10 HEAD`
+
+Then apply pointing to the new directory:
+
+```
+git am --directory the/directory/ 0001-patchfile.patch
+```
