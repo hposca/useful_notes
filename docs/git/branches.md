@@ -137,7 +137,8 @@ git branch -d new_branch
 ~~~
 
 Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório que estava no "repositório A", e com o histórico preservado!
-E isto tudo só foi possível devido às dicas [deste site](http://www.google.com/url?q=http%3A%2F%2Fgbayer.com%2Fdevelopment%2Fmoving-files-from-one-git-repository-to-another-preserving-history%2F&sa=D&sntz=1&usg=AFrqEzd245648I-fl6TPK2YXtsyvjdMGLw)!
+E isto tudo só foi possível devido às dicas [deste site](http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/)!
+[This gist](https://gist.github.com/whistler/de34b77aba2221ed8b2e) has a very similar strategy based on the site above.
 
 # How do you squash commits into one patch with git format-patch?
 

@@ -104,6 +104,12 @@ git log -S"search term"
 git log --grep "search term"
 ```
 
+On all branches
+
+```
+git log --all --grep="search term"
+```
+
 # Add only non-whitespace changes
 
 Suponha que o seu editor tenha feito mudanças nos whitespaces/tabs, para apenas adicionar ao staging as mudanças de verdade:
