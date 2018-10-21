@@ -84,3 +84,16 @@ You may want to `rebase` from the beginning of your repository. For doing that t
 ```
 git rebase -i --root
 ```
+
+# Re-creating the first commit
+
+```
+git checkout -b new-master
+git reset --hard <First commit SHA>
+git update-ref -d HEAD
+# Now remove all files from stage
+git commit --allow-empty
+git merge --no-ff <other branch>
+```
+
+Using the help from [How to revert initial git commit? - Stack Overflow](https://stackoverflow.com/questions/6632191/how-to-revert-initial-git-commit#answer-6637891)
