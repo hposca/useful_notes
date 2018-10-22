@@ -122,6 +122,15 @@ Na raiz do "repositório A":
 git filter-branch --subdirectory-filter [oDitoCujoDoDiretorioQueQueremosSeparar] -- --all
 ~~~
 
+If you want your code to be on another directory structure on repository B:
+
+~~~
+mkdir -p [new directory location]
+mv * [new directory location]
+git add .
+git commit
+~~~
+
 Este lindo comando fará, segundo a documentação, como se o repositório fosse a raíz do repositório e todo o resto, desconhecido.
 
 Já no seu "repositório B":
@@ -129,7 +138,7 @@ Já no seu "repositório B":
 ~~~ Bash
 git checkout -b new_branch
 git remote add branchA [caminhoParaORepositorioA]
-git pull branchA master # Ao invés de master você pode colocar a branch que estava sendo utilizada no repositório A
+git pull branchA master --allow-unrelated-histories # Ao invés de master você pode colocar a branch que estava sendo utilizada no repositório A
 git remote rm branchA
 git checkout master
 git merge --no-ff new_branch
