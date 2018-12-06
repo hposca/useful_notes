@@ -122,7 +122,7 @@ Na raiz do "repositório A":
 git filter-branch --subdirectory-filter [oDitoCujoDoDiretorioQueQueremosSeparar] -- --all
 ~~~
 
-If you want your code to be on another directory structure on repository B:
+If you want your code to be on another directory structure on repository B, execute the following commands still on Repository A:
 
 ~~~
 mkdir -p [new directory location]
@@ -194,4 +194,36 @@ Then apply pointing to the new directory:
 
 ```
 git am --directory the/directory/ 0001-patchfile.patch
+```
+
+# Merging two repositories
+
+How to merge a repository (`REPO_TO_DELETE`) into another (`REPO_TO_KEEP`):
+
+```bash
+#!/usr/bin/env bash
+
+GITHUB_USER=""
+REPO_TO_KEEP=""
+REPO_TO_DELETE=""
+
+git clone git@github.com:${GITHUB_USER}/${REPO_TO_KEEP}.git
+git clone git@github.com:${GITHUB_USER}/${REPO_TO_DELETE}.git
+
+cd ${REPO_TO_DELETE}
+mkdir ${REPO_TO_DELETE}
+mv * ${REPO_TO_DELETE}
+git add .
+git commit -a -m "Moving ${REPO_TO_DELETE} project into its own directory
+
+So we can merge into the ${REPO_TO_KEEP} repository with less problems"
+
+cd ../${REPO_TO_KEEP}
+git remote add ${REPO_TO_DELETE} ../${REPO_TO_DELETE}
+git fetch ${REPO_TO_DELETE}
+git checkout -b merging_${REPO_TO_DELETE}_repo
+git merge --allow-unrelated-histories ${REPO_TO_DELETE}/master
+
+# Solve any conflicts that appear
+# git commit
 ```
