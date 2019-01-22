@@ -137,3 +137,11 @@ With the help of [StackOverflow](http://stackoverflow.com/questions/17195861/und
 With the help of [StackOverflow](http://stackoverflow.com/questions/12591247/find-when-line-was-deleted):
 
     git log -c -S'missingtext' /path/to/file
+
+# Pushing to a Remote Branch with a Different Name
+
+```
+git push origin local-name:remote-name
+```
+
+Tip from https://penandpants.com/2013/02/07/git-pushing-to-a-remote-branch-with-a-different-name/
