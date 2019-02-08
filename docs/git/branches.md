@@ -149,6 +149,39 @@ Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório
 E isto tudo só foi possível devido às dicas [deste site](http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/)!
 [This gist](https://gist.github.com/whistler/de34b77aba2221ed8b2e) has a very similar strategy based on the site above.
 
+A simple bash script with all the steps at once:
+
+```bash
+#!/usr/bin/env bash
+
+GITHUB_USER=""
+REPO_FROM=""
+REPO_FROM_BRANCH="master"
+DIRECTORY_FROM="a/b/c/"
+REPO_TO=""
+REPO_TO_NEW_BRANCH="moving"
+DIRECTORY_TO="c/"
+
+git clone git@github.com:${GITHUB_USER}/${REPO_FROM}.git
+git clone git@github.com:${GITHUB_USER}/${REPO_TO}.git
+
+cd ${REPO_FROM}
+git filter-branch --subdirectory-filter "${DIRECTORY_FROM}" -- --all
+mkdir -p "${DIRECTORY_TO}"
+mv * "${DIRECTORY_TO}"
+git add .
+git commit -m "Moving files to new location"
+
+cd ../${REPO_TO}
+git checkout -b "${REPO_TO_NEW_BRANCH}"
+git remote add repoFrom "../${REPO_FROM}"
+git pull repoFrom "${REPO_FROM_BRANCH}" --allow-unrelated-histories
+git remote rm repoFrom
+git checkout master
+git merge --no-ff "${REPO_TO_NEW_BRANCH}"
+# git branch -d "${REPO_TO_NEW_BRANCH}"
+```
+
 # How do you squash commits into one patch with git format-patch?
 
 With the help of [StackOverflow](http://stackoverflow.com/questions/616556/how-do-you-squash-commits-into-one-patch-with-git-format-patch).
