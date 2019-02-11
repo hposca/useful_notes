@@ -306,12 +306,18 @@ _file=&quot;${1}&quot;
 _times=8
 filesize=$(stat -c %s &quot;${_file}&quot;)
 
+# Zeroes
+dd if=/dev/zero of=&quot;${_file}&quot; bs=&quot;${filesize}&quot; count=1 conv=notrunc
+# Ones
+dd if=&lt;(yes $'\xFF' | tr -d '\n') of=&quot;${_file}&quot; bs=&quot;${filesize}&quot; count=1 conv=notrunc
+
+# Random stuff
 for (( i = 0; i &lt; _times; i++ )); do
   dd if=/dev/urandom of=&quot;${_file}&quot; bs=&quot;${filesize}&quot; count=1 conv=notrunc
 done
 </code></pre>
 
-<p>Made possible with the help of <a href="https://www.marksanborn.net/security/securely-wipe-a-file-with-dd/">Securely Wipe a File with DD</a></p>
+<p>Made possible with the help of <a href="https://www.marksanborn.net/security/securely-wipe-a-file-with-dd/">Securely Wipe a File with DD</a> and <a href="https://stackoverflow.com/questions/10905062/how-do-i-get-an-equivalent-of-dev-one-in-linux">How do I get an equivalent of /dev/one in Linux</a></p>
               
             </div>
           </div>
