@@ -35,6 +35,7 @@ pages:
   - Pass: 'linux/pass.md'
   - Terminal: 'linux/terminal.md'
   - Tmux: 'linux/tmux.md'
+  - Upgrading Python: 'linux/upgrading_python.md'
   - Wifi: 'linux/wifi.md'
   - Youtube: 'linux/youtube.md'
 - Mercurial: 'mercurial.md'
