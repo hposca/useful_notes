@@ -339,10 +339,15 @@ python3 -V
 /usr/bin/env python3 -V
 </code></pre>
 
+<p>After executing this process, <code>pip</code> failed because it could not find <code>lsb_release</code>, creating a symbolic link solved this issue:</p>
+<pre><code class="bash">sudo ln -s /usr/share/pyshared/lsb_release.py /usr/local/lib/python3.7/site-packages/lsb_release.py
+</code></pre>
+
 <p>Possible with the help of:</p>
 <ul>
 <li><a href="https://mintguide.org/other/794-python-3-6-install-latest-version-into-linux-mint.html">Python 3.6 - install latest version into Linux Mint</a></li>
 <li><a href="https://tecadmin.net/install-python-3-7-on-ubuntu-linuxmint/">How To Install Python 3.7.0 on Ubuntu, Debian &amp; LinuxMint - TecAdmin</a></li>
+<li><a href="https://askubuntu.com/questions/965043/no-module-named-lsb-release-after-install-python-3-6-3-from-source#answer-1003535">python3 - No module named 'lsb_release' after install Python 3.6.3 from source - Ask Ubuntu</a></li>
 </ul>
               
             </div>
