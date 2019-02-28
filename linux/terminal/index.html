@@ -202,6 +202,23 @@
     <li class="toctree-l3"><a href="#displaying-a-function-definition">Displaying a function definition</a></li>
     
 
+    <li class="toctree-l3"><a href="#bang-commands">Bang commands</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#useful-idioms">Useful idioms</a></li>
+        
+            <li><a class="toctree-l4" href="#retrieving-previous-command-arguments">Retrieving previous command arguments</a></li>
+        
+            <li><a class="toctree-l4" href="#lines-in-history">Lines in history</a></li>
+        
+            <li><a class="toctree-l4" href="#word-designators">Word designators</a></li>
+        
+            <li><a class="toctree-l4" href="#modifiers">Modifiers:</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -299,6 +316,224 @@
 <p><code>type foobar</code> To discover its location
 <code>declare -f foobar</code> To display its definition</p>
 <p>Found this info at <a href="https://stackoverflow.com/questions/6916856/can-bash-show-a-functions-definition">Can bash show a function's definition? - Stack Overflow</a>.</p>
+<h1 id="bang-commands">Bang commands</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!!</td>
+<td>Will execute the last command. Same as !-1 or "up-arrow + return". The most common use is sudo !! when issued command failed due to insufficient privileges.</td>
+</tr>
+<tr>
+<td>!n</td>
+<td>Will execute the line n of the history record.   In most cases using mouse is a better deal</td>
+</tr>
+<tr>
+<td>!-n</td>
+<td>Will execute the command n lines back.  You usually remember the last three-four command you issues so !-2 and !-3 speed things up.</td>
+</tr>
+<tr>
+<td>!gzip</td>
+<td>will re-execute the most recent gzip command (history is searched  in reverse order). String specified is considered to be the prefix of the  command.</td>
+</tr>
+<tr>
+<td>!?etc.gz</td>
+<td>same as above but the unique string doesn't have to be at the start of the command. That means that you can identify command by a unique string appearing anywhere in the command  (might be faster then Ctrl-R  mechanism)</td>
+</tr>
+<tr>
+<td>!!:1</td>
+<td>designates the first argument of the last command.  This can be shortened to !1.</td>
+</tr>
+<tr>
+<td>!!:$</td>
+<td>designates the last argument of the preceding command. This may be shortened to !$.</td>
+</tr>
+</tbody>
+</table>
+<p>I think you need you need to know  five major bang commands (!!, !!:h, !!:f, !$, !1)</p>
+<h2 id="useful-idioms">Useful idioms</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sudo !!</td>
+<td>reexecute the last command with prefix sudo.</td>
+</tr>
+<tr>
+<td>cd !$</td>
+<td>cd to the directory which is the last argument of the previous command.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="retrieving-previous-command-arguments">Retrieving previous command arguments</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!:0</td>
+<td>is the previous command name</td>
+</tr>
+<tr>
+<td>!^, !:2, !:3, …, !$</td>
+<td>are the arguments of the previous command</td>
+</tr>
+<tr>
+<td>!*</td>
+<td>is all the arguments</td>
+</tr>
+<tr>
+<td>!$</td>
+<td>is the last argument. You can also use $_ to get the last argument of the previous command.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lines-in-history">Lines in history</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!-1</td>
+<td>previous command</td>
+</tr>
+<tr>
+<td>!-2, !-3, ...</td>
+<td>are earlier commands and arguments can be extracted from earlier commands too</td>
+</tr>
+<tr>
+<td>!-2^, !-2:2, !-2$, !-2*</td>
+<td>you can extract particular arguments as well.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="word-designators">Word designators</h2>
+<p>Generally a colon (:) separates the event designator and the word designator, but it can be omitted, if the word designator begins with $, %, ^, *, or - . As well for for command line arguments from 1 to 9 ($1-$9)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>the zero’th word (command name)</td>
+</tr>
+<tr>
+<td>n</td>
+<td>word n</td>
+</tr>
+<tr>
+<td>ˆ</td>
+<td>the first argument, i.e., word one (usually first argument of the command)</td>
+</tr>
+<tr>
+<td>$</td>
+<td>the last argument</td>
+</tr>
+<tr>
+<td>%</td>
+<td>the word matched by the most recent</td>
+</tr>
+<tr>
+<td>!? str ?</td>
+<td>search of str</td>
+</tr>
+<tr>
+<td>x-y</td>
+<td>words x through y . −y is short for 0−y</td>
+</tr>
+<tr>
+<td>*</td>
+<td>words 1 through the last (like 1−$ ) (all arguments)</td>
+</tr>
+<tr>
+<td>n*</td>
+<td>words n through the last (like n−$ )</td>
+</tr>
+</tbody>
+</table>
+<h2 id="modifiers">Modifiers:</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h</td>
+<td>remove the part of a filename after last "/", leaving the path</td>
+</tr>
+<tr>
+<td>t</td>
+<td>remove all but the part of the filename after the last slash. for example for "/etc/resolv.conf" it will be resolv.conf</td>
+</tr>
+<tr>
+<td>r</td>
+<td>remove the last suffix of a filename (extension of the file). For example /etc/resolv</td>
+</tr>
+<tr>
+<td>e</td>
+<td>remove all but the last suffix of a filename (extension)</td>
+</tr>
+<tr>
+<td>g</td>
+<td>make changes globally, use with s modifier, below</td>
+</tr>
+<tr>
+<td>p</td>
+<td>print the command but do not execute it</td>
+</tr>
+<tr>
+<td>q</td>
+<td>quote the generated text</td>
+</tr>
+<tr>
+<td>s/old/new/</td>
+<td>substitute new for old in the text. Any delimiter may be used. An &amp; in the argument means the value of old. With empty old , use last old , or the most recent !? str ? search if there was no previous old</td>
+</tr>
+<tr>
+<td>x</td>
+<td>quote the generated text, but break into words at blanks and newline</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>repeat the last substitution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre><code class="bash">echo this is a phrase
+!:s/this/that&lt;tab&gt;
+</code></pre>
+
+<ul>
+<li><a href="http://www.softpanorama.org/Scripting/Shellorama/Bash_as_command_interpreter/bash_command_history_reuse.shtml#Using_selected_capabilities_of_bang_command">Bash history reuse and bang commands</a></li>
+<li><a href="https://ss64.com/bash/bang.html">Bash Bang (!) Commands - Linux - SS64.com</a></li>
+<li><a href="https://jaysoo.ca/2009/09/16/unix-history-and-bang-commands/">Unix history and bang commands - Jack Hsu</a></li>
+</ul>
               
             </div>
           </div>
