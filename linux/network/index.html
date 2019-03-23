@@ -193,6 +193,9 @@
     <li class="toctree-l3"><a href="#discover-other-machines-on-your-network">Discover other machines on your network</a></li>
     
 
+    <li class="toctree-l3"><a href="#updating-the-dns-being-used">Updating the DNS being used</a></li>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -306,6 +309,28 @@
 <p>Grab your IP with a <code>ifconfig</code> then later use a <code>nmap</code> to scan your network, something like:</p>
 <pre><code class="bash">sudo nmap -sP 10.253.0.0/16
 </code></pre>
+
+<h1 id="updating-the-dns-being-used">Updating the DNS being used</h1>
+<p>Check which DNS you are using:</p>
+<pre><code class="bash">nslookup google.com
+</code></pre>
+
+<p>It is using the IPs that appear on <code>Server</code> and <code>Address</code>.
+To change it:</p>
+<p>Add</p>
+<pre><code>nameserver 8.8.8.8
+nameserver 1.1.1.1
+</code></pre>
+
+<p>to <code>/etc/resolvconf/resolv.conf.d/head</code> and</p>
+<pre><code class="bash">sudo resolvconf -u
+</code></pre>
+
+<p>Validate that the DNS has been updated:</p>
+<pre><code class="bash">nslookup google.com
+</code></pre>
+
+<p>Thanks to https://www.linuxquestions.org/questions/linux-networking-3/how-to-change-the-dns-server-in-linux-mint-and-should-i-4175597949/#post5658301</p>
               
             </div>
           </div>
