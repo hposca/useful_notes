@@ -27,6 +27,7 @@ pages:
   - File Handling: 'linux/file_handling.md'
   - Format Conversion: 'linux/format_conversions.md'
   - General: 'linux/index.md'
+  - Images: 'linux/images.md'
   - Jq: 'linux/jq.md'
   - Logs: 'linux/logs.md'
   - Monitoring: 'linux/monitoring.md'
