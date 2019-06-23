@@ -135,3 +135,21 @@ From this [StackOverflow question](https://stackoverflow.com/questions/9067559/s
 ```
 :%s/\<\d\d\?\>/0&/g|%&&|sor r/\(\d\{3}\)\%(\.\d\{3}\)\{3}/|%s/\<00\?\ze\d//g
 ```
+
+# Execute current line as Vim EX command
+
+From [How can I execute the current line as Vim EX commands? - Stack Overflow](https://stackoverflow.com/questions/14385998/how-can-i-execute-the-current-line-as-vim-ex-commands/14386090)
+
+```
+yy:@"
+```
+
+Or
+
+```
+Y:@"
+```
+
+Have to <enter> to begin the execution
+
+This was super useful when I had to execute many different substitutions on a list of files.
