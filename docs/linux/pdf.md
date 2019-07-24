@@ -72,6 +72,20 @@ pdfjam file.pdf --nup 2x1 --landscape --outfile together.pdf
 
 All this was possible with the help of https://superuser.com/questions/366490/how-to-merge-multiple-pdf-files-onto-one-page-with-pdftk/750293#750293
 
+# Join png files into single PDF
+
+```
+pdfjoin --a4paper --fitpaper false --rotateoversize false *.png
+```
+
+Or
+
+```
+convert *.png -compress jpeg -quality 50 result.pdf
+```
+
+Thanks to: https://stackoverflow.com/questions/4778635/merging-png-images-into-one-pdf-file
+
 # Convert PDFs into JPEGs
 
 ## All pages into the same file
