@@ -212,6 +212,9 @@
     <li class="toctree-l3"><a href="#joiningmerging-pdf-pagesfiles-into-a-single-one">Joining/merging pdf pages/files into a single one</a></li>
     
 
+    <li class="toctree-l3"><a href="#join-png-files-into-single-pdf">Join png files into single PDF</a></li>
+    
+
     <li class="toctree-l3"><a href="#convert-pdfs-into-jpegs">Convert PDFs into JPEGs</a></li>
     
         <ul>
@@ -376,6 +379,15 @@ gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/e
 </code></pre>
 
 <p>All this was possible with the help of https://superuser.com/questions/366490/how-to-merge-multiple-pdf-files-onto-one-page-with-pdftk/750293#750293</p>
+<h1 id="join-png-files-into-single-pdf">Join png files into single PDF</h1>
+<pre><code>pdfjoin --a4paper --fitpaper false --rotateoversize false *.png
+</code></pre>
+
+<p>Or</p>
+<pre><code>convert *.png -compress jpeg -quality 50 result.pdf
+</code></pre>
+
+<p>Thanks to: https://stackoverflow.com/questions/4778635/merging-png-images-into-one-pdf-file</p>
 <h1 id="convert-pdfs-into-jpegs">Convert PDFs into JPEGs</h1>
 <h2 id="all-pages-into-the-same-file">All pages into the same file</h2>
 <pre><code>for i in *.pdf; do convert -density 600 -append $i ${i%.*}.jpg; done
