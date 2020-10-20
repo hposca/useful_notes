@@ -49,6 +49,19 @@ git config --bool core.bare true
 
 Then delete all the files except .git in that folder. And then you will be able to perform git push to the remote repository without any errors.
 
+## Creating a bare repository from a normal one
+
+From [version control - How to convert a normal Git repository to a bare one? - Stack Overflow](https://stackoverflow.com/a/2200662):
+
+```
+cd repo
+mv .git ../repo.git # renaming just for clarity
+cd ..
+rm -fr repo
+cd repo.git
+git config --bool core.bare true
+```
+
 ## Gerando Patches
 
 Dica do [How to create and apply a patch with Git](https://ariejan.net/2009/10/26/how-to-create-and-apply-a-patch-with-git/):
