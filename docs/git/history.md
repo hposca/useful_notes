@@ -18,6 +18,20 @@ git diff sha1..sha2
 git diff HEAD~10..HEAD~5
 ~~~
 
+## Get all files that have been modified between two git branches
+
+From [Get all files that have been modified in git branch - Stack Overflow](https://stackoverflow.com/questions/10641361/get-all-files-that-have-been-modified-in-git-branch#10641810):
+
+```
+git diff --name-only <notMainDev> $(git merge-base <notMainDev> <mainDev>)
+```
+
+An example if you are on a branch and want to compare with master:
+
+```
+git diff --name-only HEAD $(git merge-base master HEAD)
+```
+
 ## Branches and commits between two commits
 
 - All commits between two commits (only the direct path)
