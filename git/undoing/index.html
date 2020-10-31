@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>Undoing Mistakes - Anotações</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Anotações</a>
         <div role="search">
@@ -45,253 +47,130 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Welcome to MkDocs</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../amazon/">Amazon</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../banco_de_dados/">Banco de dados</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../benchmarks/">Benchmarks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../bash/">Bash</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../docker/">Docker</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../firefox/">Firefox</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Git</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../git/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../branches/">Branches</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../cleaning/">Cleaning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../exporting/">Exporting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../history/">History</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../releasing/">Releasing</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../submodules/">Submodules</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Undoing Mistakes</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#find-and-restore-a-deleted-file">Find and restore a deleted file</a></li>
-    
-
-    <li class="toctree-l3"><a href="#undoing-a-git-rebase">Undoing a git rebase</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#desfazendo-o-ultimo-commit">Desfazendo o último commit</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#desfazendo-o-primeiro-commit-de-um-repositorio">Desfazendo o primeiro commit de um repositório</a></li>
-    
-
-    <li class="toctree-l3"><a href="#undo-a-git-merge">Undo a git merge</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#how-to-revert-a-merge-that-is-already-pushed-to-remote">How to revert a merge that is already pushed to remote?</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#removing-sensitive-files-from-old-commits">Removing sensitive files from old commits</a></li>
-    
-
-    <li class="toctree-l3"><a href="#going-way-back-to-the-origin-of-time">Going way back to the origin of time</a></li>
-    
-
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../amazon/">Amazon</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../banco_de_dados/">Banco de dados</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../benchmarks/">Benchmarks</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../bash/">Bash</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../docker/">Docker</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../firefox/">Firefox</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Git</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../branches/">Branches</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cleaning/">Cleaning</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../exporting/">Exporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../releasing/">Releasing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../submodules/">Submodules</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Undoing Mistakes</a>
+    <ul class="current">
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../encrypting/">Encrypting</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">HTML</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../html/hints/">Hints</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../latex/">Latex</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Linux</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../linux/awk/">awk</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/deleting/">Deleting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/dropbox/">Dropxbox</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/file_handling/">File Handling</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/format_conversions/">Format Conversion</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/images/">Images</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/jq/">Jq</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/logs/">Logs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/monitoring/">Monitoring</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/network/">Network</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pdf/">PDF</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pass/">Pass</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/terminal/">Terminal</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/tmux/">Tmux</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/upgrading_python/">Upgrading Python</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/wifi/">Wifi</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/youtube/">Youtube</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../mercurial/">Mercurial</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Python</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../python/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../python/virtualenv/">Virtual Environment</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../perl/">Perl</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../ruby/">Ruby</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../vim/">Vim</a>
-	    </li>
-          
-        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../encrypting/">Encrypting</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">HTML</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../html/hints/">Hints</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../latex/">Latex</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/awk/">awk</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/deleting/">Deleting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/dropbox/">Dropxbox</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/file_handling/">File Handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/format_conversions/">Format Conversion</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/images/">Images</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/jq/">Jq</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/logs/">Logs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/monitoring/">Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/network/">Network</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pdf/">PDF</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pass/">Pass</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/terminal/">Terminal</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/tmux/">Tmux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/upgrading_python/">Upgrading Python</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/wifi/">Wifi</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/youtube/">Youtube</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../mercurial/">Mercurial</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/virtualenv/">Virtual Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../perl/">Perl</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ruby/">Ruby</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../vim/">Vim</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -320,6 +199,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -329,64 +209,53 @@
 <h1 id="find-and-restore-a-deleted-file">Find and restore a deleted file</h1>
 <p>With the help of <a href="http://stackoverflow.com/questions/953481/find-and-restore-a-deleted-file-in-a-git-repo">StackOverflow</a>:</p>
 <p>Find the last commit that affected the given path. As the file isn't in the HEAD commit, this commit must have deleted it.</p>
-<pre><code class="bash">git rev-list -n 1 HEAD -- &lt;file_path&gt;
+<pre><code class="language-bash">git rev-list -n 1 HEAD -- &lt;file_path&gt;
 </code></pre>
-
 <p>Then checkout the version at the commit before, using the caret (^) symbol:</p>
-<pre><code class="bash">git checkout &lt;deleting_commit&gt;^ -- &lt;file_path&gt;
+<pre><code class="language-bash">git checkout &lt;deleting_commit&gt;^ -- &lt;file_path&gt;
 </code></pre>
-
 <p>Or in one command, if <code>$file</code> is the file in question.</p>
-<pre><code class="bash">git checkout $(git rev-list -n 1 HEAD -- &quot;$file&quot;)^ -- &quot;$file&quot;
+<pre><code class="language-bash">git checkout $(git rev-list -n 1 HEAD -- &quot;$file&quot;)^ -- &quot;$file&quot;
 </code></pre>
-
 <p><strong>HINT:</strong> Use <code>git log --diff-filter=D --summary</code> to get all the commits which have deleted files and the files deleted;</p>
 <p><strong>HINT 2:</strong> <a href="http://blog.kablamo.org/2013/12/08/git-restore/">from here</a> How to search the contents of deleted files</p>
 <p>Lets say I don’t remember the filename of that file I deleted in a fit of cleanup passion. I do remember the name of one of the functions in it though. Here is how to deal with that. Search the contents of all files that have ever existed in git for a string:</p>
-<pre><code class="Bash">git log --summary -S&lt;string&gt; [&lt;path/to/file&gt;] [--since=2009.1.1] [--until=2010.1.1]
+<pre><code class="language-Bash">git log --summary -S&lt;string&gt; [&lt;path/to/file&gt;] [--since=2009.1.1] [--until=2010.1.1]
 </code></pre>
-
 <p>Another way to do this:</p>
-<pre><code class="Bash">git rev-list --all | xargs git grep 'string'
+<pre><code class="language-Bash">git rev-list --all | xargs git grep 'string'
 </code></pre>
-
 <h1 id="undoing-a-git-rebase">Undoing a git rebase</h1>
 <p>Sometimes we want to undo a bad <code>git rebase</code>, hints from <a href="http://stackoverflow.com/questions/134882/undoing-a-git-rebase">StackOverflow</a> :</p>
 <ul>
 <li>First, we have to discover where is the head commit of the branch as it was immediately before the rebase started in the reflog:</li>
 </ul>
-<pre><code class="Bash">git reflog
+<pre><code class="language-Bash">git reflog
 </code></pre>
-
 <p>or</p>
-<pre><code class="Bash">git log -g
+<pre><code class="language-Bash">git log -g
 </code></pre>
-
 <ul>
 <li>Then, reset the current branch to it (with the usual caveats about being absolutely sure before reseting with the --hard option):</li>
 </ul>
-<pre><code class="Bash"># Suppose the old commit was HEAD@{5} in the ref log
+<pre><code class="language-Bash"># Suppose the old commit was HEAD@{5} in the ref log
 git reset --hard HEAD@{5}
 </code></pre>
-
 <p><strong>HINT:</strong> Just in case, make a backup first: <code>git tag BACKUP</code>. You can return to it if something goes wrong: <code>git reset --hard BACKUP</code></p>
 <h2 id="desfazendo-o-ultimo-commit">Desfazendo o último commit</h2>
-<pre><code class="Bash">git reset --soft HEAD~1
+<pre><code class="language-Bash">git reset --soft HEAD~1
 </code></pre>
-
 <h1 id="desfazendo-o-primeiro-commit-de-um-repositorio">Desfazendo o primeiro commit de um repositório</h1>
-<pre><code class="Bash">git update-ref -d HEAD
+<pre><code class="language-Bash">git update-ref -d HEAD
 </code></pre>
-
 <h1 id="undo-a-git-merge">Undo a git merge</h1>
 <p>From <a href="http://stackoverflow.com/questions/2389361/undo-a-git-merge">Undo a git merge</a> :</p>
-<pre><code class="Bash">git reset --hard commit_sha
+<pre><code class="language-Bash">git reset --hard commit_sha
 # ou
 git reset --hard HEAD~5 #will get you back 5 commits.
 # ou
 git reset --merge ORIG_HEAD
 </code></pre>
-
 <h2 id="how-to-revert-a-merge-that-is-already-pushed-to-remote">How to revert a merge that is already pushed to remote?</h2>
 <p>From this <a href="http://stackoverflow.com/questions/7099833/how-to-revert-a-merge-commit-thats-already-pushed-to-remote-branch">StackOverflow hint</a>:</p>
 <pre><code>git revert merge_sha -m [1,2]
@@ -426,7 +295,7 @@ git gc --prune=now
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -436,7 +305,7 @@ git gc --prune=now
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -450,6 +319,11 @@ git gc --prune=now
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

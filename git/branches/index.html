@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>Branches - Anotações</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Anotações</a>
         <div role="search">
@@ -45,273 +47,130 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Welcome to MkDocs</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../amazon/">Amazon</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../banco_de_dados/">Banco de dados</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../benchmarks/">Benchmarks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../bash/">Bash</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../docker/">Docker</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../firefox/">Firefox</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Git</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../git/">General</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Branches</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#showing-which-files-have-changed-between-git-branches">Showing which files have changed between git branches</a></li>
-    
-
-    <li class="toctree-l3"><a href="#git-rename-local-git-branch">Git rename local git branch</a></li>
-    
-
-    <li class="toctree-l3"><a href="#pushing-local-branch-to-origin">Pushing local branch to origin</a></li>
-    
-
-    <li class="toctree-l3"><a href="#remove-remote-branches">Remove remote branches</a></li>
-    
-
-    <li class="toctree-l3"><a href="#visualization">Visualization</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#branches-hierarchy">Branches Hierarchy</a></li>
-        
-            <li><a class="toctree-l4" href="#git-log-all-branches">Git log all branches</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#moving">Moving</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#move-commits-from-one-branch-to-another">Move commits from one branch to another</a></li>
-        
-            <li><a class="toctree-l4" href="#movendo-conteudo-de-uma-branch-para-outra">Movendo conteúdo de uma branch para outra</a></li>
-        
-            <li><a class="toctree-l4" href="#move-the-most-recent-commit">Move the most recent commit</a></li>
-        
-            <li><a class="toctree-l4" href="#movendo-um-diretorio-de-um-repositorio-para-outro-preservando-o-historico">Movendo um diretório de um repositório para outro, preservando o histórico!</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#how-do-you-squash-commits-into-one-patch-with-git-format-patch">How do you squash commits into one patch with git format-patch?</a></li>
-    
-
-    <li class="toctree-l3"><a href="#moving-branch-pointer-without-checkout">Moving branch pointer without checkout</a></li>
-    
-
-    <li class="toctree-l3"><a href="#git-patch-in-different-directory">Git patch in different directory</a></li>
-    
-
-    <li class="toctree-l3"><a href="#merging-two-repositories">Merging two repositories</a></li>
-    
-
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../amazon/">Amazon</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../banco_de_dados/">Banco de dados</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../benchmarks/">Benchmarks</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../bash/">Bash</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../docker/">Docker</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../firefox/">Firefox</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Git</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">General</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Branches</a>
+    <ul class="current">
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../cleaning/">Cleaning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../exporting/">Exporting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../history/">History</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../releasing/">Releasing</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../submodules/">Submodules</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../undoing/">Undoing Mistakes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../encrypting/">Encrypting</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">HTML</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../html/hints/">Hints</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../latex/">Latex</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Linux</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../linux/awk/">awk</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/deleting/">Deleting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/dropbox/">Dropxbox</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/file_handling/">File Handling</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/format_conversions/">Format Conversion</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/images/">Images</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/jq/">Jq</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/logs/">Logs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/monitoring/">Monitoring</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/network/">Network</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pdf/">PDF</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pass/">Pass</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/terminal/">Terminal</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/tmux/">Tmux</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/upgrading_python/">Upgrading Python</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/wifi/">Wifi</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/youtube/">Youtube</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../mercurial/">Mercurial</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Python</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../python/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../python/virtualenv/">Virtual Environment</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../perl/">Perl</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../ruby/">Ruby</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../vim/">Vim</a>
-	    </li>
-          
-        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cleaning/">Cleaning</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../exporting/">Exporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../releasing/">Releasing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../submodules/">Submodules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../undoing/">Undoing Mistakes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../encrypting/">Encrypting</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">HTML</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../html/hints/">Hints</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../latex/">Latex</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/awk/">awk</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/deleting/">Deleting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/dropbox/">Dropxbox</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/file_handling/">File Handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/format_conversions/">Format Conversion</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/images/">Images</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/jq/">Jq</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/logs/">Logs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/monitoring/">Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/network/">Network</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pdf/">PDF</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pass/">Pass</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/terminal/">Terminal</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/tmux/">Tmux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/upgrading_python/">Upgrading Python</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/wifi/">Wifi</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/youtube/">Youtube</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../mercurial/">Mercurial</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/virtualenv/">Virtual Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../perl/">Perl</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ruby/">Ruby</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../vim/">Vim</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -340,6 +199,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -348,74 +208,64 @@
                 <p>Dicas de como se utilizar branches no git.</p>
 <h2 id="showing-which-files-have-changed-between-git-branches">Showing which files have changed between git branches</h2>
 <p>From <a href="http://stackoverflow.com/questions/822811/showing-which-files-have-changed-between-git-branches">Showing which files have changed between git branches</a> :</p>
-<pre><code class="Bash">git diff --name-status master..branchName
+<pre><code class="language-Bash">git diff --name-status master..branchName
 </code></pre>
-
 <h2 id="git-rename-local-git-branch">Git rename local git branch</h2>
 <p>From <a href="http://stackoverflow.com/questions/6591213/rename-local-git-branch">Git rename local git branch</a> :</p>
-<pre><code class="Bash">git branch -m &lt;oldname&gt; &lt;newname&gt;
+<pre><code class="language-Bash">git branch -m &lt;oldname&gt; &lt;newname&gt;
 # or, if you want to rename the current branch:
 git branch -m &lt;newname&gt;
 </code></pre>
-
 <h2 id="pushing-local-branch-to-origin">Pushing local branch to origin</h2>
-<pre><code class="Bash">git push origin &lt;branchName&gt;
+<pre><code class="language-Bash">git push origin &lt;branchName&gt;
 </code></pre>
-
 <h2 id="remove-remote-branches">Remove remote branches</h2>
 <p>From <a href="http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely">Remove remote branches</a> :</p>
-<pre><code class="Bash">git push origin --delete &lt;branchName&gt; # or
+<pre><code class="language-Bash">git push origin --delete &lt;branchName&gt; # or
 git push origin :&lt;branchName&gt;
 </code></pre>
-
 <h1 id="visualization">Visualization</h1>
 <h2 id="branches-hierarchy">Branches Hierarchy</h2>
-<pre><code class="Bash">git log --oneline --decorate --color --graph --all --simplify-by-decoration
+<pre><code class="language-Bash">git log --oneline --decorate --color --graph --all --simplify-by-decoration
 # ou
 git log --graph --simplify-by-decoration --pretty=format:'%d' --all
 </code></pre>
-
 <h2 id="git-log-all-branches">Git log all branches</h2>
 <p>From <a href="http://www.lornajane.net/posts/2014/git-log-all-branches">Git log all branches</a> :</p>
-<pre><code class="Bash">git log --oneline --graph --decorate --all
+<pre><code class="language-Bash">git log --oneline --graph --decorate --all
 </code></pre>
-
 <h1 id="moving">Moving</h1>
 <h2 id="move-commits-from-one-branch-to-another">Move commits from one branch to another</h2>
 <p>From <a href="http://effectif.com/git/move-commit-from-one-branch-to-another">Move commits from one branch to another</a> :</p>
-<pre><code class="Bash"># This will move commits from master to the new branch
+<pre><code class="language-Bash"># This will move commits from master to the new branch
 git checkout -b some-feature
 git checkout master
 git reset --hard HEAD^
 git checkout some-feature
 </code></pre>
-
 <h2 id="movendo-conteudo-de-uma-branch-para-outra">Movendo conteúdo de uma branch para outra</h2>
 <p>De vez em quando não podemos simplesmente mergear uma branch com a outra, pois isso pode trazer algumas modificações indesejadas.
 Uma coisa que podemos fazer é crirar um conjunto de patches e transportá-los para a branch onde queremos aplicar as mudanças que foram feitas na outra branch.</p>
 <p><strong>Gerando os patches:</strong></p>
-<pre><code class="Bash">git checkout &lt;SHA-1 do commit que você quer considerar como último&gt;
+<pre><code class="language-Bash">git checkout &lt;SHA-1 do commit que você quer considerar como último&gt;
 git format-patch &lt;SHA-1 do commit que você quer utilizar como primeiro&gt;
 # Serão gerados vários arquivos .patch
 </code></pre>
-
 <p><strong>Aplicando os patches:</strong></p>
-<pre><code class="Bash"># Primeiramente, mude seu workspace para a branch onde você quer aplicar as mudanças
+<pre><code class="language-Bash"># Primeiramente, mude seu workspace para a branch onde você quer aplicar as mudanças
 # e.g.: git checkout production
 
 git am *.patch
 # No caso que enfrentei tinha alguns problemas de espaço, final de linha, etc. então utilizei:
 git am -3 --ignore-whitespace *.patch
 </code></pre>
-
 <p>Caso algum dos patches falhe na sua aplicação basta editar o arquivo, adicioná-lo com <code>git add</code> e dar um <code>git am --continue</code></p>
 <h2 id="move-the-most-recent-commit">Move the most recent commit</h2>
 <p>From <a href="http://stackoverflow.com/questions/1628563/move-the-most-recent-commits-to-a-new-branch-with-git">Move the most recent commit(s) to a new branch with Git</a> :</p>
-<pre><code class="Bash">git branch newbranch
+<pre><code class="language-Bash">git branch newbranch
 git reset --hard HEAD~3 # Go back 3 commits. You *will* lose uncommitted work.
 git checkout newbranch
 </code></pre>
-
 <h2 id="movendo-um-diretorio-de-um-repositorio-para-outro-preservando-o-historico">Movendo um diretório de um repositório para outro, preservando o histórico!</h2>
 <p>Quem nunca começou a mexer em um diretório e depois percebeu que ele precisava ficar em outro repositório, ou até ser um repositório separado (uma biblioteca, por exemplo)? Seus problemas se acabaram-se!! <code>git filter-branch</code> ao resgate!</p>
 <p>Para esta receita de bolo queremos:</p>
@@ -429,19 +279,17 @@ git checkout newbranch
 </ul>
 <p>(depois de fazer um backup do seu repositório, utilizando sua forma favorita)</p>
 <p>Na raiz do "repositório A":</p>
-<pre><code class="Bash">git filter-branch --subdirectory-filter [oDitoCujoDoDiretorioQueQueremosSeparar] -- --all
+<pre><code class="language-Bash">git filter-branch --subdirectory-filter [oDitoCujoDoDiretorioQueQueremosSeparar] -- --all
 </code></pre>
-
 <p>If you want your code to be on another directory structure on repository B, execute the following commands still on Repository A:</p>
 <pre><code>mkdir -p [new directory location]
 mv * [new directory location]
 git add .
 git commit
 </code></pre>
-
 <p>Este lindo comando fará, segundo a documentação, como se o repositório fosse a raíz do repositório e todo o resto, desconhecido.</p>
 <p>Já no seu "repositório B":</p>
-<pre><code class="Bash">git checkout -b new_branch
+<pre><code class="language-Bash">git checkout -b new_branch
 git remote add branchA [caminhoParaORepositorioA]
 git pull branchA master --allow-unrelated-histories # Ao invés de master você pode colocar a branch que estava sendo utilizada no repositório A
 git remote rm branchA
@@ -449,12 +297,11 @@ git checkout master
 git merge --no-ff new_branch
 git branch -d new_branch
 </code></pre>
-
 <p>Pronto! Agora em seu "repositório B" você terá todo o conteúdo do diretório que estava no "repositório A", e com o histórico preservado!
 E isto tudo só foi possível devido às dicas <a href="http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/">deste site</a>!
 <a href="https://gist.github.com/whistler/de34b77aba2221ed8b2e">This gist</a> has a very similar strategy based on the site above.</p>
 <p>A simple bash script with all the steps at once:</p>
-<pre><code class="bash">#!/usr/bin/env bash
+<pre><code class="language-bash">#!/usr/bin/env bash
 
 GITHUB_USER=&quot;&quot;
 REPO_FROM=&quot;&quot;
@@ -483,10 +330,9 @@ git checkout master
 git merge --no-ff &quot;${REPO_TO_NEW_BRANCH}&quot;
 # git branch -d &quot;${REPO_TO_NEW_BRANCH}&quot;
 </code></pre>
-
 <h1 id="how-do-you-squash-commits-into-one-patch-with-git-format-patch">How do you squash commits into one patch with git format-patch?</h1>
 <p>With the help of <a href="http://stackoverflow.com/questions/616556/how-do-you-squash-commits-into-one-patch-with-git-format-patch">StackOverflow</a>.</p>
-<pre><code class="Bash">[(master)]$ git checkout -b tmpsquash
+<pre><code class="language-Bash">[(master)]$ git checkout -b tmpsquash
 Switched to a new branch &quot;tmpsquash&quot;
 
 [(tmpsquash)]$ git merge --squash newlines
@@ -503,25 +349,21 @@ Squash commit -- not updating HEAD
 [(tmpsquash)]$ git format-patch master
 0001-My-squashed-commits.patch
 </code></pre>
-
 <h1 id="moving-branch-pointer-without-checkout">Moving branch pointer without checkout</h1>
 <p>As stated <a href="http://stackoverflow.com/questions/5471174/git-move-branch-pointer-to-different-commit-without-checkout">here</a> we can use:</p>
 <pre><code>git branch -f branch-name new-tip-commit
 </code></pre>
-
 <h1 id="git-patch-in-different-directory">Git patch in different directory</h1>
 <p>As suggested in <a href="https://stackoverflow.com/questions/16526321/how-to-apply-a-git-patch-to-a-file-with-a-different-name-and-path">How to apply a Git patch to a file with a different name and path? - Stack Overflow</a>:</p>
 <pre><code>git format-patch --relative &lt;commit&gt;
 </code></pre>
-
 <p>It can be something like: <code>git format-patch --relative -10 HEAD</code></p>
 <p>Then apply pointing to the new directory:</p>
 <pre><code>git am --directory the/directory/ 0001-patchfile.patch
 </code></pre>
-
 <h1 id="merging-two-repositories">Merging two repositories</h1>
 <p>How to merge a repository (<code>REPO_TO_DELETE</code>) into another (<code>REPO_TO_KEEP</code>):</p>
-<pre><code class="bash">#!/usr/bin/env bash
+<pre><code class="language-bash">#!/usr/bin/env bash
 
 GITHUB_USER=&quot;&quot;
 REPO_TO_KEEP=&quot;&quot;
@@ -569,7 +411,7 @@ git merge --allow-unrelated-histories ${REPO_TO_DELETE}/master
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -579,7 +421,7 @@ git merge --allow-unrelated-histories ${REPO_TO_DELETE}/master
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -593,6 +435,11 @@ git merge --allow-unrelated-histories ${REPO_TO_DELETE}/master
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

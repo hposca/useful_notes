@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>History - Anotações</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Anotações</a>
         <div role="search">
@@ -45,249 +47,136 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Welcome to MkDocs</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../amazon/">Amazon</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../banco_de_dados/">Banco de dados</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../benchmarks/">Benchmarks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../bash/">Bash</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../docker/">Docker</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../firefox/">Firefox</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Git</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../git/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../branches/">Branches</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../cleaning/">Cleaning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../exporting/">Exporting</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">History</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#analisando-a-historia">Analisando a história</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#mudancas-entre-dois-changests">Mudanças entre dois changests</a></li>
-        
-            <li><a class="toctree-l4" href="#branches-and-commits-between-two-commits">Branches and commits between two commits</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#revert-a-commit-alredy-pushed-to-a-remote-repository">Revert a commit alredy pushed to a remote repository</a></li>
-    
-
-    <li class="toctree-l3"><a href="#making-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore">Making git “forget” about a file that was tracked but is now in .gitignore</a></li>
-    
-
-    <li class="toctree-l3"><a href="#edit-an-incorrect-commit-message-in-git">Edit an incorrect commit message in Git</a></li>
-    
-
-    <li class="toctree-l3"><a href="#changing-the-whole-history">Changing the whole history</a></li>
-    
-
-    <li class="toctree-l3"><a href="#re-creating-the-first-commit">Re-creating the first commit</a></li>
-    
-
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../amazon/">Amazon</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../banco_de_dados/">Banco de dados</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../benchmarks/">Benchmarks</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../bash/">Bash</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../docker/">Docker</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../firefox/">Firefox</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Git</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../branches/">Branches</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cleaning/">Cleaning</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../exporting/">Exporting</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">History</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mudancas-entre-dois-changests">Mudanças entre dois changests</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-all-files-that-have-been-modified-between-two-git-branches">Get all files that have been modified between two git branches</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#branches-and-commits-between-two-commits">Branches and commits between two commits</a>
+    </li>
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../releasing/">Releasing</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../submodules/">Submodules</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../undoing/">Undoing Mistakes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../encrypting/">Encrypting</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">HTML</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../html/hints/">Hints</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../latex/">Latex</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Linux</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../linux/awk/">awk</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/deleting/">Deleting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/dropbox/">Dropxbox</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/file_handling/">File Handling</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/format_conversions/">Format Conversion</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/images/">Images</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/jq/">Jq</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/logs/">Logs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/monitoring/">Monitoring</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/network/">Network</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pdf/">PDF</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pass/">Pass</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/terminal/">Terminal</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/tmux/">Tmux</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/upgrading_python/">Upgrading Python</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/wifi/">Wifi</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/youtube/">Youtube</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../mercurial/">Mercurial</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Python</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../python/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../python/virtualenv/">Virtual Environment</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../perl/">Perl</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../ruby/">Ruby</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../vim/">Vim</a>
-	    </li>
-          
-        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../releasing/">Releasing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../submodules/">Submodules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../undoing/">Undoing Mistakes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../encrypting/">Encrypting</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">HTML</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../html/hints/">Hints</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../latex/">Latex</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/awk/">awk</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/deleting/">Deleting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/dropbox/">Dropxbox</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/file_handling/">File Handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/format_conversions/">Format Conversion</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/images/">Images</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/jq/">Jq</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/logs/">Logs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/monitoring/">Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/network/">Network</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pdf/">PDF</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pass/">Pass</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/terminal/">Terminal</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/tmux/">Tmux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/upgrading_python/">Upgrading Python</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/wifi/">Wifi</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/youtube/">Youtube</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../mercurial/">Mercurial</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/virtualenv/">Virtual Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../perl/">Perl</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ruby/">Ruby</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../vim/">Vim</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -316,6 +205,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -324,17 +214,22 @@
                 <h1 id="analisando-a-historia">Analisando a história</h1>
 <h2 id="mudancas-entre-dois-changests">Mudanças entre dois changests</h2>
 <p>Apenas os arquivos que foram mudados:</p>
-<pre><code class="Bash">git diff --name-only sha1..sha2
+<pre><code class="language-Bash">git diff --name-only sha1..sha2
 # ou
 git diff --name-only HEAD~10..HEAD~5
 </code></pre>
-
 <p>O conteúdo do que foi mudado:</p>
-<pre><code class="Bash">git diff sha1..sha2
+<pre><code class="language-Bash">git diff sha1..sha2
 # ou
 git diff HEAD~10..HEAD~5
 </code></pre>
-
+<h2 id="get-all-files-that-have-been-modified-between-two-git-branches">Get all files that have been modified between two git branches</h2>
+<p>From <a href="https://stackoverflow.com/questions/10641361/get-all-files-that-have-been-modified-in-git-branch#10641810">Get all files that have been modified in git branch - Stack Overflow</a>:</p>
+<pre><code>git diff --name-only &lt;notMainDev&gt; $(git merge-base &lt;notMainDev&gt; &lt;mainDev&gt;)
+</code></pre>
+<p>An example if you are on a branch and want to compare with master:</p>
+<pre><code>git diff --name-only HEAD $(git merge-base master HEAD)
+</code></pre>
 <h2 id="branches-and-commits-between-two-commits">Branches and commits between two commits</h2>
 <ul>
 <li>
@@ -348,20 +243,17 @@ git diff HEAD~10..HEAD~5
 </ul>
 <h1 id="revert-a-commit-alredy-pushed-to-a-remote-repository">Revert a commit alredy pushed to a remote repository</h1>
 <p>From <a href="http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html">this blog entry</a> there are two good ways:</p>
-<pre><code class="Bash">git push origin +commit_sha^:master
+<pre><code class="language-Bash">git push origin +commit_sha^:master
 </code></pre>
-
 <p>or (The one I used):</p>
-<pre><code class="Bash">git reset HEAD^ --hard
+<pre><code class="language-Bash">git reset HEAD^ --hard
 git push origin -f
 </code></pre>
-
 <h1 id="making-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore">Making git “forget” about a file that was tracked but is now in .gitignore</h1>
 <p>.gitignore will prevent untracked files from being added (without an add -f) to the set of files tracked by git, however git will continue to track any files that are already being tracked.</p>
 <p>To stop tracking a file you need to remove it from the index. This can be achieved with this command.</p>
-<pre><code class="Bash">git rm --cached &lt;file&gt;
+<pre><code class="language-Bash">git rm --cached &lt;file&gt;
 </code></pre>
-
 <p>The removal of the file from the head revision will happen on the next commit.</p>
 <h1 id="edit-an-incorrect-commit-message-in-git">Edit an incorrect commit message in Git</h1>
 <p>With hints from <a href="http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git">StackOverflow</a>:</p>
@@ -392,7 +284,6 @@ git push origin -f
 <p>You may want to <code>rebase</code> from the beginning of your repository. For doing that the <code>--root</code> flag is very useful:</p>
 <pre><code>git rebase -i --root
 </code></pre>
-
 <h1 id="re-creating-the-first-commit">Re-creating the first commit</h1>
 <pre><code>git checkout -b new-master
 git reset --hard &lt;First commit SHA&gt;
@@ -401,7 +292,6 @@ git update-ref -d HEAD
 git commit --allow-empty
 git merge --no-ff &lt;other branch&gt;
 </code></pre>
-
 <p>Using the help from <a href="https://stackoverflow.com/questions/6632191/how-to-revert-initial-git-commit#answer-6637891">How to revert initial git commit? - Stack Overflow</a></p>
               
             </div>
@@ -425,7 +315,7 @@ git merge --no-ff &lt;other branch&gt;
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -435,7 +325,7 @@ git merge --no-ff &lt;other branch&gt;
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -449,6 +339,11 @@ git merge --no-ff &lt;other branch&gt;
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

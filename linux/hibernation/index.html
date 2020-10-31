@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Hibernation Problems - Anotações</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hibernation Problems";
+    var mkdocs_page_input_path = "linux/hibernation.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Anotações</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../amazon/">Amazon</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../banco_de_dados/">Banco de dados</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../benchmarks/">Benchmarks</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../bash/">Bash</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../docker/">Docker</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../firefox/">Firefox</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Git</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/git/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/branches/">Branches</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/cleaning/">Cleaning</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/exporting/">Exporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/history/">History</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/releasing/">Releasing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/submodules/">Submodules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/undoing/">Undoing Mistakes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../git/encrypting/">Encrypting</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">HTML</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../html/hints/">Hints</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../latex/">Latex</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../awk/">awk</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../deleting/">Deleting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../dropbox/">Dropxbox</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../file_handling/">File Handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../format_conversions/">Format Conversion</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../images/">Images</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../jq/">Jq</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../logs/">Logs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../monitoring/">Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/">Network</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../pdf/">PDF</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../pass/">Pass</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../terminal/">Terminal</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tmux/">Tmux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../upgrading_python/">Upgrading Python</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../wifi/">Wifi</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../youtube/">Youtube</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../mercurial/">Mercurial</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/virtualenv/">Virtual Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../perl/">Perl</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ruby/">Ruby</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../vim/">Vim</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Anotações</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Hibernation Problems</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hibernation-problems">Hibernation Problems</h1>
+<p>After installing Linux Mint 20 Hibernation didn't work.</p>
+<p>To make it work I followed <a href="https://forums.linuxmint.com/viewtopic.php?p=1495203&amp;sid=9b5eeffffe5ffd2073e04adbb276d15e#p1495203">this post</a> on how to update grub and merging <a href="https://forums.linuxmint.com/viewtopic.php?p=1854165#p1854165">this post's</a> <code>Action</code>s of the <code>com.ubuntu.enable-hibernate.pkla</code> file.</p>
+<p>And creating the service to disable devices to wake up from hibernation as this <a href="https://unix.stackexchange.com/questions/602406/guide-on-how-to-enable-hibernation-on-linux-mint-20-cinnamon-ubuntu-20-and-pre">SO guide</a>, in my case I wanted to disable the keyboard from waking up the computer.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

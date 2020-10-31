@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>Encrypting - Anotações</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Anotações</a>
         <div role="search">
@@ -45,237 +47,134 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Welcome to MkDocs</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../amazon/">Amazon</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../banco_de_dados/">Banco de dados</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../benchmarks/">Benchmarks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../bash/">Bash</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../docker/">Docker</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../firefox/">Firefox</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Git</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../git/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../branches/">Branches</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../cleaning/">Cleaning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../exporting/">Exporting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../history/">History</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../releasing/">Releasing</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../submodules/">Submodules</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../undoing/">Undoing Mistakes</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Encrypting</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#how-to-work-with-a-encrypted-repository-using-git-crypt">How to work with a encrypted repository using git-crypt</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#to-generate-a-key">To generate a key</a></li>
-        
-            <li><a class="toctree-l4" href="#configuring-your-repository-to-encrypt-all-files">Configuring your repository to encrypt all files</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#references">References</a></li>
-    
-
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../amazon/">Amazon</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../banco_de_dados/">Banco de dados</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../benchmarks/">Benchmarks</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../bash/">Bash</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../docker/">Docker</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../firefox/">Firefox</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Git</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../branches/">Branches</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cleaning/">Cleaning</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../exporting/">Exporting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../releasing/">Releasing</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../submodules/">Submodules</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../undoing/">Undoing Mistakes</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Encrypting</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#to-generate-a-key">To generate a key</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuring-your-repository-to-encrypt-all-files">Configuring your repository to encrypt all files</a>
+    </li>
     </ul>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">HTML</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../html/hints/">Hints</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../latex/">Latex</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Linux</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../linux/awk/">awk</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/deleting/">Deleting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/dropbox/">Dropxbox</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/file_handling/">File Handling</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/format_conversions/">Format Conversion</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/images/">Images</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/jq/">Jq</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/logs/">Logs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/monitoring/">Monitoring</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/network/">Network</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pdf/">PDF</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/pass/">Pass</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/terminal/">Terminal</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/tmux/">Tmux</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/upgrading_python/">Upgrading Python</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/wifi/">Wifi</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../linux/youtube/">Youtube</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../mercurial/">Mercurial</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Python</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../python/">General</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../python/virtualenv/">Virtual Environment</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../perl/">Perl</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../ruby/">Ruby</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../vim/">Vim</a>
-	    </li>
-          
-        </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">HTML</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../html/hints/">Hints</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../latex/">Latex</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/awk/">awk</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/deleting/">Deleting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/dropbox/">Dropxbox</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/file_handling/">File Handling</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/format_conversions/">Format Conversion</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/images/">Images</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/jq/">Jq</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/logs/">Logs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/monitoring/">Monitoring</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/network/">Network</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pdf/">PDF</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/pass/">Pass</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/terminal/">Terminal</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/tmux/">Tmux</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/upgrading_python/">Upgrading Python</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/wifi/">Wifi</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/youtube/">Youtube</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../mercurial/">Mercurial</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/">General</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/virtualenv/">Virtual Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../perl/">Perl</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../ruby/">Ruby</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../vim/">Vim</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -304,6 +203,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -323,7 +223,6 @@
 <h2 id="to-generate-a-key">To generate a key</h2>
 <pre><code>cd $(mktemp -d); git init; git-crypt init; git-crypt export-key ~/git-crypt.key; cd
 </code></pre>
-
 <p>Don't forget to secure your key in a safe place.</p>
 <h2 id="configuring-your-repository-to-encrypt-all-files">Configuring your repository to encrypt all files</h2>
 <p>In a repository create and commit a <code>.gitattributes</code> file with this content:</p>
@@ -333,12 +232,10 @@
 .gitmodules !filter !diff
 .git* !filter !diff
 </code></pre>
-
 <p>After the <code>.gitattributes</code> file is commited, do the following steps:</p>
 <pre><code>git-crypt unlock ~/git-crypt.key
 git-crypt status -f
 </code></pre>
-
 <p>Then commit your changes.</p>
 <p>On all new clones of this repository you'll need to unlock it:</p>
 <pre><code>git-crypt unlock ~/git-crypt.key
@@ -348,7 +245,6 @@ git add .
 git commit
 git push
 </code></pre>
-
 <p><strong>CAUTION</strong></p>
 <p>When backuping the repository do not copy it to another place, <code>clone</code> it.
 When <code>git-crypt</code> <code>unlocks</code> a repository it creates a git-crypt directory inside <code>.git</code> which contains your key.</p>
@@ -381,7 +277,7 @@ When <code>git-crypt</code> <code>unlocks</code> a repository it creates a git-c
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -391,7 +287,7 @@ When <code>git-crypt</code> <code>unlocks</code> a repository it creates a git-c
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -405,6 +301,11 @@ When <code>git-crypt</code> <code>unlocks</code> a repository it creates a git-c
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
