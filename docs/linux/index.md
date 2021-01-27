@@ -50,6 +50,12 @@ rsync -az --progress source_dir/* remote_host:/destination_dir # Show progress b
 tar -zc path/to/source | ssh user@remote tar -zxC path/to/destination # Doesn't show progress bar
 ~~~
 
+## Rsync on a different SSH port
+
+From [Is it possible to specify a different ssh port when using rsync? - Stack Overflow](https://stackoverflow.com/questions/4549945/is-it-possible-to-specify-a-different-ssh-port-when-using-rsync):
+
+`rsync -azvP -e 'ssh -p 2222' ./dir user@host:/path`
+
 # Encontrando arquivos com setuid ativado
 
 Com [ajuda](http://www.cyberciti.biz/faq/unix-bsd-linux-setuid-file/), conseguimos encontrar todos os arquivos que estão com setuid ativado. Isso foi útil para resolver um problema que estava dando no SAS devido ao fato dos bin não estarem setados com ele:
