@@ -361,3 +361,37 @@ But if you want to see the sizes in a more human readable way:
 ```
 find . -mtime +180 -exec ls -lrt {} \; | awk '{ total += $5}; END { print total }' | awk '{ split( "KB MB GB" , v ); s=0; while( $1>1024 ){ $1/=1024; s++ } print int($1) v[s] }'
 ```
+
+# Create disk image
+
+From [dd - ArchWiki](about:reader?url=https%3A%2F%2Fwiki.archlinux.org%2Findex.php%2FDd%23Disk_cloning_and_restore#Disk_cloning_and_restore)
+
+Boot from a live media and make sure no partitions are mounted from the source hard drive.
+
+Then mount the external hard drive and backup the drive:
+
+`dd if=/dev/sda conv=sync,noerror bs=64K | gzip -c  > /path/to/backup.img.gz`
+
+If necessary (e.g. when the format of the external HD is FAT32) split the disk image in volumes (see also the split man pages):
+
+`dd if=/dev/sda conv=sync,noerror bs=64K | gzip -c | split -a3 -b2G - /path/to/backup.img.gz`
+
+If there is not enough disk space locally, you may send the image through ssh:
+
+`dd if=/dev/sda conv=sync,noerror bs=64K | gzip -c | ssh user@local dd of=backup.img.gz`
+
+Finally, save extra information about the drive geometry necessary in order to interpret the partition table stored within the image. The most important of which is the cylinder size.
+
+`fdisk -l /dev/sda > /path/to/list_fdisk.info`
+
+Note: You may wish to use a block size (bs=) that is equal to the amount of cache on the HD you are backing up. For example, bs=8192K works for an 8 MiB cache. The 64 KiB mentioned in this article is better than the default bs=512 bytes, but it will run faster with a larger bs=.
+
+# Restore system
+
+To restore your system:
+
+`gunzip -c /path/to/backup.img.gz | dd of=/dev/sda`
+
+When the image has been split, use the following instead:
+
+`cat /path/to/backup.img.gz* | gunzip -c | dd of=/dev/sda`
