@@ -240,6 +240,9 @@ for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
 #or:
 tar -zc path/to/source | ssh user@remote tar -zxC path/to/destination # Doesn't show progress bar
 </code></pre>
+<h2 id="rsync-on-a-different-ssh-port">Rsync on a different SSH port</h2>
+<p>From <a href="https://stackoverflow.com/questions/4549945/is-it-possible-to-specify-a-different-ssh-port-when-using-rsync">Is it possible to specify a different ssh port when using rsync? - Stack Overflow</a>:</p>
+<p><code>rsync -azvP -e 'ssh -p 2222' ./dir user@host:/path</code></p>
 <h1 id="encontrando-arquivos-com-setuid-ativado">Encontrando arquivos com setuid ativado</h1>
 <p>Com <a href="http://www.cyberciti.biz/faq/unix-bsd-linux-setuid-file/">ajuda</a>, conseguimos encontrar todos os arquivos que estão com setuid ativado. Isso foi útil para resolver um problema que estava dando no SAS devido ao fato dos bin não estarem setados com ele:</p>
 <pre><code class="language-Bash">find . -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
@@ -471,6 +474,29 @@ apt-file search filename
 <p>But if you want to see the sizes in a more human readable way:</p>
 <pre><code>find . -mtime +180 -exec ls -lrt {} \; | awk '{ total += $5}; END { print total }' | awk '{ split( &quot;KB MB GB&quot; , v ); s=0; while( $1&gt;1024 ){ $1/=1024; s++ } print int($1) v[s] }'
 </code></pre>
+<h1 id="create-disk-image">Create disk image</h1>
+<p>From <a href="about:reader?url=https%3A%2F%2Fwiki.archlinux.org%2Findex.php%2FDd%23Disk_cloning_and_restore#Disk_cloning_and_restore">dd - ArchWiki</a></p>
+<p>Boot from a live media and make sure no partitions are mounted from the source hard drive.</p>
+<p>Then mount the external hard drive and backup the drive:</p>
+<p><code>dd if=/dev/sda conv=sync,noerror bs=64K | gzip -c  &gt; /path/to/backup.img.gz</code></p>
+<p>If necessary (e.g. when the format of the external HD is FAT32) split the disk image in volumes (see also the split man pages):</p>
+<p><code>dd if=/dev/sda conv=sync,noerror bs=64K | gzip -c | split -a3 -b2G - /path/to/backup.img.gz</code></p>
+<p>If there is not enough disk space locally, you may send the image through ssh:</p>
+<p><code>dd if=/dev/sda conv=sync,noerror bs=64K | gzip -c | ssh user@local dd of=backup.img.gz</code></p>
+<p>Finally, save extra information about the drive geometry necessary in order to interpret the partition table stored within the image. The most important of which is the cylinder size.</p>
+<p><code>fdisk -l /dev/sda &gt; /path/to/list_fdisk.info</code></p>
+<p>Note: You may wish to use a block size (bs=) that is equal to the amount of cache on the HD you are backing up. For example, bs=8192K works for an 8 MiB cache. The 64 KiB mentioned in this article is better than the default bs=512 bytes, but it will run faster with a larger bs=.</p>
+<h1 id="restore-system">Restore system</h1>
+<p>To restore your system:</p>
+<p><code>gunzip -c /path/to/backup.img.gz | dd of=/dev/sda</code></p>
+<p>When the image has been split, use the following instead:</p>
+<p><code>cat /path/to/backup.img.gz* | gunzip -c | dd of=/dev/sda</code></p>
+<h1 id="how-to-create-a-temporary-ftp-server">How to create a temporary ftp server</h1>
+<p>Using <a href="https://pyftpdlib.readthedocs.io/en/latest/tutorial.html#command-line-usage">pyftpdlib</a>:</p>
+<pre><code>pip3 install --user pyftpdlib
+python3 -m pyftpdlib --port=2121 --write --username=user --password=password
+</code></pre>
+<p>This will create an FTP server listening on port <code>2121</code> accepting connections that can write into the current directory.</p>
               
             </div>
           </div>
