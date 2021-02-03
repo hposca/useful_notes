@@ -395,3 +395,14 @@ To restore your system:
 When the image has been split, use the following instead:
 
 `cat /path/to/backup.img.gz* | gunzip -c | dd of=/dev/sda`
+
+# How to create a temporary ftp server
+
+Using [pyftpdlib](https://pyftpdlib.readthedocs.io/en/latest/tutorial.html#command-line-usage):
+
+```
+pip3 install --user pyftpdlib
+python3 -m pyftpdlib --port=2121 --write --username=user --password=password
+```
+
+This will create an FTP server listening on port `2121` accepting connections that can write into the current directory.
