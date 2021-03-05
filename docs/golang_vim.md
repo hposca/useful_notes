@@ -12,3 +12,11 @@ Some references:
 
 - [vim-delve commands](https://github.com/sebdah/vim-delve#commands)
 - [general delve commands](https://github.com/go-delve/delve/blob/master/Documentation/cli/README.md)
+
+# How to run a single test
+
+At your terminal use `go test -run RegexpWithTestName <path where the tests are>`. Example:
+
+```
+go test -v -run Test.\*Iam ./aws
+```
