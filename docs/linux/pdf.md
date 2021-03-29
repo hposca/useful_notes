@@ -50,13 +50,11 @@ That would merge the files corresponding to the first, second, fourth and fifth 
 
 # Joining/merging pdf pages/files into a single one
 
-Install `pdfjam`:
+Install `pdfjam` from `texlive-latex-recommended`:
 
 ```bash
-sudo apt-get install -y pdfjam
+sudo apt-get install -y texlive-latex-recommended
 ```
-
-(Maybe, there is the need to install `texlive-latex-recommended` too)
 
 Merge files with:
 
