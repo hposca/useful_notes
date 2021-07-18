@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Docker - Anotações</title>
+  <title>HTML - Anotações</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Docker";
-    var mkdocs_page_input_path = "docker.md";
+    var mkdocs_page_name = "HTML";
+    var mkdocs_page_input_path = "html.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -67,10 +67,8 @@
                     <li class="toctree-l1"><a class="reference internal" href="../benchmarks/">Benchmarks</a>
                     </li>
                 </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Docker</a>
-    <ul class="current">
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker/">Docker</a>
                     </li>
                 </ul>
                 <ul>
@@ -85,8 +83,10 @@
                     <li class="toctree-l1"><a class="" href="../golang.md">Golang</a>
                     </li>
                 </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../html/">HTML</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">HTML</a>
+    <ul class="current">
+    </ul>
                     </li>
                 </ul>
                 <ul>
@@ -138,7 +138,7 @@
     
       
     
-    <li>Docker</li>
+    <li>HTML</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -149,51 +149,13 @@
           <div role="main">
             <div class="section">
               
-                <p>Dicas interessantes para docker</p>
-<h2 id="exposing-a-port-on-a-live-container">Exposing a port on a live container</h2>
-<p>From this <a href="http://stackoverflow.com/questions/19897743/exposing-a-port-on-a-live-docker-container">Stack Overflow hint</a>:</p>
-<ol>
-<li>
-<p>Discover the IP of the machine:</p>
-<p>docker inspect container_name | grep -i IPAddress</p>
-</li>
-<li>
-<p>Create an IPTables rule (with root permissions):</p>
-<p>iptables -t nat -A  DOCKER -p tcp --dport 8001 -j DNAT --to-destination container-ip:8000</p>
-</li>
-<li>
-<p>Now you can access the container contents through the hostsIP:port</p>
-</li>
-</ol>
-<h2 id="limpando-o-lixo-deixado-para-tras">Limpando o lixo deixado para trás</h2>
-<p>From <a href="http://java.dzone.com/articles/docker-%E2%80%93-clean-after-yourself?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+javalobby%2Ffrontpage+%28Javalobby+%2F+Java+Zone%29">this site</a>:</p>
-<p>Make sure that exited containers are deleted.</p>
-<pre><code>docker rm -v $(docker ps -a -q -f status=exited)
+                <h1 id="draw-boxes-around-elements">Draw boxes around elements</h1>
+<p>From: <a href="https://css-tricks.com/almanac/properties/o/outline/">outline | CSS-Tricks</a></p>
+<pre><code>*{
+  outline: 1px solid red;
+}
 </code></pre>
-<p>Remove unwanted ‘dangling’ images.</p>
-<pre><code>docker rmi $(docker images -f &quot;dangling=true&quot; -q)
-</code></pre>
-<p>Still not enough space? What is this ‘vfs’ directory?</p>
-<pre><code>docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes
-</code></pre>
-<h1 id="acessing-the-container-to-use-debugging-tools">Acessing the container to use debugging tools</h1>
-<p>In rails development sometimes we have to use <a href="https://github.com/pry/pry">pry</a> via <code>binding.pry</code> to debug our code.</p>
-<p>As we need to be on the same terminal that is running the process we need to start our server manually:</p>
-<pre><code>docker-compose run --service-ports &lt;container-name-defined-in-the-docker-compose-file&gt; /bin/bash
-rails s
-</code></pre>
-<p>And then, when we hit the breakpoint (<code>binding.pry</code>) we can <a href="https://github.com/pry/pry/wiki">use pry</a> normally.</p>
-<h1 id="checking-environment-variables-on-a-live-container">Checking environment variables on a live container</h1>
-<p>With the help of <a href="http://stackoverflow.com/questions/34051747/get-environment-variable-from-docker-container">1</a> and <a href="http://stackoverflow.com/questions/30342796/how-to-get-env-variable-when-doing-docker-inspect">2</a>:</p>
-<pre><code>docker inspect --format '{{ range $index, $value := .Config.Env }}{{ println $value }}{{ end }}' &lt;container_id&gt;
-</code></pre>
-<h1 id="accessing-a-stopped-container">Accessing a stopped container</h1>
-<p>With the help of <a href="https://github.com/docker/docker/issues/18078">1</a> and <a href="https://github.com/jpetazzo/nsenter/issues/27">2</a>:</p>
-<pre><code>docker commit STOPPED_CONTAINER NEW_IMAGE_NAME
-docker run -ti NEW_IMAGE_NAME /bin/bash
-# or
-docker run -ti --entrypoint=/bin/sh NEW_IMAGE_NAME
-</code></pre>
+<p>It is often used for accessibility reasons, to emphasize a link when tabbed to without affecting positioning and in a differnet way than hover. Or, to see/debug how your boxes are positioned.</p>
               
             </div>
           </div>
@@ -201,10 +163,10 @@ docker run -ti --entrypoint=/bin/sh NEW_IMAGE_NAME
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../firefox/" class="btn btn-neutral float-right" title="Firefox">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../latex/" class="btn btn-neutral float-right" title="Latex">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../benchmarks/" class="btn btn-neutral" title="Benchmarks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../git/" class="btn btn-neutral" title="Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -230,10 +192,10 @@ docker run -ti --entrypoint=/bin/sh NEW_IMAGE_NAME
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../benchmarks/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../git/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../firefox/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../latex/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
