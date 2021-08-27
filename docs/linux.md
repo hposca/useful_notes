@@ -1118,3 +1118,11 @@ To to a batch conversion, and have safe names:
 
     for file in *m4a; do rename 's/ /_/g' $file; done && for file in *m4a; do ffmpeg -i $file -acodec libmp3lame -ab 128k ${file%.*}.mp3; done
 
+
+# Create a ramdisk
+
+    mkdir -p /mnt/ramdisk && mount -t tmpfs tmpfs /mnt/ramdisk -o size=8192M
+
+# Get your current IPs
+
+    curl ifconfig.me
