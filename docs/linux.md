@@ -1,3 +1,94 @@
+
+<!-- vim-markdown-toc GFM -->
+
+* [Print n-th column to last column](#print-n-th-column-to-last-column)
+    * [Use cases](#use-cases)
+* [Wiping a file](#wiping-a-file)
+* [How to use multiple dropbox accounts on the same computer](#how-to-use-multiple-dropbox-accounts-on-the-same-computer)
+* [Find and Replace string in all files](#find-and-replace-string-in-all-files)
+* [How to convert between formats](#how-to-convert-between-formats)
+    * [m4a to mp3](#m4a-to-mp3)
+        * [Automatically](#automatically)
+* [How to remove accent characters](#how-to-remove-accent-characters)
+* [Finding Hardware Information on Linux](#finding-hardware-information-on-linux)
+* [Hibernation Problems](#hibernation-problems)
+* [Merge/Join images on command line](#mergejoin-images-on-command-line)
+* [Dicas Linux](#dicas-linux)
+    * [How do I list all cron jobs for all users?](#how-do-i-list-all-cron-jobs-for-all-users)
+    * [How to create a CPU spike with a bash command](#how-to-create-a-cpu-spike-with-a-bash-command)
+* [Rsync](#rsync)
+    * [Pegando e enviando arquivos para a Amazon](#pegando-e-enviando-arquivos-para-a-amazon)
+    * [Apenas arquivos novos](#apenas-arquivos-novos)
+    * [How to gzip a directory, transfer via scp, and decompress in one command?](#how-to-gzip-a-directory-transfer-via-scp-and-decompress-in-one-command)
+    * [Rsync on a different SSH port](#rsync-on-a-different-ssh-port)
+* [Encontrando arquivos com setuid ativado](#encontrando-arquivos-com-setuid-ativado)
+* [Mouse](#mouse)
+* [Sort](#sort)
+        * [Sort com delimitador diferente de espaços](#sort-com-delimitador-diferente-de-espaços)
+        * [Sort n-ésima coluna](#sort-n-ésima-coluna)
+        * [Sort com ordenação numérica de verdade ( 9 < 100 )](#sort-com-ordenação-numérica-de-verdade--9--100-)
+    * [Ativando swap](#ativando-swap)
+* [Loop com arquivos que têm espaços no nome](#loop-com-arquivos-que-têm-espaços-no-nome)
+* [Descobrindo a placa de vídeo](#descobrindo-a-placa-de-vídeo)
+* [Copying](#copying)
+    * [Avoid copy if files exist in destination](#avoid-copy-if-files-exist-in-destination)
+* [Displaying Today’s Files Only](#displaying-todays-files-only)
+* [How to zip files that are listed in a text file](#how-to-zip-files-that-are-listed-in-a-text-file)
+* [Desabilitando um usuário, mas sem apagá-lo](#desabilitando-um-usuário-mas-sem-apagá-lo)
+* [IPTables (Firewall)](#iptables-firewall)
+* [How to run multiple simultaneous X Window sessions](#how-to-run-multiple-simultaneous-x-window-sessions)
+* [Create another SSH server](#create-another-ssh-server)
+* [No wired connection after suspend](#no-wired-connection-after-suspend)
+* [Validating RSA public keys](#validating-rsa-public-keys)
+* [Getting you own key from the command line](#getting-you-own-key-from-the-command-line)
+* [Getting home directory by username](#getting-home-directory-by-username)
+* [How do I find out which process is eating up my bandwidth](#how-do-i-find-out-which-process-is-eating-up-my-bandwidth)
+* [Discovering available versions of a package to install](#discovering-available-versions-of-a-package-to-install)
+* [Copying text from the command line](#copying-text-from-the-command-line)
+* [Which package an executable came from?](#which-package-an-executable-came-from)
+* [Finding the size of files older than X days](#finding-the-size-of-files-older-than-x-days)
+* [Create disk image](#create-disk-image)
+* [Restore system](#restore-system)
+* [How to create a temporary ftp server](#how-to-create-a-temporary-ftp-server)
+* [Group AWS ECR images](#group-aws-ecr-images)
+* [Onde logs estão localizados no Linux](#onde-logs-estão-localizados-no-linux)
+    * [Logs de ssh](#logs-de-ssh)
+* [Simple monitoring with gkrellm](#simple-monitoring-with-gkrellm)
+* [Limiting the bandwith for a program](#limiting-the-bandwith-for-a-program)
+* [Discover other machines on your network](#discover-other-machines-on-your-network)
+* [Updating the DNS being used](#updating-the-dns-being-used)
+* [Installing](#installing)
+* [Before using it](#before-using-it)
+    * [Exporting Keys](#exporting-keys)
+* [Setting up](#setting-up)
+* [Reaffirming trust](#reaffirming-trust)
+* [Reduce size of PDF files](#reduce-size-of-pdf-files)
+* [Splitting and merging PDF files](#splitting-and-merging-pdf-files)
+    * [Splitting](#splitting)
+    * [Merging](#merging)
+* [Joining/merging pdf pages/files into a single one](#joiningmerging-pdf-pagesfiles-into-a-single-one)
+* [Join png files into single PDF](#join-png-files-into-single-pdf)
+* [Convert PDFs into JPEGs](#convert-pdfs-into-jpegs)
+    * [All pages into the same file](#all-pages-into-the-same-file)
+* [Printers Adventures on Linux](#printers-adventures-on-linux)
+* [Displaying a function definition](#displaying-a-function-definition)
+* [Bang commands](#bang-commands)
+    * [Useful idioms](#useful-idioms)
+    * [Retrieving previous command arguments](#retrieving-previous-command-arguments)
+    * [Lines in history](#lines-in-history)
+    * [Word designators](#word-designators)
+    * [Modifiers:](#modifiers)
+* [Send command to all panes](#send-command-to-all-panes)
+* [How to upgrade python version](#how-to-upgrade-python-version)
+* [Wifi after hibernation](#wifi-after-hibernation)
+* [Download a video from youtube](#download-a-video-from-youtube)
+* [Convert the downloaded audio](#convert-the-downloaded-audio)
+* [Create a ramdisk](#create-a-ramdisk)
+* [Get your current IPs](#get-your-current-ips)
+* [Resetting the gpg-agent](#resetting-the-gpg-agent)
+
+<!-- vim-markdown-toc -->
+
 # Print n-th column to last column
 
 From [this StackOverflow thread](http://stackoverflow.com/questions/1602035/print-third-column-to-last-column), this is how you can print from the n-th column to the last column of a line, using awk.
@@ -1126,3 +1217,13 @@ To to a batch conversion, and have safe names:
 # Get your current IPs
 
     curl ifconfig.me
+
+# Resetting the gpg-agent
+
+If, by any reason, gpg stops working you can kill it:
+
+    gconf --kill gpg-agent
+
+GPG will restart next time it is needed.
+
+Tip from https://superuser.com/a/1150399
