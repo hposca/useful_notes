@@ -151,7 +151,122 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="print-n-th-column-to-last-column">Print n-th column to last column</h1>
+                <!-- vim-markdown-toc GFM -->
+
+<ul>
+<li><a href="#print-n-th-column-to-last-column">Print n-th column to last column</a><ul>
+<li><a href="#use-cases">Use cases</a></li>
+</ul>
+</li>
+<li><a href="#wiping-a-file">Wiping a file</a></li>
+<li><a href="#how-to-use-multiple-dropbox-accounts-on-the-same-computer">How to use multiple dropbox accounts on the same computer</a></li>
+<li><a href="#find-and-replace-string-in-all-files">Find and Replace string in all files</a></li>
+<li><a href="#how-to-convert-between-formats">How to convert between formats</a><ul>
+<li><a href="#m4a-to-mp3">m4a to mp3</a><ul>
+<li><a href="#automatically">Automatically</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#how-to-remove-accent-characters">How to remove accent characters</a></li>
+<li><a href="#finding-hardware-information-on-linux">Finding Hardware Information on Linux</a></li>
+<li><a href="#hibernation-problems">Hibernation Problems</a></li>
+<li><a href="#mergejoin-images-on-command-line">Merge/Join images on command line</a></li>
+<li><a href="#dicas-linux">Dicas Linux</a><ul>
+<li><a href="#how-do-i-list-all-cron-jobs-for-all-users">How do I list all cron jobs for all users?</a></li>
+<li><a href="#how-to-create-a-cpu-spike-with-a-bash-command">How to create a CPU spike with a bash command</a></li>
+</ul>
+</li>
+<li><a href="#rsync">Rsync</a><ul>
+<li><a href="#pegando-e-enviando-arquivos-para-a-amazon">Pegando e enviando arquivos para a Amazon</a></li>
+<li><a href="#apenas-arquivos-novos">Apenas arquivos novos</a></li>
+<li><a href="#how-to-gzip-a-directory-transfer-via-scp-and-decompress-in-one-command">How to gzip a directory, transfer via scp, and decompress in one command?</a></li>
+<li><a href="#rsync-on-a-different-ssh-port">Rsync on a different SSH port</a></li>
+</ul>
+</li>
+<li><a href="#encontrando-arquivos-com-setuid-ativado">Encontrando arquivos com setuid ativado</a></li>
+<li><a href="#mouse">Mouse</a></li>
+<li><a href="#sort">Sort</a>
+        * <a href="#sort-com-delimitador-diferente-de-espaços">Sort com delimitador diferente de espaços</a>
+        * <a href="#sort-n-ésima-coluna">Sort n-ésima coluna</a>
+        * <a href="#sort-com-ordenação-numérica-de-verdade--9--100-">Sort com ordenação numérica de verdade ( 9 &lt; 100 )</a><ul>
+<li><a href="#ativando-swap">Ativando swap</a></li>
+</ul>
+</li>
+<li><a href="#loop-com-arquivos-que-têm-espaços-no-nome">Loop com arquivos que têm espaços no nome</a></li>
+<li><a href="#descobrindo-a-placa-de-vídeo">Descobrindo a placa de vídeo</a></li>
+<li><a href="#copying">Copying</a><ul>
+<li><a href="#avoid-copy-if-files-exist-in-destination">Avoid copy if files exist in destination</a></li>
+</ul>
+</li>
+<li><a href="#displaying-todays-files-only">Displaying Today’s Files Only</a></li>
+<li><a href="#how-to-zip-files-that-are-listed-in-a-text-file">How to zip files that are listed in a text file</a></li>
+<li><a href="#desabilitando-um-usuário-mas-sem-apagá-lo">Desabilitando um usuário, mas sem apagá-lo</a></li>
+<li><a href="#iptables-firewall">IPTables (Firewall)</a></li>
+<li><a href="#how-to-run-multiple-simultaneous-x-window-sessions">How to run multiple simultaneous X Window sessions</a></li>
+<li><a href="#create-another-ssh-server">Create another SSH server</a></li>
+<li><a href="#no-wired-connection-after-suspend">No wired connection after suspend</a></li>
+<li><a href="#validating-rsa-public-keys">Validating RSA public keys</a></li>
+<li><a href="#getting-you-own-key-from-the-command-line">Getting you own key from the command line</a></li>
+<li><a href="#getting-home-directory-by-username">Getting home directory by username</a></li>
+<li><a href="#how-do-i-find-out-which-process-is-eating-up-my-bandwidth">How do I find out which process is eating up my bandwidth</a></li>
+<li><a href="#discovering-available-versions-of-a-package-to-install">Discovering available versions of a package to install</a></li>
+<li><a href="#copying-text-from-the-command-line">Copying text from the command line</a></li>
+<li><a href="#which-package-an-executable-came-from">Which package an executable came from?</a></li>
+<li><a href="#finding-the-size-of-files-older-than-x-days">Finding the size of files older than X days</a></li>
+<li><a href="#create-disk-image">Create disk image</a></li>
+<li><a href="#restore-system">Restore system</a></li>
+<li><a href="#how-to-create-a-temporary-ftp-server">How to create a temporary ftp server</a></li>
+<li><a href="#group-aws-ecr-images">Group AWS ECR images</a></li>
+<li><a href="#onde-logs-estão-localizados-no-linux">Onde logs estão localizados no Linux</a><ul>
+<li><a href="#logs-de-ssh">Logs de ssh</a></li>
+</ul>
+</li>
+<li><a href="#simple-monitoring-with-gkrellm">Simple monitoring with gkrellm</a></li>
+<li><a href="#limiting-the-bandwith-for-a-program">Limiting the bandwith for a program</a></li>
+<li><a href="#discover-other-machines-on-your-network">Discover other machines on your network</a></li>
+<li><a href="#updating-the-dns-being-used">Updating the DNS being used</a></li>
+<li><a href="#installing">Installing</a></li>
+<li><a href="#before-using-it">Before using it</a><ul>
+<li><a href="#exporting-keys">Exporting Keys</a></li>
+</ul>
+</li>
+<li><a href="#setting-up">Setting up</a></li>
+<li><a href="#reaffirming-trust">Reaffirming trust</a></li>
+<li><a href="#reduce-size-of-pdf-files">Reduce size of PDF files</a></li>
+<li><a href="#splitting-and-merging-pdf-files">Splitting and merging PDF files</a><ul>
+<li><a href="#splitting">Splitting</a></li>
+<li><a href="#merging">Merging</a></li>
+</ul>
+</li>
+<li><a href="#joiningmerging-pdf-pagesfiles-into-a-single-one">Joining/merging pdf pages/files into a single one</a></li>
+<li><a href="#join-png-files-into-single-pdf">Join png files into single PDF</a></li>
+<li><a href="#convert-pdfs-into-jpegs">Convert PDFs into JPEGs</a><ul>
+<li><a href="#all-pages-into-the-same-file">All pages into the same file</a></li>
+</ul>
+</li>
+<li><a href="#printers-adventures-on-linux">Printers Adventures on Linux</a></li>
+<li><a href="#displaying-a-function-definition">Displaying a function definition</a></li>
+<li><a href="#bang-commands">Bang commands</a><ul>
+<li><a href="#useful-idioms">Useful idioms</a></li>
+<li><a href="#retrieving-previous-command-arguments">Retrieving previous command arguments</a></li>
+<li><a href="#lines-in-history">Lines in history</a></li>
+<li><a href="#word-designators">Word designators</a></li>
+<li><a href="#modifiers">Modifiers:</a></li>
+</ul>
+</li>
+<li><a href="#send-command-to-all-panes">Send command to all panes</a></li>
+<li><a href="#how-to-upgrade-python-version">How to upgrade python version</a></li>
+<li><a href="#wifi-after-hibernation">Wifi after hibernation</a></li>
+<li><a href="#download-a-video-from-youtube">Download a video from youtube</a></li>
+<li><a href="#convert-the-downloaded-audio">Convert the downloaded audio</a></li>
+<li><a href="#create-a-ramdisk">Create a ramdisk</a></li>
+<li><a href="#get-your-current-ips">Get your current IPs</a></li>
+<li><a href="#resetting-the-gpg-agent">Resetting the gpg-agent</a></li>
+</ul>
+<!-- vim-markdown-toc -->
+
+<h1 id="print-n-th-column-to-last-column">Print n-th column to last column</h1>
 <p>From <a href="http://stackoverflow.com/questions/1602035/print-third-column-to-last-column">this StackOverflow thread</a>, this is how you can print from the n-th column to the last column of a line, using awk.</p>
 <p>e.g. form the third column:</p>
 <pre><code>awk '{ print substr($0, index($0,$3)) }'
@@ -1125,6 +1240,12 @@ wifi.powersave = 2
 <h1 id="get-your-current-ips">Get your current IPs</h1>
 <pre><code>curl ifconfig.me
 </code></pre>
+<h1 id="resetting-the-gpg-agent">Resetting the gpg-agent</h1>
+<p>If, by any reason, gpg stops working you can kill it:</p>
+<pre><code>gconf --kill gpg-agent
+</code></pre>
+<p>GPG will restart next time it is needed.</p>
+<p>Tip from https://superuser.com/a/1150399</p>
               
             </div>
           </div>
