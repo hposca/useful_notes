@@ -1218,6 +1218,8 @@ To to a batch conversion, and have safe names:
 
     curl ifconfig.me
 
+    curl ipinfo.io/ip
+
 # Resetting the gpg-agent
 
 If, by any reason, gpg stops working you can kill it:
