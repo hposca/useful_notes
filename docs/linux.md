@@ -86,6 +86,7 @@
 * [Create a ramdisk](#create-a-ramdisk)
 * [Get your current IPs](#get-your-current-ips)
 * [Resetting the gpg-agent](#resetting-the-gpg-agent)
+* [VirtualBox shared folder](#virtualbox-shared-folder)
 
 <!-- vim-markdown-toc -->
 
@@ -1229,3 +1230,11 @@ If, by any reason, gpg stops working you can kill it:
 GPG will restart next time it is needed.
 
 Tip from https://superuser.com/a/1150399
+
+# VirtualBox shared folder
+
+If you are having permission denied issues on VirtualBox shared folders:
+
+```
+sudo usermod -aG vboxsf $(whoami)
+```
