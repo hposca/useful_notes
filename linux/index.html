@@ -263,6 +263,7 @@
 <li><a href="#create-a-ramdisk">Create a ramdisk</a></li>
 <li><a href="#get-your-current-ips">Get your current IPs</a></li>
 <li><a href="#resetting-the-gpg-agent">Resetting the gpg-agent</a></li>
+<li><a href="#virtualbox-shared-folder">VirtualBox shared folder</a></li>
 </ul>
 <!-- vim-markdown-toc -->
 
@@ -1248,6 +1249,10 @@ curl ipinfo.io/ip
 </code></pre>
 <p>GPG will restart next time it is needed.</p>
 <p>Tip from https://superuser.com/a/1150399</p>
+<h1 id="virtualbox-shared-folder">VirtualBox shared folder</h1>
+<p>If you are having permission denied issues on VirtualBox shared folders:</p>
+<pre><code>sudo usermod -aG vboxsf $(whoami)
+</code></pre>
               
             </div>
           </div>
