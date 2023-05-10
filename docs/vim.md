@@ -153,3 +153,9 @@ Y:@"
 Have to <enter> to begin the execution
 
 This was super useful when I had to execute many different substitutions on a list of files.
+
+# Delete all lines containing a pattern
+
+```
+:g/stringToMatch/d
+```
