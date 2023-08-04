@@ -12,6 +12,20 @@ Para se pegar a extensão de um arquivo:
 ${name##*.}
 ~~~
 
+[Explanation from SO](https://stackoverflow.com/a/3162500):
+
+`"${foo##*:}"` trims everything from the front until a ':', greedily.
+
+```
+${foo  <-- from variable foo
+  ##   <-- greedy front trim
+  *    <-- matches anything
+  :    <-- until the last ':'
+ }
+```
+
+
+
 Exemplo:
 
 - Renomear vários arquivos deixando-os com 3 digitos:
