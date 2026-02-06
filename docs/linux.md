@@ -1238,3 +1238,17 @@ If you are having permission denied issues on VirtualBox shared folders:
 ```
 sudo usermod -aG vboxsf $(whoami)
 ```
+
+# Find which files belong to a specific inode number
+
+This is useful when you have hardlinks in your system and you want to find out where this file is being referenced.
+
+As can be seen on on this [SO post](https://unix.stackexchange.com/a/35310) for ext4 filesystems:
+
+```bash
+sudo debugfs -R 'ncheck 393094' /dev/sda2 2>/dev/null
+```
+
+```bash
+sudo debugfs -R 'ncheck 393094' /dev/sda2 | cut -f2 | tail -n2 > filenames
+```
