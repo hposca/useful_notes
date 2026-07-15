@@ -153,6 +153,9 @@ A simple bash script with all the steps at once:
 
 ```bash
 #!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
 
 GITHUB_USER=""
 REPO_FROM=""
@@ -165,21 +168,23 @@ DIRECTORY_TO="c/"
 git clone git@github.com:${GITHUB_USER}/${REPO_FROM}.git
 git clone git@github.com:${GITHUB_USER}/${REPO_TO}.git
 
-cd ${REPO_FROM}
+pushd ${REPO_FROM}
 git filter-branch --subdirectory-filter "${DIRECTORY_FROM}" -- --all
 mkdir -p "${DIRECTORY_TO}"
-mv * "${DIRECTORY_TO}"
+mv * "${DIRECTORY_TO}" || true
 git add .
 git commit -m "Moving files to new location"
+popd
 
-cd ../${REPO_TO}
+pushd ${REPO_TO}
 git checkout -b "${REPO_TO_NEW_BRANCH}"
 git remote add repoFrom "../${REPO_FROM}"
-git pull repoFrom "${REPO_FROM_BRANCH}" --allow-unrelated-histories
+git pull --no-ff repoFrom "${REPO_FROM_BRANCH}" --allow-unrelated-histories
 git remote rm repoFrom
-git checkout master
+git checkout main
 git merge --no-ff "${REPO_TO_NEW_BRANCH}"
-# git branch -d "${REPO_TO_NEW_BRANCH}"
+git branch -d "${REPO_TO_NEW_BRANCH}"
+popd
 ```
 
 # How do you squash commits into one patch with git format-patch?
